@@ -1,0 +1,1595 @@
+{
+    "version": "0.1.0",
+    "description": "TacBoard Checklist Data",
+    "objects": [
+        {
+            "aircraftModule": "A-10C",
+            "folders": [
+                {
+                    "title": "Normal Procedures",
+                    "items": [
+                        {
+                            "title": "Pre-Startup",
+                            "sections": [
+                                {
+                                    "title": "Radios",
+                                    "items": [
+                                        {
+                                            "text": "Intercom Volumes",
+                                            "subtext": "Intercom Panel",
+                                            "action": "As Needed"
+                                        },
+                                        {
+                                            "text": "VHF 1 Preset Channels",
+                                            "subtext": "VHF / AM Radio 1 Control Panel",
+                                            "action": "Per Briefing"
+                                        },
+                                        {
+                                            "text": "VHF 2 Preset Channels",
+                                            "subtext": "VHF / FM Radio 2 Control Panel",
+                                            "action": "Per Briefing"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "LASTE Panel",
+                                    "items": [
+                                        {
+                                            "text": "EAC",
+                                            "subtext": "LASTE Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Radar Altimeter",
+                                            "subtext": "LASTE Panel",
+                                            "action": "DIS"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "EFC Panel",
+                                    "items": [
+                                        {
+                                            "text": "FLAP EMER RETR",
+                                            "subtext": "EFC Panel",
+                                            "action": "Aft"
+                                        },
+                                        {
+                                            "text": "FLT CONT",
+                                            "subtext": "EFC Panel",
+                                            "action": "NORM"
+                                        },
+                                        {
+                                            "text": "AILERON EMER DISENGAGE",
+                                            "subtext": "EFC Panel",
+                                            "action": "Centered"
+                                        },
+                                        {
+                                            "text": "ELEVATOR EMER DISENGAGE",
+                                            "subtext": "EFC Panel",
+                                            "action": "Centered"
+                                        },
+                                        {
+                                            "text": "SPD BK EMER RETR",
+                                            "subtext": "EFC Panel",
+                                            "action": "Aft"
+                                        },
+                                        {
+                                            "text": "PITCH/ROLL TRIM",
+                                            "subtext": "EFC Panel",
+                                            "action": "NORM"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Auxiliary Lighting Panel",
+                                    "items": [
+                                        {
+                                            "text": "HARS / SAS OVERRIDE",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "NORM"
+                                        },
+                                        {
+                                            "text": "REFUEL STATUS & INDEXER LTS",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "As Desired"
+                                        },
+                                        {
+                                            "text": "NVIS LTS",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Throttle Quadrant",
+                                    "items": [
+                                        {
+                                            "text": "Exterior Lights Master",
+                                            "subtext": "Throttle",
+                                            "action": "Aft"
+                                        },
+                                        {
+                                            "text": "Throttles",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both OFF"
+                                        },
+                                        {
+                                            "text": "Flaps",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "UP"
+                                        },
+                                        {
+                                            "text": "Speed Brakes",
+                                            "subtext": "Throttle",
+                                            "action": "Closed"
+                                        },
+                                        {
+                                            "text": "APU",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "L / R ENG OPER",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both NORM"
+                                        },
+                                        {
+                                            "text": "L / R ENG FUEL FLOW",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both NORM"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Fuel System Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "L / R BOOST PUMPS MAIN",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both OFF"
+                                        },
+                                        {
+                                            "text": "L / R BOOST PUMPS WING",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both OFF"
+                                        },
+                                        {
+                                            "text": "L / R FILL DISABLE MAIN",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both Pressed"
+                                        },
+                                        {
+                                            "text": "L / R FILL DISABLE WING",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both Pressed"
+                                        },
+                                        {
+                                            "text": "Refuel Lever",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "CLOSE"
+                                        },
+                                        {
+                                            "text": "TK GATE",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "CLOSE"
+                                        },
+                                        {
+                                            "text": "CROSS FEED",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Landing Gear Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "Emergency Brake",
+                                            "subtext": "Left Console",
+                                            "action": "Set"
+                                        },
+                                        {
+                                            "text": "Landing Gear Handle",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "Down"
+                                        },
+                                        {
+                                            "text": "Landing / Taxi Lights",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Armament / HUD Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "GUN / PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "LASER",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "TGP",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CICU",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "JTRS",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Front Dash",
+                                    "items": [
+                                        {
+                                            "text": "L / R MFCDs",
+                                            "subtext": "Front Dash",
+                                            "action": "Both Off"
+                                        },
+                                        {
+                                            "text": "G-Meter",
+                                            "subtext": "Left Canopy Bow",
+                                            "action": "Reset"
+                                        },
+                                        {
+                                            "text": "Fire T-Handles",
+                                            "subtext": "Front Dash",
+                                            "action": "All In"
+                                        },
+                                        {
+                                            "text": "Fire Agent Discharge Switch",
+                                            "subtext": "Front Dash",
+                                            "action": "Centered"
+                                        },
+                                        {
+                                            "text": "Standby Compass",
+                                            "subtext": "Right Canopy Bow",
+                                            "action": "Check Accuracy"
+                                        },
+                                        {
+                                            "text": "AUX LG EXT Handle",
+                                            "subtext": "Front Dash",
+                                            "action": "In"
+                                        },
+                                        {
+                                            "text": "Ejection Seat",
+                                            "subtext": "Seat",
+                                            "action": "Disarm"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CMSP Panel",
+                                    "items": [
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CMSP SYSTEM Switches",
+                                            "subtext": "CMSP Panel",
+                                            "action": "All OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Electrical Power Panel",
+                                    "items": [
+                                        {
+                                            "text": "BATTERY",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "INVERTER",
+                                            "subtext": "ELectrical Power Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "APU GEN",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF / RESET"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Auxiliary Avionics Panel",
+                                    "items": [
+                                        {
+                                            "text": "CDU",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "EGI",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "PAGE Dial",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "OTHER"
+                                        },
+                                        {
+                                            "text": "STEER PT Dial",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "MISSION"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "ILS Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "ILS Power Dial",
+                                            "subtext": "ILS Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "TACAN Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "TACAN Mode Dial",
+                                            "subtext": "TACAN Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lighting Control Panel",
+                                    "items": [
+                                        {
+                                            "text": "Lighting Controls",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "As Desired"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Startup",
+                            "sections": [
+                                {
+                                    "title": "Electrical Startup",
+                                    "items": [
+                                        {
+                                            "text": "BATTERY",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "PWR"
+                                        },
+                                        {
+                                            "text": "INVERTER",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "STBY"
+                                        },
+                                        {
+                                            "text": "L / R AC GEN",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "Both PWR"
+                                        },
+                                        {
+                                            "text": "EMER FLOOD",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "ON",
+                                            "comment": "Night only."
+                                        },
+                                        {
+                                            "text": "SIGNAL LIGHTS LAMP TEST",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "Press",
+                                            "comment": "Verify all caution/warning lights illuminate."
+                                        },
+                                        {
+                                            "text": "FIRE DETECT BLEED AIR LEAK TEST",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "Press",
+                                            "comment": "Verify fire T-handles and BLEED AIR LEAK alert illuminate."
+                                        },
+                                        {
+                                            "text": "Landing Gear Indicators",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "All Green"
+                                        },
+                                        {
+                                            "text": "Digital Clock",
+                                            "subtext": "Front Dash",
+                                            "action": "Set"
+                                        },
+                                        {
+                                            "text": "L / R ITT",
+                                            "subtext": "Front Dash",
+                                            "action": "Both Below 150°C"
+                                        },
+                                        {
+                                            "text": "Fuel Quantity",
+                                            "subtext": "Fuel Quantity Panel",
+                                            "action": "Verify",
+                                            "comment": "Totalizer should be 6000 pounds with main tanks full."
+                                        },
+                                        {
+                                            "text": "Oxygen Supply",
+                                            "subtext": "Environment System Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "Oxygen Flow",
+                                            "subtext": "Environment System Panel",
+                                            "action": "NORMAL"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "APU Startup",
+                                    "items": [
+                                        {
+                                            "text": "APU",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "START"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "APU Indicators",
+                                            "subtext": "Front Dash",
+                                            "action": "Monitor",
+                                            "comment": "APU EGT should stabilize at 400°C - 450°C with APU RPM at 100%. EGT will spike at 760°C."
+                                        },
+                                        {
+                                            "text": "APU GEN",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "PWR"
+                                        },
+                                        {
+                                            "text": "CDU",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "EGI",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "ON",
+                                            "comment": "Continue checklist while EGI BIT and alignment completes."
+                                        },
+                                        {
+                                            "text": "Position Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "FLASH"
+                                        },
+                                        {
+                                            "text": "Exterior Lights Master",
+                                            "subtext": "Throttle",
+                                            "action": "Aft"
+                                        },
+                                        {
+                                            "text": "Cockpit Lighting",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "As Desired"
+                                        },
+                                        {
+                                            "text": "VHF / AM Mode",
+                                            "subtext": "VHF / AM Radio 1 Control Panel",
+                                            "action": "TR"
+                                        },
+                                        {
+                                            "text": "UHF Function",
+                                            "subtext": "UHF Radio Control Panel",
+                                            "action": "MAIN"
+                                        },
+                                        {
+                                            "text": "VHF / FM Mode",
+                                            "subtext": "VHF / FM Radio 2 Control Panel",
+                                            "action": "TR"
+                                        },
+                                        {
+                                            "text": "Radio Frequencies",
+                                            "subtext": "Radio Control Panels",
+                                            "action": "As Needed"
+                                        },
+                                        {
+                                            "text": "Intercom Volume",
+                                            "subtext": "Intercom Panel",
+                                            "action": "As Needed",
+                                            "comment": "Pull HM, IM, FM, VHF, UHF switches. Set volume as desired."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Engine Startup",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Startup Clearance",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Request",
+                                            "comment": "Do not start aircraft engines until cleared by ATC."
+                                        },
+                                        {
+                                            "text": "L / R BOOST PUMPS MAIN",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both ON"
+                                        },
+                                        {
+                                            "text": "L / R BOOST PUMPS WING",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both ON"
+                                        },
+
+                                        {
+                                            "text": "L / R ENG OPER",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both NORM"
+                                        },
+                                        {
+                                            "text": "L Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "IDLE",
+                                            "comment": "Move throttle out of OFF detent."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "L Engine Indicators",
+                                            "subtext": "Front Dash",
+                                            "action": "Monitor",
+                                            "comment": "L core RPM should stabilize at 56% with ITT between 275°C and 865°C. ITT will spike at 900°C."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "L Hydraulic Pressure",
+                                            "subtext": "Fuel Quantity Panel",
+                                            "action": "Monitor",
+                                            "comment": "HYD SYS L pressure should stabilize between 2800 PSI and 3350 PSI."
+                                        },
+                                        {
+                                            "text": "R Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "IDLE",
+                                            "comment": "Move throttle out of OFF detent."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "R Engine Indicators",
+                                            "subtext": "Front Dash",
+                                            "action": "Monitor",
+                                            "comment": "R core RPM should stabilize at 56% with ITT between 275°C and 865°C. ITT will spike at 900°C."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "R Hydraulic Pressure",
+                                            "subtext": "Fuel Quantity Panel",
+                                            "action": "Monitor",
+                                            "comment": "HYD SYS R pressure should stabilize between 2800 and 3350 PSI."
+                                        },
+                                        {
+                                            "text": "APU GEN",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "APU",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Post-Startup",
+                            "sections": [
+                                {
+                                    "title": "Flight Controls",
+                                    "items": [
+                                        {
+                                            "text": "Speed Brakes",
+                                            "subtext": "Throttle",
+                                            "action": "Cycle",
+                                            "comment": "Monitor L HYD SYS hydraulic pressure."
+                                        },
+                                        {
+                                            "text": "Flaps",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Cycle",
+                                            "comment": "Monitor R HYD SYS hydraulic pressure."
+                                        },
+                                        {
+                                            "text": "Flight Controls",
+                                            "subtext": "Control Stick / Rudder Pedals",
+                                            "action": "Check"
+                                        },
+                                        {
+                                            "text": "Yaw / Pitch SAS",
+                                            "subtext": "SAS Panel",
+                                            "action": "All ENGAGE",
+                                            "comment": "Test disconnect with control stick paddle switch, then re-engage."
+                                        },
+                                        {
+                                            "text": "T/O Trim Button",
+                                            "subtext": "SAS Panel",
+                                            "action": "Press",
+                                            "comment": "Verify TAKEOFF TRIM light illuminates."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Avionics",
+                                    "items": [
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "TEST"
+                                        },
+                                        {
+                                            "text": "IFFCC BIT",
+                                            "subtext": "Up Front Controller / HUD",
+                                            "action": "Start",
+                                            "comment": "Continue checklist while IFFCC BIT completes."
+                                        },
+                                        {
+                                            "text": "JTRS",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "CICU",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "TGP",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "HUD MODE",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "As Desired",
+                                            "comment": "Set to DAY or NIGHT per pilot preference."
+                                        },
+                                        {
+                                            "text": "L / R MFCDs",
+                                            "subtext": "Front Dash",
+                                            "action": "Both On",
+                                            "comment": "Continue checklist while MFCDs power on."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Instruments",
+                                    "items": [
+                                        {
+                                            "text": "G-Meter",
+                                            "subtext": "Left Canopy Bow",
+                                            "action": "Reset"
+                                        },
+                                        {
+                                            "text": "Standby Attitude Indicator",
+                                            "subtext": "Front Dash",
+                                            "action": "Uncage"
+                                        },
+                                        {
+                                            "text": "Altimeter",
+                                            "subtext": "Front Dash",
+                                            "action": "Set"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "MFCDs",
+                                    "items": [
+                                        {
+                                            "text": "Data Upload",
+                                            "subtext": "MFCD - DTS Page",
+                                            "action": "LOAD ALL",
+                                            "comment": "Wait for data load to complete."
+                                        },
+                                        {
+                                            "text": "Ownship / Group ID",
+                                            "subtext": "MFCD - TAD Page",
+                                            "action": "Configure",
+                                            "comment": "Verify flight member symbols visible on TAD."
+                                        },
+                                        {
+                                            "text": "Avionics Status",
+                                            "subtext": "MFCD - STAT Page",
+                                            "action": "Check",
+                                            "comment": "Verify all systems operational."
+                                        },
+                                        {
+                                            "text": "Stores",
+                                            "subtext": "MFCD - DSMS Page",
+                                            "action": "Check",
+                                            "comment": "Verify data upload completed. Configure weapon systems as desired."
+                                        },
+                                        {
+                                            "text": "L / R MFCD Pages",
+                                            "subtext": "Front Dash",
+                                            "action": "As Desired"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "IFFCC / HUD",
+                                    "items": [
+                                        {
+                                            "text": "IFFCC Test Menu",
+                                            "subtext": "Up Front Controller / HUD",
+                                            "action": "Configure",
+                                            "comment": "After BIT is complete, set CCIP Consent, AAS, 30 MM, and display modes as desired."
+                                        },
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Navigation",
+                                    "items": [
+                                        {
+                                            "text": "INS Mode",
+                                            "subtext": "CDU",
+                                            "action": "NAV",
+                                            "comment": "Set when SYS / INS / ALIGN page indicates alignment complete (T = 4.0 0.8)."
+                                        },
+                                        {
+                                            "text": "ILS Power Dial",
+                                            "subtext": "ILS Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "TACAN Mode Dial",
+                                            "subtext": "TACAN Control Panel",
+                                            "action": "TR"
+                                        },
+                                        {
+                                            "text": "Primary Nav Mode",
+                                            "subtext": "Navigation Mode Select Panel",
+                                            "action": "EGI"
+                                        },
+                                        {
+                                            "text": "Secondary Nav Mode",
+                                            "subtext": "Navigation Mode Select Panel",
+                                            "action": "STR PT"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Countermeasures",
+                                    "items": [
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "STBY"
+                                        },
+                                        {
+                                            "text": "CMSP SYSTEM Switches",
+                                            "subtext": "CMSP Panel",
+                                            "action": "All ON"
+                                        },
+                                        {
+                                            "text": "CMSP Program",
+                                            "subtext": "CMSP Panel",
+                                            "action": "As Required",
+                                            "comment": "Configure CMSP programs per mission briefing."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "LASTE",
+                                    "items": [
+                                        {
+                                            "text": "EAC",
+                                            "subtext": "LASTE Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Radar Altimeter",
+                                            "subtext": "LASTE Panel",
+                                            "action": "NRM"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Pre-Taxi / Taxi",
+                            "sections": [
+                                {
+                                    "title": "Pre-Taxi",
+                                    "items": [
+                                        {
+                                            "text": "Canopy Switch",
+                                            "subtext": "R Console",
+                                            "action": "CLOSE"
+                                        },
+                                        {
+                                            "text": "Ejection Seat",
+                                            "subtext": "Seat",
+                                            "action": "Arm"
+                                        },
+                                        {
+                                            "text": "Flaps",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "MVR",
+                                            "comment": "Verify flap position MVR (7°) with gauge on Landing Gear Control Panel."
+                                        },
+                                        {
+                                            "text": "Landing / Taxi Lights",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "As Required",
+                                            "comment": "Set to TAXI at night."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Taxi Clearance",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Request",
+                                            "comment": "Do not taxi aircraft until cleared by ATC."
+                                        },
+                                        {
+                                            "text": "Emergency Brake",
+                                            "subtext": "Left Console",
+                                            "action": "Release"
+                                        },
+                                        {
+                                            "text": "Nosewheel Steering",
+                                            "subtext": "Control Stick",
+                                            "action": "Activate"
+                                        },
+                                        {
+                                            "text": "Throttles",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Advance",
+                                            "comment": "Core RPM should not exceed 70%."
+                                        },
+                                        {
+                                            "text": "Toe Brakes",
+                                            "subtext": "Rudder Pedals",
+                                            "action": "Test",
+                                            "comment": "Verify toe brakes operational when aircraft starts moving."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Taxi",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Taxi speed between 15 KTS and 25 KTS. Use rudder pedals to steer aircraft on ground."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "To stop, set throttles to IDLE and apply toe brakes."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Before Takeoff",
+                            "sections": [
+                                {
+                                    "title": "Before Takeoff",
+                                    "items": [
+                                        {
+                                            "text": "Anti-Skid",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "Landing / Taxi Lights",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "As Required",
+                                            "comment": "Set to LAND at night."
+                                        },
+                                        {
+                                            "text": "Pitot Heat",
+                                            "subtext": "Environment System Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "Anti-Collision Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "Position Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "STEADY"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Takeoff Clearance",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Request",
+                                            "comment": "Do not enter runway until cleared by ATC."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Takeoff",
+                            "sections": [
+                                {
+                                    "title": "Lineup",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Flaps",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Confirm MVR"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Exterior Lights Master",
+                                            "subtext": "Throttle",
+                                            "action": "Confirm Aft"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Ejection Seat",
+                                            "subtext": "Seat",
+                                            "action": "Confirm Armed"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Line up on runway centerline after receiving clearance from ATC."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Runup",
+                                    "items": [
+                                        {
+                                            "text": "Toe Brakes",
+                                            "subtext": "Rudder Pedals",
+                                            "action": "Hold"
+                                        },
+                                        {
+                                            "text": "L / R Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both 90% Core RPM"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "L / R Engine Indicators",
+                                            "subtext": "Front Dash",
+                                            "action": "Check",
+                                            "comment": "Ensure normal readings."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Caution Lights",
+                                            "subtext": "Caution Light Panel",
+                                            "action": "Check",
+                                            "comment": "Ensure no caution lights active."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Takeoff",
+                                    "items": [
+                                        {
+                                            "text": "L / R Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "Both MAX"
+                                        },
+                                        {
+                                            "text": "Toe Brakes",
+                                            "subtext": "Rudder Pedals",
+                                            "action": "Release"
+                                        },
+                                        {
+                                            "text": "Nosewheel Steering",
+                                            "subtext": "Control Stick",
+                                            "action": "Deactivate",
+                                            "comment": "Deactivate NWS when airspeed passes 70 KTS."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Rotate to 10° pitch approximately 10 KTS before takeoff speed. Takeoff speed is approximately 135 KTS with combat load."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Fence In",
+                            "sections": [
+                                {
+                                    "title": "Fence In",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Complete fence in checklist prior to entering combat area."
+                                        },
+                                        {
+                                            "text": "Exterior Lights Master",
+                                            "subtext": "Throttle",
+                                            "action": "Center"
+                                        },
+                                        {
+                                            "text": "CMSP SYSTEM Switches",
+                                            "subtext": "CMSP Panel",
+                                            "action": "All ON"
+                                        },
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "As Required"
+                                        },
+                                        {
+                                            "text": "CMSP Program",
+                                            "subtext": "CMSP Panel",
+                                            "action": "As Required"
+                                        },
+                                        {
+                                            "text": "ECM Program",
+                                            "subtext": "CMSP Panel",
+                                            "action": "As Required"
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "GUN / PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM",
+                                            "comment": "Set to GUNARM if PAC not desired."
+                                        },
+                                        {
+                                            "text": "TGP",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "LASER",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "DSMS",
+                                            "subtext": "MFCD - DSMS Page",
+                                            "action": "Set Per Briefing"
+                                        },
+                                        {
+                                            "text": "AIM-9 Seeker",
+                                            "subtext": "MFCD - DSMS / MSL Page",
+                                            "action": "COOL"
+                                        },
+                                        {
+                                            "text": "Maverick EO",
+                                            "subtext": "MFCD - MAV Page",
+                                            "action": "ON",
+                                            "comment": "AGM-65 electro-optical alignment takes approximately 3 minutes."
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick",
+                                            "action": "As Required"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "JTAC",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Contact"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Fence Out",
+                            "sections": [
+                                {
+                                    "title": "Fence Out",
+                                    "items": [
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick",
+                                            "action": "NAV"
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "GUN/PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "LASER",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "STBY"
+                                        },
+                                        {
+                                            "text": "AIM-9 Seeker",
+                                            "subtext": "MFCD - DSMS / MSL Page",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Maverick EO",
+                                            "subtext": "MFCD - MAV Page",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Exterior Lights Master",
+                                            "subtext": "Throttle",
+                                            "action": "Aft"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Flight Check",
+                                            "subtitle": "N/A",
+                                            "action": "Complete",
+                                            "comment": "Assess aircraft control, damage, and fuel quantity."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Post-Landing",
+                            "sections": [
+                                {
+                                    "title": "Post-Landing",
+                                    "items": [
+                                        {
+                                            "text": "Speed Brakes",
+                                            "subtext": "Throttle",
+                                            "action": "Close"
+                                        },
+                                        {
+                                            "text": "Flaps",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "UP"
+                                        },
+                                        {
+                                            "text": "Anti-Skid",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "Off"
+                                        },
+                                        {
+                                            "text": "Landing / Taxi Lights",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "As Required",
+                                            "comment": "Set to TAXI at night."
+                                        },
+                                        {
+                                            "text": "Ejection Seat",
+                                            "subtext": "Seat",
+                                            "action": "Disarm"
+                                        },
+                                        {
+                                            "text": "Pitot Heat",
+                                            "subtext": "Environment System Panel",
+                                            "action": "Off"
+                                        },
+                                        {
+                                            "text": "Position Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "FLASH"
+                                        },
+                                        {
+                                            "text": "Anti-Collision Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Shutdown",
+                            "sections": [
+                                {
+                                    "title": "Aircraft Configuration",
+                                    "items": [
+                                        {
+                                            "text": "Nosewheel Steering",
+                                            "subtext": "Control Stick",
+                                            "action": "Deactivate"
+                                        },
+                                        {
+                                            "text": "Emergency Brake",
+                                            "subtext": "Left Console",
+                                            "action": "Set"
+                                        },
+                                        {
+                                            "text": "Canopy Switch",
+                                            "subtext": "Right Console",
+                                            "action": "OPEN"
+                                        },
+                                        {
+                                            "text": "Landing / Taxi Lights",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Standby Attitude Indicator",
+                                            "subtext": "Front Dash",
+                                            "action": "Cage"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Systems",
+                                    "items": [
+                                        {
+                                            "text": "EAC",
+                                            "subtext": "LASTE Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Radar Altimeter",
+                                            "subtext": "LASTE Panel",
+                                            "action": "DIS"
+                                        },
+                                        {
+                                            "text": "L / R MFCDs",
+                                            "subtext": "Front Dash",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "GUN / PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "LASER",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "TGP",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CICU",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "JTRS",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CMSP SYSTEM Switches",
+                                            "subtext": "CMSP Panel",
+                                            "action": "All OFF"
+                                        },
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "EGI",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CDU",
+                                            "subtext": "Auxiliary Avionics Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "ILS Power Dial",
+                                            "subtext": "ILS Control Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "TACAN Mode Dial",
+                                            "subtext": "TACAN Control Panel",
+                                            "action": "OFF"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Final Shutdown",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Engines must be set to IDLE for 5 minutes before proceeding.",
+                                            "comment": "Taxi time may be included if core RPM was < 80%."
+                                        },
+                                        {
+                                            "text": "L / R Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "L / R BOOST PUMPS MAIN",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both OFF"
+                                        },
+                                        {
+                                            "text": "L / R BOOST PUMPS WING",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "Both OFF"
+                                        },
+                                        {
+                                            "text": "L / R AC GEN",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF / RESET"
+                                        },
+                                        {
+                                            "text": "INVERTER",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "BATTERY",
+                                            "subtext": "Electrical Power Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Oxygen Supply",
+                                            "subtext": "Environment System Panel",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Lighting Controls",
+                                            "subtext": "Lighting System Panel",
+                                            "action": "All OFF"
+                                        },
+                                        {
+                                            "text": "Radios",
+                                            "subtext": "Left Console",
+                                            "action": "All OFF"
+                                        },
+                                        {
+                                            "text": "Boarding Ladder",
+                                            "subtext": "Right Console",
+                                            "action": "Deploy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Abnormal Procedures",
+                    "items": [
+                        {
+                            "title": "Engine Start After Failed Start",
+                            "sections": [
+                                {
+                                    "title": "Engine Start After Failed Start",
+                                    "items": [
+                                        {
+                                            "text": "Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "ENG OPER",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "MOTOR",
+                                            "comment": "Hold switch in MOTOR position for at least 30 seconds."
+                                        },
+                                        {
+                                            "text": "ENG OPER",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "NORM"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Attempt normal engine start."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Landing Gear Extension Failure",
+                            "sections": [
+                                {
+                                    "title": "Landing Gear Extension Failure",
+                                    "items": [
+                                        {
+                                            "text": "SIGNAL LIGHTS LAMP TEST",
+                                            "subtext": "Auxiliary Lighting Panel",
+                                            "action": "Press",
+                                            "comment": "Verify all landing gear indicators illuminate."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Check L HYD SYS hydraulic pressure. If pressure is normal:"
+                                        },
+                                        {
+                                            "text": "Landing Gear Handle",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "Cycle"
+                                        },
+                                        {
+                                            "text": "Airspeed",
+                                            "action": "Increase to 200 KTS",
+                                            "comment": "Roll aircraft rapidly to attempt to shake gear loose."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "If the above actions fail:"
+                                        },
+                                        {
+                                            "text": "Airspeed",
+                                            "action": "Reduce to < 200 KTS"
+                                        },
+                                        {
+                                            "text": "Landing Gear Handle",
+                                            "subtext": "Landing Gear Control Panel",
+                                            "action": "Down"
+                                        },
+                                        {
+                                            "text": "AUX LG EXT Handle",
+                                            "subtext": "Front Dash",
+                                            "action": "Pull"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Emergency Procedures",
+                    "items": [
+                        {
+                            "title": "APU Fire",
+                            "sections": [
+                                {
+                                    "title": "APU Fire",
+                                    "items": [
+                                        {
+                                            "text": "APU",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "If APU fire T-handle light does not extinguish:"
+                                        },
+                                        {
+                                            "text": "APU Fire T-Handle",
+                                            "subtext": "Front Dash",
+                                            "action": "Pull"
+                                        },
+                                        {
+                                            "text": "Fire Agent Discharge Switch",
+                                            "subtext": "Front Dash",
+                                            "action": "L or R"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "If both presses of discharge switch fail to extinguish fire, land as soon as possible."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Ejection",
+                            "sections": [
+                                {
+                                    "title": "Ejection",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "If possible, eject above:\n• 2000 FT AGL in level flight\n• 4000 FT AGL in uncontrolled flight"
+                                        },
+                                        {
+                                            "text": "IFF Master Dial",
+                                            "subtext": "IFF Control Panel",
+                                            "action": "EMER"
+                                        },
+                                        {
+                                            "text": "UHF Guard Channel",
+                                            "subtext": "UHF Radio",
+                                            "action": "Transmit Mayday"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Turn aircraft towards uninhabited area. Trim to lowest practical speed. Hold wings level."
+                                        },
+                                        {
+                                            "text": "Ejection Handle",
+                                            "subtext": "Seat",
+                                            "action": "Pull"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Engine Fire",
+                            "sections": [
+                                {
+                                    "title": "Engine Fire",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Reduce power to affected engine. If engine fire T-handle light does not extinguish:"
+                                        },
+                                        {
+                                            "text": "Throttle",
+                                            "subtext": "Throttle Quadrant",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "Engine Fire T-Handle",
+                                            "subtext": "Front Dash",
+                                            "action": "Pull"
+                                        },
+                                        {
+                                            "text": "Fire Agent Discharge Switch",
+                                            "subtext": "Front Dash",
+                                            "action": "L or R"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "If both presses of discharge switch fail to extinguish fire, land as soon as possible."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Combat Employment",
+                    "items": []
+                }
+            ]
+        }
+    ]
+}

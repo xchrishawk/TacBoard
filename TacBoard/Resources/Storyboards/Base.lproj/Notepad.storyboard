@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V27-EL-CA0">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation-->
+        <scene sceneID="hsu-1a-AAD">
+            <objects>
+                <navigationController id="V27-EL-CA0" userLabel="Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notepad" image="square.and.pencil" catalog="system" id="kDT-BZ-dnh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UnI-rN-2ta">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="TintColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3lL-be-Wdz" kind="relationship" relationship="rootViewController" id="dlS-f4-uNv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4l-Kp-1z0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1018" y="62"/>
+        </scene>
+        <!--Notepad-->
+        <scene sceneID="POS-fE-9Nf">
+            <objects>
+                <viewController id="3lL-be-Wdz" userLabel="Notepad" customClass="NotepadViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1b-qV-d3y">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zwm-vR-yhL">
+                                <rect key="frame" x="0.0" y="50" width="834" height="1079"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sG7-zC-NG6">
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="60"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-7d-SCP" customClass="SegmentedControl" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="10" width="814" height="41"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="TintColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="normalTitleTextColor">
+                                                        <color key="value" name="TintColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleTextColor">
+                                                        <color key="value" name="TintInvertedColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pageSegmentedControlValueChanged:" destination="3lL-be-Wdz" eventType="valueChanged" id="KlA-cc-XIL"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rYh-7d-SCP" firstAttribute="top" secondItem="sG7-zC-NG6" secondAttribute="top" constant="10" id="5lW-I9-pyN"/>
+                                            <constraint firstAttribute="trailing" secondItem="rYh-7d-SCP" secondAttribute="trailing" constant="10" id="JcO-gV-3N4"/>
+                                            <constraint firstItem="rYh-7d-SCP" firstAttribute="leading" secondItem="sG7-zC-NG6" secondAttribute="leading" constant="10" id="KYS-Ey-ewj"/>
+                                            <constraint firstAttribute="bottom" secondItem="rYh-7d-SCP" secondAttribute="bottom" constant="10" id="jGE-rz-NPG"/>
+                                            <constraint firstAttribute="height" constant="60" id="pUV-uR-O4s"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgA-OS-DNo">
+                                        <rect key="frame" x="0.0" y="60" width="834" height="1"/>
+                                        <color key="backgroundColor" name="SeparatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="9lw-fn-pf3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-Uq-gEt">
+                                        <rect key="frame" x="0.0" y="61" width="834" height="1018"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="tintColor" name="TintColor"/>
+                        <constraints>
+                            <constraint firstItem="EXB-wk-sBY" firstAttribute="bottom" secondItem="Zwm-vR-yhL" secondAttribute="bottom" id="0Kd-iI-yfs"/>
+                            <constraint firstItem="EXB-wk-sBY" firstAttribute="trailing" secondItem="Zwm-vR-yhL" secondAttribute="trailing" id="Ffp-Bq-0mX"/>
+                            <constraint firstItem="Zwm-vR-yhL" firstAttribute="leading" secondItem="EXB-wk-sBY" secondAttribute="leading" id="Ld7-ZV-vgh"/>
+                            <constraint firstItem="Zwm-vR-yhL" firstAttribute="top" secondItem="EXB-wk-sBY" secondAttribute="top" id="Nh8-Gl-oaG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EXB-wk-sBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notepad" id="eEf-nv-oKB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="k74-Ki-OIV"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="pencil.tip.crop.circle" catalog="system" id="GEY-Cv-4hH">
+                            <connections>
+                                <action selector="settingsBarButtonItemPressed:" destination="3lL-be-Wdz" id="iuk-BP-y68"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="RsQ-ab-RuQ">
+                                <connections>
+                                    <action selector="clearBarButtonItemPressed:" destination="3lL-be-Wdz" id="nBE-WE-EWG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="delete.left" catalog="system" id="9pJ-c6-FHB">
+                                <connections>
+                                    <action selector="undoBarButtonItemPressed:" destination="3lL-be-Wdz" id="alV-Aw-Ttr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clearBarButtonItem" destination="RsQ-ab-RuQ" id="5lT-pJ-yI3"/>
+                        <outlet property="containerView" destination="SSd-Uq-gEt" id="Bab-88-h7r"/>
+                        <outlet property="pageSegmentedControl" destination="rYh-7d-SCP" id="Cr4-XL-X3O"/>
+                        <outlet property="undoBarButtonItem" destination="9pJ-c6-FHB" id="hNw-uQ-JZs"/>
+                        <segue destination="xGn-Wl-zhY" kind="popoverPresentation" identifier="ShowSettingsPopover" destinationCreationSelector="createSettingsPopoverContainerViewController:" popoverAnchorBarButtonItem="GEY-Cv-4hH" id="i3j-O7-bR2">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="1eb-O5-lzN" kind="show" identifier="ShowSettingsPush" destinationCreationSelector="createSettingsViewController:" id="TJz-PG-WyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jft-KZ-aom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="61.809045226130657"/>
+        </scene>
+        <!--Settings Push-->
+        <scene sceneID="aAn-74-6mH">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="Settings" id="1eb-O5-lzN" userLabel="Settings Push" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WWj-tL-2MK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29Q-YC-3Jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="460"/>
+        </scene>
+        <!--Settings Popover Container-->
+        <scene sceneID="zSm-iW-bky">
+            <objects>
+                <viewController id="xGn-Wl-zhY" userLabel="Settings Popover Container" customClass="NotepadSettingsPopoverContainerViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3P-36-BrH">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="373"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNz-Qs-KSy">
+                                <rect key="frame" x="0.0" y="13" width="400" height="360"/>
+                                <connections>
+                                    <segue destination="lqa-Jo-qOV" kind="embed" destinationCreationSelector="createSettingsViewController:" id="0rZ-wc-j4c"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" name="PopoverBorderColor"/>
+                        <constraints>
+                            <constraint firstItem="h1Z-5N-eyz" firstAttribute="bottom" secondItem="BNz-Qs-KSy" secondAttribute="bottom" id="5D9-CH-Q0i"/>
+                            <constraint firstItem="BNz-Qs-KSy" firstAttribute="leading" secondItem="h1Z-5N-eyz" secondAttribute="leading" id="6LZ-z9-LV0"/>
+                            <constraint firstItem="BNz-Qs-KSy" firstAttribute="top" secondItem="h1Z-5N-eyz" secondAttribute="top" id="Y2f-kb-GpJ"/>
+                            <constraint firstItem="h1Z-5N-eyz" firstAttribute="trailing" secondItem="BNz-Qs-KSy" secondAttribute="trailing" id="kNP-NG-0uI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h1Z-5N-eyz"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="360"/>
+                    <connections>
+                        <outlet property="contentView" destination="BNz-Qs-KSy" id="ZYX-Er-cNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSq-EM-ZqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="62"/>
+        </scene>
+        <!--Settings Popover-->
+        <scene sceneID="ALC-KT-2dC">
+            <objects>
+                <tableViewController storyboardIdentifier="Settings" title="Settings" id="lqa-Jo-qOV" userLabel="Settings Popover" customClass="NotepadSettingsViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="E2z-eF-4Ad">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="360"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="SecondaryBackgroundColor"/>
+                        <color key="tintColor" name="TintColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Color" id="DRO-hH-qTr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="152" id="eUd-ZB-yWU">
+                                        <rect key="frame" x="20" y="55.5" width="360" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUd-ZB-yWU" id="mD8-we-QKp">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NQl-cy-byB">
+                                                    <rect key="frame" x="15" y="10" width="330" height="132"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M3M-1v-3su">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="66"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-ua-heS">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="PlaceholderTextColor"/>
+                                                                    <state key="normal" image="circle" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="O6g-D1-4ib"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HE-xI-gDS">
+                                                                    <rect key="frame" x="66" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="TintColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="doh-dk-twe"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-e4-qcK">
+                                                                    <rect key="frame" x="132" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadBlackWhiteColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="8xF-2y-iuT"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-sl-FUS">
+                                                                    <rect key="frame" x="198" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadRedColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="FSA-0t-dl7"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1O-xd-rsO">
+                                                                    <rect key="frame" x="264" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadOrangeColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="U7j-oJ-NuZ"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-tM-PaL">
+                                                            <rect key="frame" x="0.0" y="66" width="330" height="66"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8p-UJ-siy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadYellowColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="fKY-5Y-EQx"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMV-TG-IiQ">
+                                                                    <rect key="frame" x="66" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadGreenColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="p8A-J0-NJY"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-lB-Aj8">
+                                                                    <rect key="frame" x="132" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadBlueColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="mhv-Sk-Hdo"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-0J-jjp">
+                                                                    <rect key="frame" x="198" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadIndigoColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="YZK-A9-mpm"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-o0-gw8">
+                                                                    <rect key="frame" x="264" y="0.0" width="66" height="66"/>
+                                                                    <color key="tintColor" name="NotepadVioletColor"/>
+                                                                    <state key="normal" image="circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="colorButtonPressed:" destination="lqa-Jo-qOV" eventType="touchUpInside" id="UYZ-Bc-oWl"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="NQl-cy-byB" secondAttribute="trailing" constant="15" id="DnA-70-dr8"/>
+                                                <constraint firstAttribute="bottom" secondItem="NQl-cy-byB" secondAttribute="bottom" constant="10" id="Hce-xO-jpz"/>
+                                                <constraint firstItem="NQl-cy-byB" firstAttribute="leading" secondItem="mD8-we-QKp" secondAttribute="leading" constant="15" id="liY-99-JPs"/>
+                                                <constraint firstItem="NQl-cy-byB" firstAttribute="top" secondItem="mD8-we-QKp" secondAttribute="top" constant="10" id="sPk-3M-Ar4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Line Width" id="R4y-RK-bd9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="gGW-qg-eaQ">
+                                        <rect key="frame" x="20" y="263.5" width="360" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gGW-qg-eaQ" id="6bT-8q-eS5">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fmk-Bu-uyT">
+                                                    <rect key="frame" x="15" y="10" width="330" height="40"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7mH-el-fGB">
+                                                            <rect key="frame" x="0.0" y="5" width="32" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="dTR-bA-4V8"/>
+                                                                <constraint firstAttribute="width" constant="32" id="xPS-4W-Jjq"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lmk-HL-18d">
+                                                            <rect key="frame" x="40" y="0.0" width="250" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="K7T-r1-Caz"/>
+                                                            </constraints>
+                                                        </slider>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TfF-Oo-CQu">
+                                                            <rect key="frame" x="298" y="5" width="32" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="CDu-yV-yLu"/>
+                                                                <constraint firstAttribute="height" constant="32" id="h9T-Hn-GuD"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fmk-Bu-uyT" firstAttribute="top" secondItem="6bT-8q-eS5" secondAttribute="top" constant="10" id="1TV-NA-9cL"/>
+                                                <constraint firstItem="Fmk-Bu-uyT" firstAttribute="leading" secondItem="6bT-8q-eS5" secondAttribute="leading" constant="15" id="CaC-QA-ofM"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fmk-Bu-uyT" secondAttribute="trailing" constant="15" id="Fhb-jK-4qh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fmk-Bu-uyT" secondAttribute="bottom" constant="10" id="Gr8-NI-75M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lqa-Jo-qOV" id="5kz-lg-rRq"/>
+                            <outlet property="delegate" destination="lqa-Jo-qOV" id="Ncq-KW-vnq"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="activePathWidthSlider" destination="Lmk-HL-18d" id="GzH-Z4-85z"/>
+                        <outlet property="eraseButton" destination="J0R-ua-heS" id="wBP-DT-3qb"/>
+                        <outlet property="tintColorButton" destination="5HE-xI-gDS" id="5NN-Jc-kBf"/>
+                        <outletCollection property="activeColorButtons" destination="J0R-ua-heS" collectionClass="NSMutableArray" id="wgN-fY-0K5"/>
+                        <outletCollection property="activeColorButtons" destination="5HE-xI-gDS" collectionClass="NSMutableArray" id="ZcF-lw-22C"/>
+                        <outletCollection property="activeColorButtons" destination="ZYY-e4-qcK" collectionClass="NSMutableArray" id="rGr-Ao-hto"/>
+                        <outletCollection property="activeColorButtons" destination="p1Q-sl-FUS" collectionClass="NSMutableArray" id="evH-0V-Ny7"/>
+                        <outletCollection property="activeColorButtons" destination="i1O-xd-rsO" collectionClass="NSMutableArray" id="JO8-zq-luu"/>
+                        <outletCollection property="activeColorButtons" destination="Q8p-UJ-siy" collectionClass="NSMutableArray" id="s0l-ka-bNn"/>
+                        <outletCollection property="activeColorButtons" destination="jMV-TG-IiQ" collectionClass="NSMutableArray" id="XtN-0k-kO2"/>
+                        <outletCollection property="activeColorButtons" destination="q1d-lB-Aj8" collectionClass="NSMutableArray" id="9Uq-ht-k3d"/>
+                        <outletCollection property="activeColorButtons" destination="sVt-0J-jjp" collectionClass="NSMutableArray" id="DRn-QM-4fa"/>
+                        <outletCollection property="activeColorButtons" destination="HgI-o0-gw8" collectionClass="NSMutableArray" id="ZQZ-he-iNd"/>
+                        <segue destination="bRa-MY-Tgp" kind="unwind" identifier="Dismiss" unwindAction="unwindToNotepadViewController:" id="Ptd-2O-ZTl"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVH-3h-6UT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bRa-MY-Tgp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="62"/>
+        </scene>
+        <!--Blank Drawing-->
+        <scene sceneID="6rP-X4-oYV">
+            <objects>
+                <viewController storyboardIdentifier="BlankDrawing" id="eha-IM-qmF" userLabel="Blank Drawing" customClass="NotepadDrawingViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LHm-Mc-5WL">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atm-gv-RQG" customClass="NotepadDrawingView" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WZG-7l-WXN" appends="YES" id="qXx-u5-nMu"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="NotepadBackgroundColor"/>
+                        <color key="tintColor" name="TintColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="atm-gv-RQG" secondAttribute="bottom" id="aId-eV-HV4"/>
+                            <constraint firstItem="atm-gv-RQG" firstAttribute="leading" secondItem="LHm-Mc-5WL" secondAttribute="leading" id="eRP-t7-WPS"/>
+                            <constraint firstItem="atm-gv-RQG" firstAttribute="top" secondItem="LHm-Mc-5WL" secondAttribute="top" id="geu-Sc-ljR"/>
+                            <constraint firstAttribute="trailing" secondItem="atm-gv-RQG" secondAttribute="trailing" id="wHs-qX-rso"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yv4-kV-gCk"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView" destination="atm-gv-RQG" id="alp-J5-3OC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAv-1b-jcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="WZG-7l-WXN" customClass="NotepadDrawingGestureRecognizer" customModule="DCS_Kneeboard" customModuleProvider="target">
+                    <connections>
+                        <action selector="drawingGesture:" destination="eha-IM-qmF" id="lvr-qw-0QY"/>
+                    </connections>
+                </gestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-300" y="868"/>
+        </scene>
+        <!--9-Line Drawing-->
+        <scene sceneID="5A3-CC-hyB">
+            <objects>
+                <viewController storyboardIdentifier="NineLineCASDrawing" id="kiv-7C-DbP" userLabel="9-Line Drawing" customClass="NotepadDrawingViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2g-in-FMR">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kU-x7-Vv5" customClass="NotepadNineLineCASBackgroundView" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCq-Pe-2kh" customClass="NotepadDrawingView" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vnc-a3-2Q3" appends="YES" id="ttU-hF-PXP"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="NotepadBackgroundColor"/>
+                        <color key="tintColor" name="TintColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4kU-x7-Vv5" firstAttribute="bottom" secondItem="L2g-in-FMR" secondAttribute="bottom" id="2on-aV-LRt"/>
+                            <constraint firstItem="4kU-x7-Vv5" firstAttribute="top" secondItem="L2g-in-FMR" secondAttribute="top" id="46g-mf-G1d"/>
+                            <constraint firstAttribute="bottom" secondItem="LCq-Pe-2kh" secondAttribute="bottom" id="DRX-b0-5WF"/>
+                            <constraint firstItem="4kU-x7-Vv5" firstAttribute="leading" secondItem="L2g-in-FMR" secondAttribute="leading" id="Xic-wi-BQX"/>
+                            <constraint firstItem="LCq-Pe-2kh" firstAttribute="leading" secondItem="L2g-in-FMR" secondAttribute="leading" id="g5A-9g-BUP"/>
+                            <constraint firstAttribute="trailing" secondItem="4kU-x7-Vv5" secondAttribute="trailing" id="gy7-US-9i6"/>
+                            <constraint firstAttribute="trailing" secondItem="LCq-Pe-2kh" secondAttribute="trailing" id="nPf-Vj-p3M"/>
+                            <constraint firstItem="LCq-Pe-2kh" firstAttribute="top" secondItem="L2g-in-FMR" secondAttribute="top" id="sZv-zf-62I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pcF-U9-xGR"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="4kU-x7-Vv5" id="uRB-8f-gqI"/>
+                        <outlet property="drawingView" destination="LCq-Pe-2kh" id="qnU-yz-1nI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATG-pp-xGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="Vnc-a3-2Q3" customClass="NotepadDrawingGestureRecognizer" customModule="DCS_Kneeboard" customModuleProvider="target">
+                    <connections>
+                        <action selector="drawingGesture:" destination="kiv-7C-DbP" id="wOx-k6-05h"/>
+                    </connections>
+                </gestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="465" y="868"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="delete.left" catalog="system" width="128" height="104"/>
+        <image name="pencil.tip.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadBlackWhiteColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadBlueColor">
+            <color red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadGreenColor">
+            <color red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadIndigoColor">
+            <color red="0.6470588235294118" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadOrangeColor">
+            <color red="1" green="0.6470588235294118" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadRedColor">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadVioletColor">
+            <color red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NotepadYellowColor">
+            <color red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PlaceholderTextColor">
+            <color red="0.7686274509803922" green="0.77647058823529413" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PopoverBorderColor">
+            <color red="0.7686274509803922" green="0.77647058823529413" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBackgroundColor">
+            <color red="0.94901960784313721" green="0.95686274509803926" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SeparatorColor">
+            <color red="0.7686274509803922" green="0.77647058823529413" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.2627450980392157" green="0.58039215686274515" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintInvertedColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

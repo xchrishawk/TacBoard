@@ -1,0 +1,249 @@
+[
+    {
+        "key": "A-10A",
+        "title": "A-10A",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "A-10C",
+        "title": "A-10C Warthog",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": true,
+        "isPrimary": true
+    },
+    {
+        "key": "AJS37",
+        "title": "AJS 37 Viggen",
+        "author": "Leatherneck Simulations",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "AV8BNA",
+        "title": "AV-8B Night Attack V/STOL",
+        "compactTitle": "AV-8B V/STOL",
+        "author": "RAZBAM",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Bf-109K-4",
+        "title": "Bf 109 K-4 Kurfürst",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "C-101",
+        "title": "C-101 Aviojet",
+        "author": "AvioDev",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "ChristenEagleII",
+        "title": "Christen Eagle II",
+        "author": "Magnitude 3 LLC",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "F-5E",
+        "title": "F-5E Tiger II",
+        "author": "Belsimtek",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "F-14",
+        "title": "F-14A/B Tomcat",
+        "author": "Heatblur Simulations",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "F-15C",
+        "title": "F-15C",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "F-16C",
+        "title": "F-16CM Fighting Falcon",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "F-86",
+        "title": "F-86F Sabre",
+        "author": "Belsimtek",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "FA-18C",
+        "title": "F/A-18C Hornet",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": true,
+        "isPrimary": true
+    },
+    {
+        "key": "FlamingCliffs",
+        "title": "Flaming Cliffs 3",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "FW-190A8",
+        "title": "Fw 190 A-8 Anton",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "FW-190D9",
+        "title": "Fw 190 D-9 Dora",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "I-16",
+        "title": "I-16",
+        "author": "OctopusG",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "JF-17",
+        "title": "JF-17 Thunder",
+        "author": "Deka Ironwork Simulations",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Ka-50",
+        "title": "Ka-50 Black Shark",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": true
+    },
+    {
+        "key": "L-39C",
+        "title": "L-39 Albatros",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "M-2000C",
+        "title": "M-2000C",
+        "author": "RAZBAM",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Mi-8MTV2",
+        "title": "Mi-8MTV2 Magnificent Eight",
+        "compactTitle": "Mi-8MTV2",
+        "author": "Belsimtek",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "MiG-15bis",
+        "title": "MiG-15bis",
+        "author": "Belsimtek",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "MiG-19P",
+        "title": "MiG-19P Farmer",
+        "author": "RAZBAM",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "MiG-21bis",
+        "title": "MiG-21bis",
+        "author": "Leatherneck Simulations",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "MiG-29",
+        "title": "MiG-29",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "P-47D-30",
+        "title": "P-47D Thunderbolt",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "P-51D",
+        "title": "P-51D Mustang",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "SA342",
+        "title": "SA342 Gazelle",
+        "author": "Polychop Simulations",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "SpitfireLFMkIX",
+        "title": "Spitfire LF Mk IX",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Su-25A",
+        "title": "Su-25",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Su-27",
+        "title": "Su-27",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Su-33",
+        "title": "Su-33",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "UH-1H",
+        "title": "UH-1H Huey",
+        "author": "Belsimtek",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "Yak-52",
+        "title": "Yak-52",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    }
+]

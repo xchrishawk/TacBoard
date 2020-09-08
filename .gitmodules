@@ -1,0 +1,3 @@
+[submodule "TacBoard/Resources/Data/Remote"]
+	path = TacBoard/Resources/Data/Remote
+	url = git@github.com:xchrishawk/TacBoardData.git

@@ -1,0 +1,183 @@
+/* 
+  Localizable.strings
+  TacBoard
+
+  Created by Vig, Christopher on 8/2/20.
+  Copyright © 2020 Christopher Vig. All rights reserved.
+*/
+
+// LANGUAGE = Base
+
+// Generic
+"genericYes"                                = "Yes";
+"genericNo"                                 = "No";
+"genericOK"                                 = "OK";
+"genericCancel"                             = "Cancel";
+"genericReset"                              = "Reset";
+"genericNA"                                 = "N/A";
+"genericOther"                              = "Other";
+"genericSelected"                           = "Selected";
+"genericVersion"                            = "Version";
+"genericDebug"                              = "Debug";
+"genericRelease"                            = "Release";
+"genericSlashSeparator"                     = "/";
+"genericCommaSeparator"                     = ",";
+"genericXSeparator"                         = "×";
+"genericNorth"                              = "North";
+"genericSouth"                              = "South";
+"genericEast"                               = "East";
+"genericWest"                               = "West";
+"genericNorthLetter"                        = "N";
+"genericSouthLetter"                        = "S";
+"genericEastLetter"                         = "E";
+"genericWestLetter"                         = "W";
+"genericChannel"                            = "Channel";
+"genericRunway"                             = "Runway";
+"genericIdentifier"                         = "ID";
+
+// About Page
+"aboutAppInfoSection"                       = "App Info";
+"aboutAppInfoItemName"                      = "App Name";
+"aboutAppInfoItemVersion"                   = "Version";
+"aboutAppInfoItemBuild"                     = "Build Number";
+"aboutAppInfoItemType"                      = "Build Type";
+"aboutAppInfoItemDate"                      = "Build Date";
+"aboutAppInfoItemCommit"                    = "Git Commit";
+"aboutDataInfoSection"                      = "Data";
+"aboutDataInfoItemAirports"                 = "Airports";
+"aboutDataInfoItemChecklists"               = "Checklists";
+"aboutDataInfoItemReference"                = "Reference Documents";
+"aboutDebugSection"                         = "Debug";
+"aboutDebugUseFallbackData"                 = "Use Fallback Data Indices";
+"aboutDebugUseLocalData"                    = "Use Local Data Indices";
+"aboutDebugUseStagingData"                  = "Use Staging Data Indices";
+"aboutDebugUseProductionData"               = "Use Production Data Indices";
+
+// Airports
+"airportChartDisclaimer"                    = "Not for use in real-world navigation";
+"airportDetailItemIdentifier"               = "Identifier";
+"airportDetailItemCallsign"                 = "Callsign";
+"airportDetailItemName"                     = "Name";
+"airportDetailItemType"                     = "Type";
+"airportDetailItemTACAN"                    = "TACAN";
+"airportDetailItemILS"                      = "ILS";
+"airportDetailItemCity"                     = "City";
+"airportDetailItemCountry"                  = "Country";
+"airportDetailItemLatLon"                   = "Lat/Lon";
+"airportDetailItemElevation"                = "Elevation";
+"airportDetailItemMagneticVariation"        = "Mag Var";
+"airportDetailSectionInformation"           = "Information";
+"airportDetailSectionLocation"              = "Location";
+"airportDetailSectionImages"                = "Images";
+"airportDetailSectionNavigation"            = "Navigation";
+"airportDetailSectionCommunications"        = "Communications";
+"airportDetailSectionRunways"               = "Runways";
+"airportListEnableTerrainModule"            = "Enable At Least One Terrain Module";
+"airportListNoMatches"                      = "No Matching Airports Found";
+"airportTypeCivilian"                       = "Civilian";
+"airportTypeMilitary"                       = "Military";
+
+// Checklists
+"checklistBinderEnableAircraftModule"       = "Enable At Least One Aircraft Module";
+"checklistBinderNoMatches"                  = "No Matching Checklists Found";
+"checklistFoldersSectionTitle"              = "Folders";
+"checklistProceduresSectionTitle"           = "Procedures";
+"checklistResetAllAlertBinderMessage"       = "All checklists will be reset to incomplete.";
+"checklistResetAllAlertFolderMessage"       = "All checklists in %@ will be reset to incomplete.";
+"checklistResetAllAlertTitle"               = "Reset All Checklists?";
+
+// DisplayMode
+"displayModeAuto"                           = "Auto";
+"displayModeDay"                            = "Day";
+"displayModeNight"                          = "Night";
+
+// Home
+"homeAboutPage"                             = "About";
+"homeSettingsPage"                          = "Settings";
+"homeHelpPage"                              = "Help";
+"homeAllModulesPage"                        = "All Modules";
+"homeEnabledAircraftModulesSectionTitle"    = "Enabled Aircraft";
+"homeEnabledTerrainModulesSectionTitle"     = "Enabled Terrain";
+
+// ISO3166
+"iso3166Georgia"                            = "Georgia";
+"iso3166Russia"                             = "Russia";
+"iso3166UnitedStates"                       = "United States";
+
+// LatLon.Format
+"latLonFormatDegrees"                       = "D";
+"latLonFormatDegreesMinutes"                = "DM";
+"latLonFormatDegreesMinutesSeconds"         = "DMS";
+
+// NavaidType
+"navaidTypeVOR"                             = "VOR";
+"navaidTypeDME"                             = "DME";
+"navaidTypeVORDME"                          = "VOR/DME";
+"navaidTypeTACAN"                           = "TACAN";
+"navaidTypeVORTAC"                          = "VORTAC";
+"navaidTypeRSBN"                            = "RSBN";
+"navaidTypeNDB"                             = "NDB";
+"navaidTypeInnerMarker"                     = "IM";
+"navaidTypeOuterMarker"                     = "OM";
+"navaidTypeILS"                             = "ILS";
+"navaidTypePRMG"                            = "PRMG";
+"navaidTypeICLS"                            = "ICLS";
+
+// NineLineCAS
+"nineLineCASItem1"                          = "1. INITIAL POINT / BATTLE POSITION";
+"nineLineCASItem1Short"                     = "1. IP / BP";
+"nineLineCASItem2"                          = "2. HEADING / OFFSET";
+"nineLineCASItem2Short"                     = "2. HDG / OFST";
+"nineLineCASItem3"                          = "3. DISTANCE";
+"nineLineCASItem3Short"                     = "3. DST";
+"nineLineCASItem4"                          = "4. TARGET ELEVATION";
+"nineLineCASItem4Short"                     = "4. TGT ELEV";
+"nineLineCASItem5"                          = "5. TARGET DESCRIPTION";
+"nineLineCASItem5Short"                     = "5. TGT DESC";
+"nineLineCASItem6"                          = "6. TARGET LOCATION";
+"nineLineCASItem6Short"                     = "6. TGT LOC";
+"nineLineCASItem7"                          = "7. MARK TYPE / CODE / LTL";
+"nineLineCASItem7Short"                     = "7. MARK";
+"nineLineCASItem8"                          = "8. FRIENDLIES";
+"nineLineCASItem8Short"                     = "8. FRIENDLIES";
+"nineLineCASItem9"                          = "9. EGRESS";
+"nineLineCASItem9Short"                     = "9. EGRESS";
+"nineLineCASRemarks"                        = "REMARKS";
+"nineLineCASRemarksShort"                   = "REMARKS";
+
+// NotepadPage
+"notepadPageBlank1"                         = "Blank 1";
+"notepadPageBlank2"                         = "Blank 2";
+"notepadPageNineLineCAS"                    = "9-Line CAS";
+
+// RadioFrequencyBand
+"radioFrequencyBandHF"                      = "HF";
+"radioFrequencyBandVHFLow"                  = "VHF";
+"radioFrequencyBandVHFHigh"                 = "VHF";
+"radioFrequencyBandUHF"                     = "UHF";
+
+// RadioModulationType
+"radioModulationTypeAM"                     = "AM";
+"radioModulationTypeFM"                     = "FM";
+"radioModulationTypeAMFM"                   = "AM-FM";
+
+// Reference
+"referenceBinderNoMatches"                  = "No Matching Documents Found";
+"referenceFoldersSectionTitle"              = "Folders";
+"referenceDocumentDisclaimer"               = "Not for use in real-world aviation";
+"referenceDocumentsSectionTitle"            = "Documents";
+
+// Settings
+"settingsResetAlertTitle"                   = "Reset All Settings";
+"settingsResetAlertMessage"                 = "All application settings will be set to their default state.";
+
+// TerrainModule
+"terrainModuleCaucasus"                     = "Caucasus";
+"terrainModuleNevada"                       = "Nevada";
+"terrainModuleNormandy"                     = "Normandy";
+"terrainModulePersianGulf"                  = "Persian Gulf";
+"terrainModuleTheChannel"                   = "The Channel";
+
+// UnitFormat
+"unitFormatImperial"                        = "Imperial";
+"unitFormatMetric"                          = "Metric";

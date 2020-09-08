@@ -1,0 +1,38 @@
+[
+    {
+        "key": "Caucasus",
+        "title": "Caucasus",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": true,
+        "isPrimary": true
+    },
+    {
+        "key": "Nevada",
+        "title": "Nevada Test and Training Range",
+        "compactTitle": "Nevada",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": true
+    },
+    {
+        "key": "Normandy",
+        "title": "Normandy 1944",
+        "author": "Ugra Media",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "PersianGulf",
+        "title": "Persian Gulf",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    },
+    {
+        "key": "TheChannel",
+        "title": "The Channel",
+        "author": "Eagle Dynamics",
+        "isDefaultEnabled": false,
+        "isPrimary": false
+    }
+]

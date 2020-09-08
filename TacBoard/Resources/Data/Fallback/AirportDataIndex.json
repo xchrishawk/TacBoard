@@ -1,0 +1,2699 @@
+{
+    "version": "0.1.0",
+    "description": "TacBoard Airport Data",
+    "objects": [
+        {
+            "terrainModule" : "Caucasus",
+            "airports" : [
+                {
+                    "identifier": "UG5X",
+                    "type": "Civilian",
+                    "callsign": "Kobuleti",
+                    "name": "Kobuleti",
+                    "unlocalizedName": "ქობულეთი",
+                    "city": "Kobuleti",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 41, "min": 55.797 },
+                        "lon": { "dir": "E", "deg": 41, "min": 51.809 }
+                    },
+                    "elevation": 59.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.932878 },
+                                "lon": { "deg": 41.879171 }
+                            },
+                            "heading": 64.0,
+                            "frequency": 111500000.0,
+                            "identifier": "IKB",
+                            "runwayIdentifier": "07",
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 41.930770 },
+                                "lon": { "deg": 41.861970 }
+                            },
+                            "channel": "67X",
+                            "identifier": "KBL"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 133000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 40800000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4350000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 262000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "07",
+                            "reciprocalIdentifier": "25",
+                            "heading": 64.0,
+                            "reciprocalHeading": 244.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 55.640 },
+                                "lon": { "dir": "E", "deg": 41, "min": 50.975 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 55.952 },
+                                "lon": { "dir": "E", "deg": 41, "min": 52.642 }
+                            },
+                            "length": 7870.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UG23",
+                    "type": "Military",
+                    "callsign": "Lachuga",
+                    "name": "Gudauta",
+                    "unlocalizedName": "გუდაუთა",
+                    "city": "Gudauta",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 43, "min": 6.856 },
+                        "lon": { "dir": "E", "deg": 40, "min": 34.187 }
+                    },
+                    "elevation": 69.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "NDB",
+                            "latLon": {
+                                "lat": { "deg": 43.099003 },
+                                "lon": { "deg": 40.578961 }
+                            },
+                            "frequency": 395000.0,
+                            "identifier": "XC"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 130000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 40200000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4200000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 259000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "15",
+                            "reciprocalIdentifier": "33",
+                            "heading": 145.0,
+                            "reciprocalHeading": 325.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 7.468 },
+                                "lon": { "dir": "E", "deg": 40, "min": 33.817 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 6.242 },
+                                "lon": { "dir": "E", "deg": 40, "min": 34.555 }
+                            },
+                            "length": 8200.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UG24",
+                    "type": "Civilian",
+                    "callsign": "Soganlug",
+                    "name": "Tbilisi - Soganlug",
+                    "unlocalizedName": "თბილისი - სოგანლუღი",
+                    "city": "Tbilisi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 41, "min": 38.970 },
+                        "lon": { "dir": "E", "deg": 44, "min": 56.304 }
+                    },
+                    "elevation": 1473.0,
+                    "magneticVariation": 6.0,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 139000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 42000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4650000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 268000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "13",
+                            "reciprocalIdentifier": "31",
+                            "heading": 126.0,
+                            "reciprocalHeading": 306.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 39.475 },
+                                "lon": { "dir": "E", "deg": 44, "min": 55.742 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 38.464 },
+                                "lon": { "dir": "E", "deg": 44, "min": 56.866 }
+                            },
+                            "length": 8120.0,
+                            "width": 262.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UG27",
+                    "type": "Military",
+                    "callsign": "Vaziani",
+                    "name": "Vaziani",
+                    "unlocalizedName": "ვაზიანი",
+                    "city": "Tbilisi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 41, "min": 37.743 },
+                        "lon": { "dir": "E", "deg": 45, "min": 1.632 }
+                    },
+                    "elevation": 1478.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.619095 },
+                                "lon": { "deg": 45.037014 }
+                            },
+                            "heading": 129.5,
+                            "frequency": 108750000.0,
+                            "identifier": "IVZ",
+                            "runwayIdentifier": "14"
+                        },
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.639015 },
+                                "lon": { "deg": 45.017397 }
+                            },
+                            "heading": 309.5,
+                            "frequency": 108750000.0,
+                            "identifier": "IVZ",
+                            "runwayIdentifier": "32"
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 41.630707 },
+                                "lon": { "deg": 45.027340 }
+                            },
+                            "channel": "22X",
+                            "identifier": "VAS"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 140000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 42200000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4700000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 269000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "14",
+                            "reciprocalIdentifier": "32",
+                            "heading": 129.5,
+                            "reciprocalHeading": 309.5,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 38.275 },
+                                "lon": { "dir": "E", "deg": 45, "min": 1.108 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 37.215 },
+                                "lon": { "dir": "E", "deg": 45, "min": 2.153 }
+                            },
+                            "length": 8150.0,
+                            "width": 203.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UGKO",
+                    "type": "Civilian",
+                    "callsign": "Kutaisi",
+                    "name": "Kutaisi - Kopitnari",
+                    "unlocalizedName": "ქუთაისი - კოპიტნარი",
+                    "city": "Kutaisi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 42, "min": 10.657 },
+                        "lon": { "dir": "E", "deg": 42, "min": 28.874 }
+                    },
+                    "elevation": 148.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 42.179695 },
+                                "lon": { "deg": 42.497820 }
+                            },
+                            "heading": 68.0,
+                            "frequency": 109750000.0,
+                            "identifier": "IKS",
+                            "runwayIdentifier": "08"
+                        },
+                        {
+                            "type": "NDB",
+                            "latLon": {
+                                "lat": { "deg": 42.174289 },
+                                "lon": { "deg": 42.454567 }
+                            },
+                            "frequency": 477000.0,
+                            "identifier": "TI"
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 42.178443 },
+                                "lon": { "deg": 42.479213 }
+                            },
+                            "channel": "44X",
+                            "identifier": "KTS"
+                        },
+                        {
+                            "type": "VOR",
+                            "latLon": {
+                                "lat": { "deg": 42.174389 },
+                                "lon": { "deg": 42.455276 }
+                            },
+                            "frequency": 113600000.0,
+                            "identifier": "KT"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 134000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 41000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 263000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "08",
+                            "reciprocalIdentifier": "26",
+                            "heading": 68.0,
+                            "reciprocalHeading": 248.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 10.544 },
+                                "lon": { "dir": "E", "deg": 42, "min": 27.988 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 10.768 },
+                                "lon": { "dir": "E", "deg": 42, "min": 29.759 }
+                            },
+                            "length": 8200.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UGKS",
+                    "type": "Military",
+                    "callsign": "Tzokot",
+                    "name": "Senaki - Kolkhi",
+                    "unlocalizedName": "სენაკი - კოლხი",
+                    "city": "Senaki",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 42, "min": 14.434 },
+                        "lon": { "dir": "E", "deg": 42, "min": 2.861 }
+                    },
+                    "elevation": 43.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 42.238667 },
+                                "lon": { "deg": 42.063400 }
+                            },
+                            "heading": 88.7,
+                            "frequency": 108900000.0,
+                            "identifier": "ITS",
+                            "runwayIdentifier": "09"
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 42.242087 },
+                                "lon": { "deg": 42.047020 }
+                            },
+                            "channel": "31X",
+                            "identifier": "TSK"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 132000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 40600000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4300000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 261000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "09",
+                            "reciprocalIdentifier": "27",
+                            "heading": 88.7,
+                            "reciprocalHeading": 268.7,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 14.573 },
+                                "lon": { "dir": "E", "deg": 42, "min": 2.024 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 14.336 },
+                                "lon": { "dir": "E", "deg": 42, "min": 3.695 }
+                            },
+                            "length": 7790.0,
+                            "width": 164.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UGSB",
+                    "type": "Civilian",
+                    "callsign": "Druzhinnik",
+                    "name": "Batumi",
+                    "unlocalizedName": "ბათუმი",
+                    "city": "Batumi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 41, "min": 36.562 },
+                        "lon": { "dir": "E", "deg": 41, "min": 36.034 }
+                    },
+                    "elevation": 33.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.601731 },
+                                "lon": { "deg": 41.612203 }
+                            },
+                            "heading": 119.6,
+                            "frequency": 110300000.0,
+                            "identifier": "ILU",
+                            "runwayIdentifier": "13"
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 41.610899 },
+                                "lon": { "deg": 41.600419 }
+                            },
+                            "channel": "16X",
+                            "identifier": "BTM"
+                        },
+                        {
+                            "type": "NDB",
+                            "latLon": {
+                                "lat": { "deg": 41.602594 },
+                                "lon": { "deg": 41.613238 }
+                            },
+                            "frequency": 430000.0,
+                            "identifier": "LU"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 131000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 40400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4250000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 260000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "13",
+                            "reciprocalIdentifier": "31",
+                            "heading": 119.6,
+                            "reciprocalHeading": 299.6,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 36.995 },
+                                "lon": { "dir": "E", "deg": 41, "min": 35.378 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 36.127 },
+                                "lon": { "dir": "E", "deg": 41, "min": 36.694 }
+                            },
+                            "length": 8050.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UGSS",
+                    "type": "Civilian",
+                    "callsign": "Uklad",
+                    "name": "Sukhumi - Babushara",
+                    "unlocalizedName": "სოხუმი - ბაბუშარა",
+                    "city": "Sukhumi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 42, "min": 51.677 },
+                        "lon": { "dir": "E", "deg": 41, "min": 7.474 }
+                    },
+                    "elevation": 30.0,
+                    "magneticVariation": 6.0,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 129000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 40000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4150000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 258000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "12",
+                            "reciprocalIdentifier": "30",
+                            "heading": 110.0,
+                            "reciprocalHeading": 290.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 52.179 },
+                                "lon": { "dir": "E", "deg": 41, "min": 6.383 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 42, "min": 51.172 },
+                                "lon": { "dir": "E", "deg": 41, "min": 8.570 }
+                            },
+                            "length": 11610.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "UGTB",
+                    "type": "Civilian",
+                    "callsign": "Lochini",
+                    "name": "Tbilisi - Lochini",
+                    "unlocalizedName": "ტბილისი - ლოხინი",
+                    "city": "Tbilisi",
+                    "country": "GE",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 41, "min": 40.095 },
+                        "lon": { "dir": "E", "deg": 44, "min": 57.283 }
+                    },
+                    "elevation": 1525.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.657953 },
+                                "lon": { "deg": 44.967988 }
+                            },
+                            "heading": 122.0,
+                            "frequency": 110300000.0,
+                            "identifier": "INA",
+                            "runwayIdentifier": "13R"
+                        },
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 41.678562 },
+                                "lon": { "deg": 44.941458 }
+                            },
+                            "heading": 302.0,
+                            "frequency": 108900000.0,
+                            "identifier": "INA",
+                            "runwayIdentifier": "31L"
+                        },
+                        {
+                            "type": "VOR",
+                            "latLon": {
+                                "lat": { "deg": 41.670555 },
+                                "lon": { "deg": 44.946945 }
+                            },
+                            "frequency": 113700000.0,
+                            "identifier": "TB"
+                        },
+                        {
+                            "type": "TACAN",
+                            "latLon": {
+                                "lat": { "deg": 41.670577 },
+                                "lon": { "deg": 44.930298 }
+                            },
+                            "channel": "25X",
+                            "identifier": "GTB"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 138000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 41800000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4600000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 267000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "13R",
+                            "reciprocalIdentifier": "31L",
+                            "heading": 122.0,
+                            "reciprocalHeading": 302.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 40.654 },
+                                "lon": { "dir": "E", "deg": 44, "min": 56.565 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 41, "min": 39.537 },
+                                "lon": { "dir": "E", "deg": 44, "min": 58.003 }
+                            },
+                            "length": 9580.0,
+                            "width": 150.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKA",
+                    "type": "Civilian",
+                    "callsign": "Anapa",
+                    "name": "Anapa - Vityazevo",
+                    "unlocalizedName": "Анапа - Витязево",
+                    "city": "Anapa",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 45, "min": 0.298 },
+                        "lon": { "dir": "E", "deg": 37, "min": 20.870 }
+                    },
+                    "elevation": 148.0,
+                    "magneticVariation": 6.0,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 121000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 38400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 3750000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 250000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "04",
+                            "reciprocalIdentifier": "22",
+                            "heading": 36.0,
+                            "reciprocalHeading": 216.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 59.741 },
+                                "lon": { "dir": "E", "deg": 37, "min": 20.099 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 0.853 },
+                                "lon": { "dir": "E", "deg": 37, "min": 21.642 }
+                            },
+                            "length": 9510.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKG",
+                    "type": "Civilian",
+                    "callsign": "Maslenka",
+                    "name": "Gelendzhik",
+                    "unlocalizedName": "Геленджик",
+                    "city": "Gelendzhik",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 44, "min": 34.364 },
+                        "lon": { "dir": "E", "deg": 38, "min": 0.684 }
+                    },
+                    "elevation": 82.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "NDB",
+                            "latLon": {
+                                "lat": { "deg": 44.569658 },
+                                "lon": { "deg": 38.008795 }
+                            },
+                            "frequency": 1000000.0,
+                            "identifier": "GN"
+                        },
+                        {
+                            "type": "VOR",
+                            "latLon": {
+                                "lat": { "deg": 44.572498 },
+                                "lon": { "deg": 38.012222 }
+                            },
+                            "frequency": 114300000.0,
+                            "identifier": "GN"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 126000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 39400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 255000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "04",
+                            "reciprocalIdentifier": "22",
+                            "heading": 34.0,
+                            "reciprocalHeading": 214.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 34.014 },
+                                "lon": { "dir": "E", "deg": 38, "min": 0.219 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 34.715 },
+                                "lon": { "dir": "E", "deg": 38, "min": 1.149 }
+                            },
+                            "length": 5905.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKH",
+                    "type": "Military",
+                    "callsign": "Sokrat",
+                    "name": "Maykop - Khanskaya",
+                    "unlocalizedName": "Майкоп - Ханская",
+                    "city": "Maykop",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 44, "min": 40.874 },
+                        "lon": { "dir": "E", "deg": 40, "min": 2.112 }
+                    },
+                    "elevation": 591.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 44.697894 },
+                                "lon": { "deg": 40.057712 }
+                            },
+                            "heading": 33.0,
+                            "frequency": 836000000.0,
+                            "channel": "36",
+                            "identifier": "DG",
+                            "runwayIdentifier": "04"
+                        },
+                        {
+                            "type": "RSBN",
+                            "latLon": {
+                                "lat": { "deg": 44.679754 },
+                                "lon": { "deg": 40.035455 }
+                            },
+                            "heading": 33.0,
+                            "frequency": 834000000.0,
+                            "channel": "34",
+                            "identifier": "DG",
+                            "runwayIdentifier": "04"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 125000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 39200000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 3950000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 254000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "04",
+                            "reciprocalIdentifier": "22",
+                            "heading": 33.0,
+                            "reciprocalHeading": 213.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 40.257 },
+                                "lon": { "dir": "E", "deg": 40, "min": 1.276 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 41.494 },
+                                "lon": { "dir": "E", "deg": 40, "min": 2.946 }
+                            },
+                            "length": 10495.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKK",
+                    "type": "Military",
+                    "callsign": "Krasnodar",
+                    "name": "Krasnodar - Pashkovsky",
+                    "unlocalizedName": "Краснодар-Пашковский",
+                    "city": "Krasnodar",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 45, "min": 2.276 },
+                        "lon": { "dir": "E", "deg": 39, "min": 11.282 }
+                    },
+                    "elevation": 112.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "VOR",
+                            "latLon": {
+                                "lat": { "deg": 45.020832 },
+                                "lon": { "deg": 39.163887 }
+                            },
+                            "frequency": 115800000.0,
+                            "identifier": "KN"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 128000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 39800000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4100000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 257000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "05L",
+                            "reciprocalIdentifier": "23R",
+                            "heading": 41.0,
+                            "reciprocalHeading": 221.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 1.991 },
+                                "lon": { "dir": "E", "deg": 39, "min": 8.464 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 2.749 },
+                                "lon": { "dir": "E", "deg": 39, "min": 9.800 }
+                            },
+                            "length": 7430.0,
+                            "width": 197.0
+                        },
+                        {
+                            "identifier": "05R",
+                            "reciprocalIdentifier": "23L",
+                            "heading": 41.0,
+                            "reciprocalHeading": 221.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 1.757 },
+                                "lon": { "dir": "E", "deg": 39, "min": 10.367 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 2.794 },
+                                "lon": { "dir": "E", "deg": 39, "min": 12.198 }
+                            },
+                            "length": 10170.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKL",
+                    "type": "Military",
+                    "callsign": "Volokno",
+                    "name": "Krasnodar - Center",
+                    "unlocalizedName": "Краснодар",
+                    "city": "Krasnodar",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 45, "min": 5.216 },
+                        "lon": { "dir": "E", "deg": 38, "min": 56.415 }
+                    },
+                    "elevation": 98.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 45.086520 },
+                                "lon": { "deg": 38.967638 }
+                            },
+                            "heading": 81.0,
+                            "frequency": 838000000.0,
+                            "channel": "38",
+                            "identifier": "MB",
+                            "runwayIdentifier": "09"
+                        },
+                        {
+                            "type": "RSBN",
+                            "latLon": {
+                                "lat": { "deg": 45.083171 },
+                                "lon": { "deg": 38.927839 }
+                            },
+                            "heading": 81.0,
+                            "frequency": 840000000.0,
+                            "channel": "40",
+                            "identifier": "MB",
+                            "runwayIdentifier": "09"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 122000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 38600000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 3800000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 251000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "09",
+                            "reciprocalIdentifier": "27",
+                            "heading": 81.0,
+                            "reciprocalHeading": 261.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 5.231 },
+                                "lon": { "dir": "E", "deg": 38, "min": 55.467 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 45, "min": 5.202 },
+                                "lon": { "dir": "E", "deg": 38, "min": 57.362 }
+                            },
+                            "length": 8200.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKN",
+                    "type": "Military",
+                    "callsign": "Myshkako",
+                    "name": "Novorossiysk",
+                    "unlocalizedName": "Новороссийск",
+                    "city": "Novorossiysk",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 44, "min": 40.084 },
+                        "lon": { "dir": "E", "deg": 37, "min": 46.694 }
+                    },
+                    "elevation": 131.0,
+                    "magneticVariation": 6.0,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 123000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 38800000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 3850000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 252000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "04",
+                            "reciprocalIdentifier": "22",
+                            "heading": 36.0,
+                            "reciprocalHeading": 216.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 39.744 },
+                                "lon": { "dir": "E", "deg": 37, "min": 46.213 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 40.424 },
+                                "lon": { "dir": "E", "deg": 37, "min": 47.176 }
+                            },
+                            "length": 5905.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URKW",
+                    "type": "Military",
+                    "callsign": "Taymyr",
+                    "name": "Krymsk",
+                    "unlocalizedName": "Крымск",
+                    "city": "Krymsk",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 44, "min": 58.073 },
+                        "lon": { "dir": "E", "deg": 37, "min": 59.697 }
+                    },
+                    "elevation": 66.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 44.952449 },
+                                "lon": { "deg": 37.974655 }
+                            },
+                            "heading": 213.5,
+                            "frequency": 826000000.0,
+                            "channel": "26",
+                            "identifier": "KW",
+                            "runwayIdentifier": "22"
+                        },
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 44.982907 },
+                                "lon": { "deg": 38.014740 }
+                            },
+                            "heading": 33.5,
+                            "frequency": 826000000.0,
+                            "channel": "26",
+                            "identifier": "OX",
+                            "runwayIdentifier": "04"
+                        },
+                        {
+                            "type": "RSBN",
+                            "latLon": {
+                                "lat": { "deg": 44.966653 },
+                                "lon": { "deg": 37.996805 }
+                            },
+                            "heading": 33.5,
+                            "frequency": 828000000.0,
+                            "channel": "28",
+                            "identifier": "KW",
+                            "runwayIdentifier": "04"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 124000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 39000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 3900000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 253000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "04",
+                            "reciprocalIdentifier": "22",
+                            "heading": 33.5,
+                            "reciprocalHeading": 213.5,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 57.562 },
+                                "lon": { "dir": "E", "deg": 37, "min": 59.026 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 58.584 },
+                                "lon": { "dir": "E", "deg": 38, "min": 0.369 }
+                            },
+                            "length": 8530.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URMM",
+                    "type": "Civilian",
+                    "callsign": "Minvody",
+                    "name": "Mineralnye Vody",
+                    "unlocalizedName": "Минеральные Воды",
+                    "city": "Mineralnye Vody",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 44, "min": 13.672 },
+                        "lon": { "dir": "E", "deg": 43, "min": 4.870 }
+                    },
+                    "elevation": 1050.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 44.238297 },
+                                "lon": { "deg": 43.058263 }
+                            },
+                            "heading": 289.3,
+                            "frequency": 109300000.0,
+                            "identifier": "IMW",
+                            "runwayIdentifier": "30"
+                        },
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 44.217421 },
+                                "lon": { "deg": 43.104064 }
+                            },
+                            "heading": 109.3,
+                            "frequency": 111700000.0,
+                            "identifier": "IMD",
+                            "runwayIdentifier": "12"
+                        },
+                        {
+                            "type": "VOR",
+                            "latLon": {
+                                "lat": { "deg": 44.239445 },
+                                "lon": { "deg": 43.054165 }
+                            },
+                            "frequency": 117100000.0,
+                            "identifier": "MN"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 135000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 41200000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4450000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 264000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "12",
+                            "reciprocalIdentifier": "30",
+                            "heading": 109.3,
+                            "reciprocalHeading": 289.3,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 14.254 },
+                                "lon": { "dir": "E", "deg": 43, "min": 3.591 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 44, "min": 13.089 },
+                                "lon": { "dir": "E", "deg": 43, "min": 6.148 }
+                            },
+                            "length": 13350.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URMN",
+                    "type": "Civilian",
+                    "callsign": "Nalchik",
+                    "name": "Nalchik",
+                    "unlocalizedName": "Нальчик",
+                    "city": "Nalchik",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 43, "min": 30.842 },
+                        "lon": { "dir": "E", "deg": 43, "min": 38.193 }
+                    },
+                    "elevation": 1410.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 43.508738 },
+                                "lon": { "deg": 43.622345 }
+                            },
+                            "heading": 229.5,
+                            "frequency": 110500000.0,
+                            "identifier": "INL",
+                            "runwayIdentifier": "24"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 136000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 41400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4500000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 265000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "06",
+                            "reciprocalIdentifier": "24",
+                            "heading": 49.5,
+                            "reciprocalHeading": 229.5,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 30.562 },
+                                "lon": { "dir": "E", "deg": 43, "min": 37.443 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 31.122 },
+                                "lon": { "dir": "E", "deg": 43, "min": 38.943 }
+                            },
+                            "length": 7545.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URMO",
+                    "type": "Civilian",
+                    "callsign": "Stavok",
+                    "name": "Beslan",
+                    "unlocalizedName": "Беслан",
+                    "city": "Beslan",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 43, "min": 12.342 },
+                        "lon": { "dir": "E", "deg": 44, "min": 36.346 }
+                    },
+                    "elevation": 1771.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 43.202754 },
+                                "lon": { "deg": 44.625580 }
+                            },
+                            "heading": 87.5,
+                            "frequency": 110500000.0,
+                            "identifier": "ICH",
+                            "runwayIdentifier": "10"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 141000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 42400000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4750000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 270000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "10",
+                            "reciprocalIdentifier": "28",
+                            "heading": 87.5,
+                            "reciprocalHeading": 267.5,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 12.501 },
+                                "lon": { "dir": "E", "deg": 44, "min": 35.275 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 12.182 },
+                                "lon": { "dir": "E", "deg": 44, "min": 37.416 }
+                            },
+                            "length": 9890.0,
+                            "width": 164.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "URSS",
+                    "type": "Civilian",
+                    "callsign": "Sochi",
+                    "name": "Sochi - Adler",
+                    "unlocalizedName": "Сочи - А́длер",
+                    "city": "Sochi",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 43, "min": 26.669 },
+                        "lon": { "dir": "E", "deg": 39, "min": 56.849 }
+                    },
+                    "elevation": 98.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "NDB",
+                            "latLon": {
+                                "lat": { "deg": 43.435164 },
+                                "lon": { "deg": 39.911051 }
+                            },
+                            "frequency": 761000.0,
+                            "identifier": "CO"
+                        },
+                        {
+                            "type": "ILS",
+                            "latLon": {
+                                "lat": { "deg": 43.450492 },
+                                "lon": { "deg": 39.960744 }
+                            },
+                            "heading": 56.0,
+                            "frequency": 111100000.0,
+                            "identifier": "ISO",
+                            "runwayIdentifier": "06"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 127000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 39600000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4050000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 256000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "02",
+                            "reciprocalIdentifier": "20",
+                            "heading": 20.0,
+                            "reciprocalHeading": 200.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 26.149 },
+                                "lon": { "dir": "E", "deg": 39, "min": 56.642 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 27.167 },
+                                "lon": { "dir": "E", "deg": 39, "min": 57.459 }
+                            },
+                            "length": 7220.0,
+                            "width": 197.0
+                        },
+                        {
+                            "identifier": "06",
+                            "reciprocalIdentifier": "24",
+                            "heading": 56.0,
+                            "reciprocalHeading": 236.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 26.337 },
+                                "lon": { "dir": "E", "deg": 39, "min": 55.432 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 26.997 },
+                                "lon": { "dir": "E", "deg": 39, "min": 57.540 }
+                            },
+                            "length": 10170.0,
+                            "width": 197.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "XRMF",
+                    "type": "Military",
+                    "callsign": "Assistent",
+                    "name": "Mozdok",
+                    "unlocalizedName": "Моздок",
+                    "city": "Mozdok",
+                    "country": "RU",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 43, "min": 47.504 },
+                        "lon": { "dir": "E", "deg": 44, "min": 35.981 }
+                    },
+                    "elevation": 499.0,
+                    "magneticVariation": 6.0,
+                    "navaids": [
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 43.791382 },
+                                "lon": { "deg": 44.632072 }
+                            },
+                            "heading": 76.8,
+                            "frequency": 822000000.0,
+                            "channel": "22",
+                            "identifier": "MZ",
+                            "runwayIdentifier": "08"
+                        },
+                        {
+                            "type": "PRMG",
+                            "latLon": {
+                                "lat": { "deg": 43.792027 },
+                                "lon": { "deg": 44.572203 }
+                            },
+                            "heading": 256.8,
+                            "frequency": 822000000.0,
+                            "channel": "22",
+                            "identifier": "MZ",
+                            "runwayIdentifier": "26"
+                        },
+                        {
+                            "type": "RSBN",
+                            "latLon": {
+                                "lat": { "deg": 43.790367 },
+                                "lon": { "deg": 44.602658 }
+                            },
+                            "heading": 256.8,
+                            "frequency": 820000000.0,
+                            "channel": "20",
+                            "identifier": "MZ",
+                            "runwayIdentifier": "26"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 137000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "VHFLow",
+                            "modulation": "FM",
+                            "frequency": 41600000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "HF",
+                            "modulation": "AM",
+                            "frequency": 4550000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 266000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "08",
+                            "reciprocalIdentifier": "26",
+                            "heading": 76.8,
+                            "reciprocalHeading": 256.8,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 47.514 },
+                                "lon": { "dir": "E", "deg": 44, "min": 34.984 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 43, "min": 47.495 },
+                                "lon": { "dir": "E", "deg": 44, "min": 37.279 }
+                            },
+                            "length": 10235.0,
+                            "width": 230.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "terrainModule": "Nevada",
+            "airports": [
+                {
+                    "identifier": "KBTY",
+                    "type": "Civilian",
+                    "callsign": "Beatty",
+                    "name": "Beatty",
+                    "unlocalizedName": null,
+                    "city": "Beatty, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 51.668 },
+                        "lon": { "dir": "W", "deg": 116, "min": 47.183 }
+                    },
+                    "elevation": 3169.0,
+                    "magneticVariation": 12.9,
+                    "navaids": [
+                        {
+                            "type": "VORTAC",
+                            "frequency": 114700000.0,
+                            "channel": "94X",
+                            "identifier": "BTY",
+                            "offFieldHeading": 135.0,
+                            "offFieldDistance": 4.1
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "16",
+                            "reciprocalIdentifier": "34",
+                            "heading": 168.0,
+                            "reciprocalHeading": 348.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 52.131 },
+                                "lon": { "dir": "W", "deg": 116, "min": 47.184 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 51.205 },
+                                "lon": { "dir": "W", "deg": 116, "min": 47.184 }
+                            },
+                            "length": 5615.0,
+                            "width": 60.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KBVU",
+                    "type": "Civilian",
+                    "callsign": "Boulder City",
+                    "name": "Boulder City Municipal",
+                    "unlocalizedName": null,
+                    "city": "Boulder City, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 35, "min": 56.838 },
+                        "lon": { "dir": "W", "deg": 114, "min": 51.665 }
+                    },
+                    "elevation": 2203.0,
+                    "magneticVariation": 12.2,
+                    "navaids": [
+                        {
+                            "type": "VORTAC",
+                            "frequency": 116700000.0,
+                            "channel": "114X",
+                            "identifier": "BLD",
+                            "offFieldHeading": 347.0,
+                            "offFieldDistance": 2.9
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "09",
+                            "reciprocalIdentifier": "27",
+                            "heading": 86.9,
+                            "reciprocalHeading": 266.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 56.848 },
+                                "lon": { "dir": "W", "deg": 114, "min": 52.142 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 56.706 },
+                                "lon": { "dir": "W", "deg": 114, "min": 51.123 }
+                            },
+                            "length": 4800.0,
+                            "width": 70.0
+                        },
+                        {
+                            "identifier": "15",
+                            "reciprocalIdentifier": "33",
+                            "heading": 152.9,
+                            "reciprocalHeading": 332.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 57.228 },
+                                "lon": { "dir": "W", "deg": 114, "min": 51.807 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 56.613 },
+                                "lon": { "dir": "W", "deg": 114, "min": 51.610 }
+                            },
+                            "length": 3850.0,
+                            "width": 70.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KINS",
+                    "type": "Military",
+                    "callsign": "Indian Springs",
+                    "name": "Creech AFB",
+                    "unlocalizedName": null,
+                    "city": "Indian Springs, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 35.181 },
+                        "lon": { "dir": "W", "deg": 115, "min": 40.642 }
+                    },
+                    "elevation": 3134.0,
+                    "magneticVariation": 12.5,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "heading": 78.9,
+                            "frequency": 108700000.0,
+                            "identifier": "ICRR",
+                            "runwayIdentifier": "08",
+                        },
+                        {
+                            "type": "ILS",
+                            "heading": 133.8,
+                            "frequency": 108500000.0,
+                            "identifier": "ICRS",
+                            "runwayIdentifier": "13"
+                        },
+                        {
+                            "type": "TACAN",
+                            "channel": "87X",
+                            "identifier": "INS"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 118300000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 360600000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "08",
+                            "reciprocalIdentifier": "26",
+                            "heading": 78.9,
+                            "reciprocalHeading": 258.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 35.067 },
+                                "lon": { "dir": "W", "deg": 115, "min": 41.734 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 35.007 },
+                                "lon": { "dir": "W", "deg": 115, "min": 39.896 }
+                            },
+                            "length": 9002.0,
+                            "width": 150.0
+                        },
+                        {
+                            "identifier": "13",
+                            "reciprocalIdentifier": "31",
+                            "heading": 133.8,
+                            "reciprocalHeading": 313.8,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 35.790 },
+                                "lon": { "dir": "W", "deg": 115, "min": 40.672 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 35.043 },
+                                "lon": { "dir": "W", "deg": 115, "min": 40.043 }
+                            },
+                            "length": 4064.0,
+                            "width": 100.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "0L7",
+                    "type": "Civilian",
+                    "callsign": "Jean",
+                    "name": "Jean",
+                    "unlocalizedName": null,
+                    "city": "Jean, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 35, "min": 46.096 },
+                        "lon": { "dir": "W", "deg": 115, "min": 19.777 }
+                    },
+                    "elevation": 2835.0,
+                    "magneticVariation": 12.3,
+                    "runways": [
+                        {
+                            "identifier": "02L",
+                            "reciprocalIdentifier": "20R",
+                            "heading": 20.0,
+                            "reciprocalHeading": 200.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 45.802 },
+                                "lon": { "dir": "W", "deg": 115, "min": 20.035 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 46.445 },
+                                "lon": { "dir": "W", "deg": 115, "min": 19.542 }
+                            },
+                            "length": 4600.0,
+                            "width": 75.0
+                        },
+                        {
+                            "identifier": "02R",
+                            "reciprocalIdentifier": "20L",
+                            "heading": 20.0,
+                            "reciprocalHeading": 200.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 45.803 },
+                                "lon": { "dir": "W", "deg": 115, "min": 19.962 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 46.321 },
+                                "lon": { "dir": "W", "deg": 115, "min": 19.565 }
+                            },
+                            "length": 3700.0,
+                            "width": 60.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KHND",
+                    "type": "Civilian",
+                    "callsign": "Henderson",
+                    "name": "Henderson Executive",
+                    "unlocalizedName": null,
+                    "city": "Las Vegas, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 35, "min": 58.372 },
+                        "lon": { "dir": "W", "deg": 115, "min": 8.067 }
+                    },
+                    "elevation": 2492.0,
+                    "magneticVariation": 12.3,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 125100000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "17L",
+                            "reciprocalIdentifier": "35R",
+                            "heading": 168.7,
+                            "reciprocalHeading": 348.7,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 58.852 },
+                                "lon": { "dir": "W", "deg": 115, "min": 7.977 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 58.029 },
+                                "lon": { "dir": "W", "deg": 115, "min": 7.987 }
+                            },
+                            "length": 6501.0,
+                            "width": 100.0
+                        },
+                        {
+                            "identifier": "17R",
+                            "reciprocalIdentifier": "35L",
+                            "heading": 168.7,
+                            "reciprocalHeading": 348.7,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 58.854 },
+                                "lon": { "dir": "W", "deg": 115, "min": 8.119 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 57.782 },
+                                "lon": { "dir": "W", "deg": 115, "min": 8.132 }
+                            },
+                            "length": 5001.0,
+                            "width": 75.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KLAS",
+                    "type": "Civilian",
+                    "callsign": "Las Vegas",
+                    "name": "McCarran Intl.",
+                    "unlocalizedName": null,
+                    "city": "Las Vegas, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 4.803 },
+                        "lon": { "dir": "W", "deg": 115, "min": 9.134 }
+                    },
+                    "elevation": 2181.0,
+                    "magneticVariation": 12.3,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "heading": 256.9,
+                            "frequency": 111750000.0,
+                            "runwayIdentifier": "26L"
+                        },
+                        {
+                            "type": "ILS",
+                            "heading": 256.9,
+                            "frequency": 110300000.0,
+                            "runwayIdentifier": "26R"
+                        },
+                        {
+                            "type": "VORTAC",
+                            "frequency": 116900000.0,
+                            "channel": "116X",
+                            "identifier": "LAS"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 119900000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 257800000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "1L",
+                            "reciprocalIdentifier": "19R",
+                            "heading": 11.9,
+                            "reciprocalHeading": 191.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.519 },
+                                "lon": { "dir": "W", "deg": 115, "min": 10.222 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 5.863 },
+                                "lon": { "dir": "W", "deg": 115, "min": 9.453 }
+                            },
+                            "length": 8988.0,
+                            "width": 140.0
+                        },
+                        {
+                            "identifier": "1R",
+                            "reciprocalIdentifier": "19L",
+                            "heading": 11.9,
+                            "reciprocalHeading": 191.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.454 },
+                                "lon": { "dir": "W", "deg": 115, "min": 10.049 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 5.915 },
+                                "lon": { "dir": "W", "deg": 115, "min": 9.213 }
+                            },
+                            "length": 9771.0,
+                            "width": 140.0
+                        },
+                        {
+                            "identifier": "8L",
+                            "reciprocalIdentifier": "26R",
+                            "heading": 76.9,
+                            "reciprocalHeading": 256.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.582 },
+                                "lon": { "dir": "W", "deg": 115, "min": 10.211 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.584 },
+                                "lon": { "dir": "W", "deg": 115, "min": 7.265 }
+                            },
+                            "length": 14152.0,
+                            "width": 150.0
+                        },
+                        {
+                            "identifier": "8R",
+                            "reciprocalIdentifier": "26L",
+                            "heading": 76.9,
+                            "reciprocalHeading": 256.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.418 },
+                                "lon": { "dir": "W", "deg": 115, "min": 9.686 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 4.419 },
+                                "lon": { "dir": "W", "deg": 115, "min": 7.549 }
+                            },
+                            "length": 10525.0,
+                            "width": 140.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KLSV",
+                    "type": "Military",
+                    "callsign": "Nellis Control",
+                    "name": "Nellis AFB",
+                    "unlocalizedName": null,
+                    "city": "Las Vegas, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 14.172 },
+                        "lon": { "dir": "W", "deg": 115, "min": 2.055 }
+                    },
+                    "elevation": 1869.0,
+                    "magneticVariation": 12.3,
+                    "navaids": [
+                        {
+                            "type": "TACAN",
+                            "channel": "12X",
+                            "identifier": "LSV"
+                        },
+                        {
+                            "type": "ILS",
+                            "heading": 209.2,
+                            "frequency": 109100000.0,
+                            "identifier": "IDIQ",
+                            "runwayIdentifier": "21L"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 132550000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 327000000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "3L",
+                            "reciprocalIdentifier": "21R",
+                            "heading": 29.2,
+                            "reciprocalHeading": 209.2,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 13.602 },
+                                "lon": { "dir": "W", "deg": 115, "min": 2.808 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 14.855 },
+                                "lon": { "dir": "W", "deg": 115, "min": 1.450 }
+                            },
+                            "length": 10120.0,
+                            "width": 200.0
+                        },
+                        {
+                            "identifier": "3R",
+                            "reciprocalIdentifier": "21L",
+                            "heading": 29.2,
+                            "reciprocalHeading": 209.2,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 13.493 },
+                                "lon": { "dir": "W", "deg": 115, "min": 2.655 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 14.738 },
+                                "lon": { "dir": "W", "deg": 115, "min": 1.306 }
+                            },
+                            "length": 10051.0,
+                            "width": 150.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KVGT",
+                    "type": "Civilian",
+                    "callsign": "North Las Vegas",
+                    "name": "North Las Vegas",
+                    "unlocalizedName": null,
+                    "city": "Las Vegas, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 12.642 },
+                        "lon": { "dir": "W", "deg": 115, "min": 11.667 }
+                    },
+                    "elevation": 2205.0,
+                    "magneticVariation": 12.3,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "heading": 122.3,
+                            "frequency": 110700000.0,
+                            "identifier": "IHWG",
+                            "runwayIdentifier": "12L"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 125700000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 360750000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "7",
+                            "reciprocalIdentifier": "25",
+                            "heading": 76.6,
+                            "reciprocalHeading": 256.6,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.798 },
+                                "lon": { "dir": "W", "deg": 115, "min": 12.202 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.818 },
+                                "lon": { "dir": "W", "deg": 115, "min": 11.185 }
+                            },
+                            "length": 5005.0,
+                            "width": 75.0
+                        },
+                        {
+                            "identifier": "12L",
+                            "reciprocalIdentifier": "30R",
+                            "heading": 122.3,
+                            "reciprocalHeading": 302.3,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.745 },
+                                "lon": { "dir": "W", "deg": 115, "min": 11.785 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.262 },
+                                "lon": { "dir": "W", "deg": 115, "min": 11.174 }
+                            },
+                            "length": 4203.0,
+                            "width": 75.0
+                        },
+                        {
+                            "identifier": "12R",
+                            "reciprocalIdentifier": "30L",
+                            "heading": 122.3,
+                            "reciprocalHeading": 302.3,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.881 },
+                                "lon": { "dir": "W", "deg": 115, "min": 12.160 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 12.305 },
+                                "lon": { "dir": "W", "deg": 115, "min": 11.433 }
+                            },
+                            "length": 5001.0,
+                            "width": 75.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "L23",
+                    "type": "Civilian",
+                    "callsign": "Pahute",
+                    "name": "Pahute Mesa",
+                    "unlocalizedName": null,
+                    "city": "Mercury, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 37, "min": 6.164 },
+                        "lon": { "dir": "W", "deg": 116, "min": 18.802 }
+                    },
+                    "elevation": 5068.0,
+                    "magneticVariation": 12.3,
+                    "runways": [
+                        {
+                            "identifier": "18",
+                            "reciprocalIdentifier": "36",
+                            "heading": 181.9,
+                            "reciprocalHeading": 1.9,
+                            "length": 5800.0,
+                            "width": 100.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "67L",
+                    "type": "Civilian",
+                    "callsign": "Mesquite",
+                    "name": "Mesquite",
+                    "unlocalizedName": null,
+                    "city": "Mesquite, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 49.988 },
+                        "lon": { "dir": "W", "deg": 114, "min": 3.353 }
+                    },
+                    "elevation": 1978.0,
+                    "magneticVariation": 12.1,
+                    "navaids": [
+                        {
+                            "type": "VORTAC",
+                            "frequency": 114300000.0,
+                            "channel": "90X",
+                            "identifier": "MMM",
+                            "offFieldHeading": 257.0,
+                            "offFieldDistance": 11.3
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "2",
+                            "reciprocalIdentifier": "20",
+                            "heading": 17.9,
+                            "reciprocalHeading": 196.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 49.620 },
+                                "lon": { "dir": "W", "deg": 114, "min": 3.610 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 50.356 },
+                                "lon": { "dir": "W", "deg": 114, "min": 3.096 }
+                            },
+                            "length": 5121.0,
+                            "width": 75.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "3Q0",
+                    "type": "Civilian",
+                    "callsign": "Mina",
+                    "name": "Mina",
+                    "unlocalizedName": null,
+                    "city": "Mina, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 38, "min": 22.792 },
+                        "lon": { "dir": "W", "deg": 118, "min": 5.805 }
+                    },
+                    "elevation": 1978.0,
+                    "magneticVariation": 12.1,
+                    "navaids": [
+                        {
+                            "type": "VORTAC",
+                            "frequency": 115100000.0,
+                            "channel": "98X",
+                            "identifier": "MVA",
+                            "offFieldHeading": 358.0,
+                            "offFieldDistance": 11.5
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "13",
+                            "reciprocalIdentifier": "31",
+                            "heading": 140.1,
+                            "reciprocalHeading": 320.1,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 23.127 },
+                                "lon": { "dir": "W", "deg": 118, "min": 6.032 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 22.458 },
+                                "lon": { "dir": "W", "deg": 118, "min": 5.578 }
+                            },
+                            "length": 4600.0,
+                            "width": 165.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "0L9",
+                    "type": "Civilian",
+                    "callsign": "Echo Bay",
+                    "name": "Echo Bay",
+                    "unlocalizedName": null,
+                    "city": "Overton, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 36, "min": 18.662 },
+                        "lon": { "dir": "W", "deg": 114, "min": 27.833 }
+                    },
+                    "elevation": 1535.0,
+                    "magneticVariation": 12.2,
+                    "runways": [
+                        {
+                            "identifier": "6",
+                            "reciprocalIdentifier": "24",
+                            "heading": 66.9,
+                            "reciprocalHeading": 246.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 18.607 },
+                                "lon": { "dir": "W", "deg": 114, "min": 28.173 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 36, "min": 18.717 },
+                                "lon": { "dir": "W", "deg": 114, "min": 27.494 }
+                            },
+                            "length": 3400.0,
+                            "width": 50.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "1L1",
+                    "type": "Civilian",
+                    "callsign": "Lincoln",
+                    "name": "Lincoln County",
+                    "unlocalizedName": null,
+                    "city": "Panaca, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 37, "min": 47.245 },
+                        "lon": { "dir": "W", "deg": 114, "min": 25.193 }
+                    },
+                    "elevation": 4831.0,
+                    "magneticVariation": 12.4,
+                    "runways": [
+                        {
+                            "identifier": "17",
+                            "reciprocalIdentifier": "35",
+                            "heading": 169.9,
+                            "reciprocalHeading": 349.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 37, "min": 47.624 },
+                                "lon": { "dir": "W", "deg": 114, "min": 25.173 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 37, "min": 46.866 },
+                                "lon": { "dir": "W", "deg": 114, "min": 25.215 }
+                            },
+                            "length": 4606.0,
+                            "width": 60.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KXTA",
+                    "type": "Military",
+                    "callsign": "Dreamland",
+                    "name": "Groom Lake AFB",
+                    "unlocalizedName": null,
+                    "city": "Rachel, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 37.233333 },
+                        "lon": { "dir": "W", "deg": 115.808333 }
+                    },
+                    "elevation": 4495.0,
+                    "magneticVariation": 12.7,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "heading": 324.9,
+                            "frequency": 109300000.0,
+                            "identifier": "GLRI",
+                            "runwayIdentifier": "32R"
+                        },
+                        {
+                            "type": "TACAN",
+                            "channel": "18X",
+                            "identifier": "GRL"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 118000000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 250050000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "14L",
+                            "reciprocalIdentifier": "32R",
+                            "heading": 144.9,
+                            "reciprocalHeading": 324.9,
+                            "length": 11007.0,
+                            "width": 150.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KTPH",
+                    "type": "Civilian",
+                    "callsign": "Tonopah",
+                    "name": "Tonopah",
+                    "unlocalizedName": null,
+                    "city": "Tonopah, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 38, "min": 3.612 },
+                        "lon": { "dir": "W", "deg": 117, "min": 5.208 }
+                    },
+                    "elevation": 5430.0,
+                    "magneticVariation": 13.2,
+                    "navaids": [
+                        {
+                            "type": "VORTAC",
+                            "frequency": 117200000.0,
+                            "channel": "119X",
+                            "identifier": "TPH",
+                            "offFieldHeading": 106.0,
+                            "offFieldDistance": 3.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "11",
+                            "reciprocalIdentifier": "29",
+                            "heading": 112.2,
+                            "reciprocalHeading": 292.2,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 4.052 },
+                                "lon": { "dir": "W", "deg": 117, "min": 5.551 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 3.467 },
+                                "lon": { "dir": "W", "deg": 117, "min": 4.493 }
+                            },
+                            "length": 6195.0,
+                            "width": 50.0
+                        },
+                        {
+                            "identifier": "15",
+                            "reciprocalIdentifier": "33",
+                            "heading": 152.2,
+                            "reciprocalHeading": 332.2,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 4.052 },
+                                "lon": { "dir": "W", "deg": 117, "min": 5.563 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 38, "min": 2.913 },
+                                "lon": { "dir": "W", "deg": 117, "min": 5.177 }
+                            },
+                            "length": 7158.0,
+                            "width": 80.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KTNX",
+                    "type": "Military",
+                    "callsign": "Silverbow",
+                    "name": "Tonopah Test Range",
+                    "unlocalizedName": null,
+                    "city": "Tonopah, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 37, "min": 47.932 },
+                        "lon": { "dir": "W", "deg": 116, "min": 46.845 }
+                    },
+                    "elevation": 5550.0,
+                    "magneticVariation": 13.1,
+                    "navaids": [
+                        {
+                            "type": "ILS",
+                            "heading": 145.0,
+                            "frequency": 108300000.0,
+                            "identifier": "IRVP",
+                            "runwayIdentifier": "14"
+                        },
+                        {
+                            "type": "ILS",
+                            "heading": 325.0,
+                            "frequency": 111700000.0,
+                            "identifier": "IUVV",
+                            "runwayIdentifier": "32"
+                        },
+                        {
+                            "type": "VORTAC",
+                            "frequency": 113000000.0,
+                            "channel": "77X",
+                            "identifier": "TQQ"
+                        }
+                    ],
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 124750000.0
+                        },
+                        {
+                            "title": "Tower",
+                            "band": "UHF",
+                            "modulation": "AM",
+                            "frequency": 257950000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "14",
+                            "reciprocalIdentifier": "32",
+                            "heading": 145.0,
+                            "reciprocalHeading": 325.0,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 37, "min": 48.843 },
+                                "lon": { "dir": "W", "deg": 116, "min": 47.326 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 37, "min": 47.021 },
+                                "lon": { "dir": "W", "deg": 116, "min": 46.362 }
+                            },
+                            "length": 12274.0,
+                            "width": 200.0
+                        }
+                    ]
+                },
+                {
+                    "identifier": "KIFP",
+                    "type": "Civilian",
+                    "callsign": "Bullhead",
+                    "name": "Laughlin / Bullhead Intl.",
+                    "unlocalizedName": null,
+                    "city": "Bullhead City, NV",
+                    "country": "US",
+                    "latLon": {
+                        "lat": { "dir": "N", "deg": 35, "min": 9.277 },
+                        "lon": { "dir": "W", "deg": 114, "min": 33.560 }
+                    },
+                    "elevation": 707.0,
+                    "magneticVariation": 12.0,
+                    "frequencies": [
+                        {
+                            "title": "Tower",
+                            "band": "VHFHigh",
+                            "modulation": "AM",
+                            "frequency": 123900000.0
+                        }
+                    ],
+                    "runways": [
+                        {
+                            "identifier": "16",
+                            "reciprocalIdentifier": "34",
+                            "heading": 164.9,
+                            "reciprocalHeading": 344.9,
+                            "latLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 9.976 },
+                                "lon": { "dir": "W", "deg": 114, "min": 33.613 }
+                            },
+                            "reciprocalLatLon": {
+                                "lat": { "dir": "N", "deg": 35, "min": 8.578 },
+                                "lon": { "dir": "W", "deg": 114, "min": 33.507 }
+                            },
+                            "length": 7500.0,
+                            "width": 150.0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
