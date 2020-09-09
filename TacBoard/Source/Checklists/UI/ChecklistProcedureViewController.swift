@@ -151,11 +151,15 @@ class ChecklistProcedureViewController: TableViewController, SplitDisplayModeTog
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ChecklistItemTableViewCell
         
         configure(cell, for: item)
+
+        if item.isSmallText {
+            cell.itemTextLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.smallTextSize)
+        }
         
         cell.selectionStyle = .none
         cell.isCompleteImageView?.safeIsHidden = true
         cell.isNotCompleteImageView?.safeIsHidden = true
-        cell.isNotApplicableLabel?.safeIsHidden = true // false - evaluating leaving this turned off
+        cell.isNotApplicableLabel?.safeIsHidden = true
         
         return cell
         
@@ -165,14 +169,18 @@ class ChecklistProcedureViewController: TableViewController, SplitDisplayModeTog
     private func configure(_ cell: ChecklistItemTableViewCell, for item: ChecklistItem) {
 
         cell.itemTextLabel?.text = item.text
+        cell.itemTextLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.defaultTextSize)
 
         cell.itemSubtextLabel?.text = item.subtext
+        cell.itemSubtextLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.verySmallTextSize)
         cell.itemSubtextLabel?.safeIsHidden = item.subtext.isNilOrEmpty
 
         cell.itemActionLabel?.text = item.action
+        cell.itemActionLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.defaultTextSize)
         cell.itemActionLabel?.safeIsHidden = item.action.isNilOrEmpty
 
         cell.itemCommentLabel?.text = item.comment
+        cell.itemCommentLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.smallTextSize)
         cell.itemCommentLabel?.safeIsHidden = item.comment.isNilOrEmpty
         cell.itemCommentView?.safeIsHidden = item.comment.isNilOrEmpty
         cell.itemCommentViewConstraint?.isActive = !item.comment.isNilOrEmpty

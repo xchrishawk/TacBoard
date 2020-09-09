@@ -15,11 +15,12 @@ class ChecklistCommentItem: ChecklistItem, Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(text: String, subtext: String? = nil, action: String? = nil, comment: String? = nil) {
+    init(text: String, subtext: String? = nil, action: String? = nil, comment: String? = nil, isSmallText: Bool = false) {
         self.text = text
         self.subtext = subtext
         self.action = action
         self.comment = comment
+        self.isSmallText = isSmallText
     }
     
     // MARK: Properties
@@ -36,6 +37,9 @@ class ChecklistCommentItem: ChecklistItem, Decodable {
     /// The comment for this item, or `nil` if there is no comment.
     let comment: String?
     
+    /// If set to `true`, this comment should be displayed in a smaller font size.
+    let isSmallText: Bool
+    
     // MARK: Codable
     
     /// `CodingKey` enum for this class.
@@ -44,6 +48,7 @@ class ChecklistCommentItem: ChecklistItem, Decodable {
         case subtext
         case action
         case comment
+        case small
     }
     
     /// Initializes a new instance with the specified `Decoder`.
@@ -52,7 +57,8 @@ class ChecklistCommentItem: ChecklistItem, Decodable {
         self.init(text: try container.decode(String.self, forKey: .text),
                   subtext: try container.decodeOrDefault(String?.self, forKey: .subtext, default: nil),
                   action: try container.decodeOrDefault(String?.self, forKey: .action, default: nil),
-                  comment: try container.decodeOrDefault(String?.self, forKey: .comment, default: nil))
+                  comment: try container.decodeOrDefault(String?.self, forKey: .comment, default: nil),
+                  isSmallText: try container.decodeOrDefault(Bool.self, forKey: .small, default: false))
     }
     
 }
