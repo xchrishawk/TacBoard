@@ -165,7 +165,7 @@
 		0C1ECEEC24DCA50900769AD5 /* AirportImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportImage.swift; sourceTree = "<group>"; };
 		0C1ECEF824DCBE0700769AD5 /* RadioFrequencyBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioFrequencyBand.swift; sourceTree = "<group>"; };
 		0C1ECEFA24DCBEE300769AD5 /* AirportCommFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCommFrequency.swift; sourceTree = "<group>"; };
-		0C1ED45924D587E900486255 /* TacBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TacBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1ED45924D587E900486255 /* DCS TacBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCS TacBoard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1ED45C24D587E900486255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C1ED45E24D587E900486255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0C1ED46324D587E900486255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 		0C1ED45A24D587E900486255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C1ED45924D587E900486255 /* TacBoard.app */,
+				0C1ED45924D587E900486255 /* DCS TacBoard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -719,7 +719,7 @@
 				0CB6AB4E24D5A4C50030447D /* ReactiveCocoa */,
 			);
 			productName = DCSKneeboard;
-			productReference = 0C1ED45924D587E900486255 /* TacBoard.app */;
+			productReference = 0C1ED45924D587E900486255 /* DCS TacBoard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1165,7 +1165,7 @@
 				);
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = so.invictus.TacBoard;
-				PRODUCT_NAME = TacBoard;
+				PRODUCT_NAME = "DCS TacBoard";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Utility/SwiftBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1190,7 +1190,7 @@
 				);
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = so.invictus.TacBoard;
-				PRODUCT_NAME = TacBoard;
+				PRODUCT_NAME = "DCS TacBoard";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Utility/SwiftBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
