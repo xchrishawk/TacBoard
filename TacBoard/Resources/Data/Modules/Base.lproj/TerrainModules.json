@@ -11,7 +11,7 @@
         "title": "Nevada Test and Training Range",
         "compactTitle": "Nevada",
         "author": "Eagle Dynamics",
-        "isDefaultEnabled": false,
+        "isDefaultEnabled": true,
         "isPrimary": true
     },
     {

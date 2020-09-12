@@ -88,7 +88,7 @@
         "key": "FA-18C",
         "title": "F/A-18C Hornet",
         "author": "Eagle Dynamics",
-        "isDefaultEnabled": true,
+        "isDefaultEnabled": false,
         "isPrimary": true
     },
     {
