@@ -110,4 +110,26 @@ extension UIFont {
         
     }
     
+    // MARK: Properties
+    
+    /// Returns a bold copy of this font, if one exists.
+    var boldFont: UIFont? {
+        var symbolicTraits = fontDescriptor.symbolicTraits
+        symbolicTraits.insert(.traitBold)
+        return withSymbolicTraits(symbolicTraits)
+    }
+    
+    /// Returns an italic copy of this font, if one exists.
+    var italicFont: UIFont? {
+        var symbolicTraits = fontDescriptor.symbolicTraits
+        symbolicTraits.insert(.traitItalic)
+        return withSymbolicTraits(symbolicTraits)
+    }
+ 
+    /// Returns a copy of this font with the specified symbolic traits, if possible.
+    func withSymbolicTraits(_ symbolicTraits: UIFontDescriptor.SymbolicTraits) -> UIFont? {
+        guard let descriptor = fontDescriptor.withSymbolicTraits(symbolicTraits) else { return nil }
+        return UIFont(descriptor: descriptor, size: pointSize)
+    }
+    
 }

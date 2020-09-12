@@ -17,6 +17,9 @@ class ChecklistProcedureTableViewCell: SelectableHighlightableTableViewCell {
     /// The label displaying the procedure title.
     @IBOutlet var titleLabel: UILabel?
     
+    /// The label displaying the procedure subtitle.
+    @IBOutlet var subtitleLabel: UILabel?
+    
     /// An image view displaying a check box if the procedure is complete.
     @IBOutlet var isCompleteImageView: UIImageView?
     

@@ -47,10 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIFont.overrideSystemFonts()
 
         // Override additional UI components
-        UILabel.appearance(whenContainedInInstancesOf: [UITableViewHeaderFooterView.self]).font = UIFont.applicationSystemFont(ofSize: Constants.verySmallTextSize)
-        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.applicationSystemFont(ofSize: Constants.defaultTextSize)] // this is normally bold, but I like it better this way
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.applicationSystemFont(ofSize: Constants.verySmallTextSize)], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.applicationBoldSystemFont(ofSize: Constants.verySmallTextSize)], for: .selected) // TODO: doesn't work???
+        UILabel.appearance(whenContainedInInstancesOf: [UITableViewHeaderFooterView.self]).font = UIFont.systemFont(ofSize: Constants.verySmallTextSize)
+        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.systemFont(ofSize: Constants.defaultTextSize)] // this is normally bold, but I like it better this way
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: Constants.verySmallTextSize)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: Constants.verySmallTextSize)], for: .selected) // TODO: doesn't work???
         
     }
 

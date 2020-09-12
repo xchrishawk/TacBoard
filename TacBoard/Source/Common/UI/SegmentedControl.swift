@@ -68,8 +68,8 @@ class SegmentedControl: UISegmentedControl {
     private func updateTitleTextAttributes() {
      
         // I would prefer to not set the font here, but if we use the UIAppearance proxy then it overrides the text colors
-        setTitleTextAttributes([.font: UIFont.applicationSystemFont(ofSize: 14.0), .foregroundColor: normalTitleTextColor], for: .normal)
-        setTitleTextAttributes([.font: UIFont.applicationSystemFont(ofSize: 14.0), .foregroundColor: selectedTitleTextColor], for: .selected)
+        setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14.0), .foregroundColor: normalTitleTextColor], for: .normal)
+        setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14.0), .foregroundColor: selectedTitleTextColor], for: .selected)
         
     }
 

@@ -49,6 +49,8 @@ class ChecklistFolderViewController: FolderViewController<ChecklistViewModel> {
         
         // Basic info
         cell.titleLabel?.text = item.title
+        cell.subtitleLabel?.text = item.subtitle
+        cell.subtitleLabel?.safeIsHidden = item.subtitle.isNilOrEmpty
         cell.accessoryType = (traitCollection.horizontalSizeClass == .compact ? .disclosureIndicator : .none)
         
         // Auto-update visibility of isComplete image view

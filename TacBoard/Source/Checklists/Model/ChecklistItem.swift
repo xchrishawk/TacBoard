@@ -17,7 +17,7 @@ protocol ChecklistItem: class, Decodable {
     // MARK: Properties
     
     /// The main text of the item.
-    var text: String { get }
+    var text: NSAttributedString { get }
     
     /// The subtext of the item, or `nil` if there is no subtext.
     var subtext: String? { get }

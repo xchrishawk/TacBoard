@@ -19,11 +19,6 @@ struct Constants {
     
     // MARK: Constants
     
-    /// The base URL for locating content.
-    static var contentBaseURL: URL {
-        return URL(string: "http://www.invictus.so/cdn/")!
-    }
-    
     /// The default duration for animations.
     static let defaultAnimationDuration: TimeInterval = (1.0 / 3.0)
     
@@ -44,6 +39,9 @@ struct Constants {
     
     /// The default text size.
     static let defaultTextSize: CGFloat = 17.0
+    
+    /// The large text size.
+    static let largeTextSize: CGFloat = 21.0
     
     /// The small text size.
     static let smallTextSize: CGFloat = 14.0

@@ -127,6 +127,7 @@
 		0CFDF40B24F5B86E00A6DE25 /* ChecklistDataIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDF40824F5B86E00A6DE25 /* ChecklistDataIndex.json */; };
 		0CFDF40C24F5B86E00A6DE25 /* ReferenceDataIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDF40924F5B86E00A6DE25 /* ReferenceDataIndex.json */; };
 		0CFDF40E24F5B90700A6DE25 /* ContentSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDF40D24F5B90700A6DE25 /* ContentSource.swift */; };
+		8360890F250C4D7000BC6BD4 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360890E250C4D7000BC6BD4 /* NSAttributedString.swift */; };
 		8389446524FD6A1500BE9161 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389446424FD6A1500BE9161 /* URL.swift */; };
 		83F238652506E26100C757FA /* RadioModulationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238642506E26100C757FA /* RadioModulationType.swift */; };
 		83F238672507082A00C757FA /* NavaidType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238662507082A00C757FA /* NavaidType.swift */; };
@@ -259,6 +260,7 @@
 		0CFDF40824F5B86E00A6DE25 /* ChecklistDataIndex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChecklistDataIndex.json; sourceTree = "<group>"; };
 		0CFDF40924F5B86E00A6DE25 /* ReferenceDataIndex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ReferenceDataIndex.json; sourceTree = "<group>"; };
 		0CFDF40D24F5B90700A6DE25 /* ContentSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSource.swift; sourceTree = "<group>"; };
+		8360890E250C4D7000BC6BD4 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		8389446424FD6A1500BE9161 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		83F238642506E26100C757FA /* RadioModulationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModulationType.swift; sourceTree = "<group>"; };
 		83F238662507082A00C757FA /* NavaidType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavaidType.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 				0C1BEC2E24F2E4B6001695E6 /* HTTPURLResponse.swift */,
 				0C1BEC1E24F19A04001695E6 /* Int.swift */,
 				0CA7405224D625C300E7DDA9 /* KeyedDecodingContainer.swift */,
+				8360890E250C4D7000BC6BD4 /* NSAttributedString.swift */,
 				0CAFF49824DDBB5C00AA8D8B /* Set.swift */,
 				0CA7405424D62D0100E7DDA9 /* String.swift */,
 				0C15735724D6679F00136274 /* UIApplication.swift */,
@@ -894,6 +897,7 @@
 				0CBE446F24DCEA64002144FD /* AirportListViewController.swift in Sources */,
 				0CC4B79124E0A77500BF999D /* HomeTitleTableViewCell.swift in Sources */,
 				0C9D9A1C24E9B68C00064F9C /* ReferenceBinderViewController.swift in Sources */,
+				8360890F250C4D7000BC6BD4 /* NSAttributedString.swift in Sources */,
 				0C0A380B24E8B30A00D077C6 /* Binder.swift in Sources */,
 				0CA7403F24D5B84C00E7DDA9 /* ChecklistFolderViewController.swift in Sources */,
 				0C9D9A2224E9BDB900064F9C /* ReferenceDocumentType.swift in Sources */,

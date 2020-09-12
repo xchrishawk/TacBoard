@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
         // To work around this, we manually update the font of the header view here.
         //
         guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.font = UIFont.applicationSystemFont(ofSize: Constants.verySmallTextSize)
+        header.textLabel?.font = UIFont.systemFont(ofSize: Constants.verySmallTextSize)
         
     }
     

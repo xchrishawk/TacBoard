@@ -15,7 +15,7 @@ class ChecklistDefaultItem: ChecklistCompletableItem, Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(text: String, subtext: String? = nil, action: String? = nil, comment: String? = nil, isComplete: Bool = false) {
+    init(text: NSAttributedString, subtext: String? = nil, action: String? = nil, comment: String? = nil, isComplete: Bool = false) {
         self.text = text
         self.subtext = subtext
         self.action = action
@@ -26,7 +26,7 @@ class ChecklistDefaultItem: ChecklistCompletableItem, Decodable {
     // MARK: Properties
     
     /// The text of the item.
-    let text: String
+    let text: NSAttributedString
     
     /// The subtext of the item, or `nil` if there is no subtext.
     let subtext: String?
@@ -53,12 +53,20 @@ class ChecklistDefaultItem: ChecklistCompletableItem, Decodable {
     
     /// Initializes a new instance with the specified `Decoder`.
     convenience required init(from decoder: Decoder) throws {
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(text: try container.decode(String.self, forKey: .text),
+        
+        guard
+            let textMarkup = try? container.decode(String.self, forKey: .text),
+            let text = NSAttributedString(markup: textMarkup)
+            else { throw DecodingError.dataCorruptedError(forKey: .text, in: container, debugDescription: "Invalid text!") }
+        
+        self.init(text: text,
                   subtext: try container.decodeOrDefault(String?.self, forKey: .subtext, default: nil),
                   action: try container.decodeOrDefault(String?.self, forKey: .action, default: nil),
                   comment: try container.decodeOrDefault(String?.self, forKey: .comment, default: nil),
                   isComplete: try container.decodeOrDefault(Bool.self, forKey: .isComplete, default: false))
+        
     }
     
 }

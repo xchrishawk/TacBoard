@@ -88,8 +88,9 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String, sections: [ChecklistSection] = []) {
+    init(title: String, subtitle: String? = nil, sections: [ChecklistSection] = []) {
         self.title = title
+        self.subtitle = subtitle
         self.sections = sections
         self.isComplete = Property(initial: false, then: sections.isCompletedProducer)
     }
@@ -98,6 +99,9 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     
     /// The title of the procedure.
     let title: String
+    
+    /// The subtitle of the procedure, if any.
+    let subtitle: String?
     
     /// The sections contained in this procedure.
     let sections: [ChecklistSection]
@@ -125,6 +129,7 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     /// `CodingKey` enum for this class.
     private enum CodingKeys: String, CodingKey {
         case title
+        case subtitle
         case sections
     }
     
@@ -132,6 +137,7 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     convenience required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.init(title: try container.decode(String.self, forKey: .title),
+                  subtitle: try container.decodeOrDefault(String?.self, forKey: .subtitle, default: nil),
                   sections: try container.decodeOrDefault([ChecklistSection].self, forKey: .sections, default: []))
     }
     
