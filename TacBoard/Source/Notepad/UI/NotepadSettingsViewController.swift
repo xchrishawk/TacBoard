@@ -63,6 +63,18 @@ class NotepadSettingsViewController: TableViewController {
         
         // If this is set in the storyboard, it doesn't get matched as "equal"
         tintColorButton?.tintColor = UIColor(application: .tint)
+
+        // Update images for buttons
+        if let activeColorButtons = activeColorButtons {
+            for activeColorButton in activeColorButtons {
+                activeColorButton.setImage(UIImage(systemName: "pencil.circle"), for: .normal)
+                activeColorButton.setImage(UIImage(systemName: "pencil.circle.fill"), for: .selected)
+            }
+        }
+        
+        // This needs to be done after activeColorButtons since eraseButton is a member of activeColorButtons
+        eraseButton?.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
+        eraseButton?.setImage(UIImage(systemName: "xmark.circle.fill"), for: .selected)
         
         // On iPhone, we need to enable scrolling since in landscape mode the entire view may not be displayed
         if UIDevice.current.isPhone {
@@ -124,16 +136,13 @@ class NotepadSettingsViewController: TableViewController {
         
         guard let activeColorButtons = activeColorButtons else { return }
         
-        let selectedAlpha: CGFloat = 1.0
-        let notSelectedAlpha: CGFloat = 0.5
-        
         // Update all buttons
         for activeColorButton in activeColorButtons {
-            activeColorButton.alpha = (activeColorButton.tintColor == viewModel.activePathColor.value ? selectedAlpha : notSelectedAlpha)
+            activeColorButton.isSelected = viewModel.activePathColor.value.isEqualToColor(activeColorButton.tintColor)
         }
         
         // Erase button is handled specially
-        eraseButton?.alpha = (viewModel.activePathColor.value == UIColor(application: .notepadBackground) ? selectedAlpha : notSelectedAlpha)
+        eraseButton?.isSelected = viewModel.activePathColor.value.isEqualToColor(UIColor(application: .notepadBackground))
         
     }
 
