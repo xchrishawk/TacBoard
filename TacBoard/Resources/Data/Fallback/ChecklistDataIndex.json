@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "TacBoard Checklists",
     "objects": [
         {
@@ -1408,6 +1408,152 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "title": "In Air Refueling",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Intent to Refuel",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Notify",
+                                            "comment": "Notify tanker of intent to refuel on VHF AM radio. Do not approach tanker until cleared."
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "GUN / PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "SAFE"
+                                        },
+                                        {
+                                            "text": "Maverick EO",
+                                            "subtext": "MFCD - MAV Page",
+                                            "action": "OFF"
+                                        },
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "STBY"
+                                        },
+                                        {
+                                            "text": "Exterior Lights",
+                                            "subtext": "Lighting Control Panel",
+                                            "action": "As Needed"
+                                        },
+                                        {
+                                            "text": "L / R FILL DISABLE MAIN",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "As Needed",
+                                            "comment": "Disable fill to damaged / leaking fuel tanks."
+                                        },
+                                        {
+                                            "text": "L / R FILL DISABLE WING",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "As Needed",
+                                            "comment": "Disable fill to damaged / leaking fuel tanks."
+                                        },
+                                        {
+                                            "text": "TK GATE",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "CLOSE"
+                                        },
+                                        {
+                                            "text": "Refuel Lever",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "OPEN"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Refuel Status Light",
+                                            "subtext": "Canopy Bow",
+                                            "action": "Confirm READY"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Refueling",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Tanker Contact",
+                                            "subtext": "Throttle Radio Switch",
+                                            "action": "Request",
+                                            "comment": "Request clearance to contact tanker boom on VHF AM radio."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Approach tanker boom at differential speed of 2-3 knots. Allow the boom operator to \"fly\" the boom to the refuel slipway. Do not chase the boom."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Refuel Status Light",
+                                            "subtext": "Canopy Bow",
+                                            "action": "Confirm LATCHED"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Wait for refueling to complete."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Reconnect",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "If aircraft disconnects from boom before refueling is complete:"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Refuel Status Light",
+                                            "subtext": "Canopy Bow",
+                                            "action": "Conform DISCONNECT"
+                                        },
+                                        {
+                                            "text": "NWS Button",
+                                            "subtext": "Control Stick",
+                                            "action": "Press"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Refuel Status Light",
+                                            "subtext": "Canopy Bow",
+                                            "action": "Confirm READY"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Approach boom and allow operator to reconnect with the aircraft."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Disconnect",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Refuel Status Light",
+                                            "subtext": "Canopy Bow",
+                                            "action": "Conform DISCONNECT"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Reduce power. Move down and away from the tanker into an observation position."
+                                        },
+                                        {
+                                            "text": "Refuel Lever",
+                                            "subtext": "Fuel System Control Panel",
+                                            "action": "CLOSE"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -1474,7 +1620,7 @@
                                             "items": [
                                                 {
                                                     "type": "Comment",
-                                                    "text": "[small][b]NOTE[/b]: Aileron and elevator jams are indicated by the [b]AIL L / R[/b] and [b]ELEV L / R[/b] warning lights, respectively.[/small]"
+                                                    "text": "[small][b]NOTE[/b]: Aileron and elevator jams are indicated by the [b]AIL L / R[/b] and [b]ELEV L / R[/b] caution lights, respectively.[/small]"
                                                 }
                                             ]
                                         },
@@ -1485,7 +1631,7 @@
                                                     "text": "EMER DISENGAGE",
                                                     "subtext": "Emergency Flight Control Panel",
                                                     "action": "Activate",
-                                                    "comment": "Move the appropriate emergency disengage switch in the direction indicated by the jam warning light."
+                                                    "comment": "Move the appropriate emergency disengage switch in the direction indicated by the jam indicator light."
                                                 }
                                             ]
                                         }
@@ -1656,7 +1802,7 @@
                                             "items": [
                                                 {
                                                     "type": "Comment",
-                                                    "text": "[small][b]NOTE[/b]: These instructions apply to engine oil over-pressure and under-pressure failures. Such failures are indicated by the [b]ENG OIL PRESS L / R[/b] warning lights.[/small]"
+                                                    "text": "[small][b]NOTE[/b]: These instructions apply to engine oil over-pressure and under-pressure failures. Such failures are indicated by the [b]ENG OIL PRESS L / R[/b] caution lights.[/small]"
                                                 }
                                             ]
                                         },
@@ -1698,7 +1844,7 @@
                                             "items": [
                                                 {
                                                     "type": "Comment",
-                                                    "text": "[small][b]NOTE[/b]: Main fuel boost pump failures are indicated by the [b]MAIN PUMP L / R[/b] warning lights.[/small]"
+                                                    "text": "[small][b]NOTE[/b]: Main fuel boost pump failures are indicated by the [b]MAIN PUMP L / R[/b] caution lights.[/small]"
                                                 },
                                                 {
                                                     "type": "Comment",
@@ -1734,7 +1880,7 @@
                                             "items": [
                                                 {
                                                     "type": "Comment",
-                                                    "text": "[small][b]NOTE[/b]: Wing fuel boost pump failures are indicated by the [b]WING PUMP L / R[/b] warning lights.[/small]"
+                                                    "text": "[small][b]NOTE[/b]: Wing fuel boost pump failures are indicated by the [b]WING PUMP L / R[/b] caution lights.[/small]"
                                                 },
                                                 {
                                                     "type": "Comment",
@@ -1770,7 +1916,7 @@
                                             "items": [
                                                 {
                                                     "type": "Comment",
-                                                    "text": "[small][b]NOTE[/b]: Fuel pressure faults are indicated by the [b]FUEL PRESS L / R[/b] warning lights.[/small]"
+                                                    "text": "[small][b]NOTE[/b]: Fuel pressure faults are indicated by the [b]FUEL PRESS L / R[/b] caution lights.[/small]"
                                                 }
                                             ]
                                         },
@@ -1784,7 +1930,7 @@
                                                 },
                                                 {
                                                     "type": "Comment",
-                                                    "text": "If warning light does not extinguish:"
+                                                    "text": "If caution light does not extinguish:"
                                                 },
                                                 {
                                                     "text": "CROSS FEED",
@@ -2163,6 +2309,65 @@
                 {
                     "title": "Combat Employment",
                     "items": [
+                        {
+                            "title": "CMSP Programming",
+                            "sections": [
+                                {
+                                    "title": "CMSP Programming",
+                                    "items": [
+                                        {
+                                            "text": "CMSP MODE Dial",
+                                            "subtext": "CMSP Panel",
+                                            "action": "STBY"
+                                        },
+                                        {
+                                            "text": "NXT Rocker",
+                                            "subtext": "CMSP Panel",
+                                            "action": "Select Program",
+                                            "comment": "Select the program to be edited using the NXT rocker on the CMSP panel."
+                                        },
+                                        {
+                                            "text": "DISP",
+                                            "subtext": "CMSP Panel",
+                                            "action": "MENU"
+                                        },
+                                        {
+                                            "text": "SET Button",
+                                            "subtext": "CMSP Panel",
+                                            "action": "Press",
+                                            "comment": "Press the SET button for the value to be edited."
+                                        },
+                                        {
+                                            "text": "NXT Rocker",
+                                            "subtext": "CMSP Panel",
+                                            "action": "Edit Value",
+                                            "comment": "Use the NXT rocker to adjust the selected value up or down."
+                                        },
+                                        {
+                                            "text": "RTN",
+                                            "subtext": "CMSP Panel",
+                                            "action": "Press",
+                                            "comment": "When all values have been set, press the RTN button to save the program."
+                                        },
+                                        {
+                                            "text": "RTN",
+                                            "subtext": "CMSP Panel",
+                                            "action": "Press",
+                                            "comment": "Pressing RTN a second time returns to the DISP status page."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CMSP Settings",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small]CMSP settings are as follows:[li][b]CHAF[/b]: Number of chaff bundles to release per cycle[/li][li][b]FLAR[/b]: Number of flares to release per cycle[/li][li][b]INTV[/b]: Time between release cycles, in seconds[/li][li][b]CYCL[/b]: Number of cycles in program[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
                         {
                             "title": "GAU-8 Cannon",
                             "sections": [
