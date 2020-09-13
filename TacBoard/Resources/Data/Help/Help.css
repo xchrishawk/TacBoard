@@ -1,0 +1,52 @@
+:root {
+
+    /* We support light and dark color schemes */
+    color-scheme: light dark;
+
+    /* Main font for entire document */
+    font-family: "Galvji", "Helvetica", sans-serif;
+
+}
+
+/* Light color scheme configuration. */
+@media (prefers-color-scheme: light) {
+
+    /* Configure colors for light mode (should match colors in Assets.xcassets) */
+    :root {
+        --background-color: #ffffff;
+        --primary-text-color: #000000;
+        --secondary-background-color: #f2f4f2;
+        --separator-color: #c4c6c4;
+        --tint-color: #439413;
+    }
+
+}
+
+/* Dark color scheme configuration. */
+@media (prefers-color-scheme: dark) {
+
+    /* Configure colors for dark mode (should match colors in Assets.xcassets) */
+    :root {
+        --background-color: #000000;
+        --primary-text-color: #ffffff;
+        --secondary-background-color: #0c0e0c;
+        --separator-color: #262926;
+        --tint-color: #2f680d;
+    }
+
+}
+
+/* Set page background color according to mode. */
+html {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+}
+
+/* Use application tint color for all types of links. */
+a:link, a:visited { color: var(--tint-color); }
+
+/* Add some basic padding around the border of the page. */
+body { padding: 10px 10px 10px 10px; }
+
+/* Additional spacing for list items. */
+li { margin-bottom: 5px; }

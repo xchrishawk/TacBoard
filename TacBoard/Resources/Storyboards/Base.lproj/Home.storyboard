@@ -751,27 +751,33 @@
         <!--Help-->
         <scene sceneID="ShC-Wu-qrk">
             <objects>
-                <viewController id="Lrd-Cj-Qbt" userLabel="Help" sceneMemberID="viewController">
+                <viewController id="Lrd-Cj-Qbt" userLabel="Help" customClass="HomeHelpViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fam-gg-HDH">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-mR-7dN">
-                                <rect key="frame" x="364" y="575" width="106" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" name="PlaceholderTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ena-gM-Fk2">
+                                <rect key="frame" x="0.0" y="50" width="834" height="1079"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
                         <constraints>
-                            <constraint firstItem="Ylg-mR-7dN" firstAttribute="centerX" secondItem="ubj-Vu-B1D" secondAttribute="centerX" id="XFT-Pt-Ynu"/>
-                            <constraint firstItem="Ylg-mR-7dN" firstAttribute="centerY" secondItem="ubj-Vu-B1D" secondAttribute="centerY" id="kec-q6-pEF"/>
+                            <constraint firstItem="ubj-Vu-B1D" firstAttribute="trailing" secondItem="ena-gM-Fk2" secondAttribute="trailing" id="2zA-sS-yjB"/>
+                            <constraint firstItem="ena-gM-Fk2" firstAttribute="top" secondItem="ubj-Vu-B1D" secondAttribute="top" id="3qK-g0-rjQ"/>
+                            <constraint firstItem="ena-gM-Fk2" firstAttribute="leading" secondItem="ubj-Vu-B1D" secondAttribute="leading" id="bue-Cm-LuH"/>
+                            <constraint firstItem="ubj-Vu-B1D" firstAttribute="bottom" secondItem="ena-gM-Fk2" secondAttribute="bottom" id="h4a-3U-L9r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ubj-Vu-B1D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Help" id="wys-CM-Jtt"/>
+                    <connections>
+                        <outlet property="webView" destination="ena-gM-Fk2" id="Rtd-gf-Ro4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ6-8K-Ryv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -786,9 +792,6 @@
         </namedColor>
         <namedColor name="HighlightedCellBackgroundColor">
             <color red="0.89803921568627454" green="0.90588235294117647" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PlaceholderTextColor">
-            <color red="0.7686274509803922" green="0.77647058823529413" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryTextColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
