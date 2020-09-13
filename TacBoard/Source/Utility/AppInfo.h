@@ -31,6 +31,15 @@ NS_SWIFT_NAME(shared);
 /** The version string of the application. */
 @property (nonatomic, readonly) NSString *version;
 
+/** The major version number of the application. */
+@property (nonatomic, readonly) NSInteger versionMajor;
+
+/** The minor version number of the application. */
+@property (nonatomic, readonly) NSInteger versionMinor;
+
+/** The revision version number of the application. */
+@property (nonatomic, readonly) NSInteger versionRevision;
+
 /** The build number of the application. */
 @property (nonatomic, readonly) NSString *build;
 

@@ -61,7 +61,7 @@ fileprivate enum Setting: String {
     
     /// The namespaced key for this setting.
     var key: String {
-        return "so.invictus.TacBoard.\(rawValue)"
+        return "so.invictus.TacBoard.SettingsManager.\(rawValue)"
     }
     
 }

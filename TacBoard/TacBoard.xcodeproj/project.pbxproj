@@ -128,6 +128,7 @@
 		0CFDF40C24F5B86E00A6DE25 /* ReferenceDataIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDF40924F5B86E00A6DE25 /* ReferenceDataIndex.json */; };
 		0CFDF40E24F5B90700A6DE25 /* ContentSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDF40D24F5B90700A6DE25 /* ContentSource.swift */; };
 		8360890F250C4D7000BC6BD4 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360890E250C4D7000BC6BD4 /* NSAttributedString.swift */; };
+		83608911250D925600BC6BD4 /* VersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83608910250D925600BC6BD4 /* VersionManager.swift */; };
 		8389446524FD6A1500BE9161 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389446424FD6A1500BE9161 /* URL.swift */; };
 		83F238652506E26100C757FA /* RadioModulationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238642506E26100C757FA /* RadioModulationType.swift */; };
 		83F238672507082A00C757FA /* NavaidType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238662507082A00C757FA /* NavaidType.swift */; };
@@ -261,6 +262,7 @@
 		0CFDF40924F5B86E00A6DE25 /* ReferenceDataIndex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ReferenceDataIndex.json; sourceTree = "<group>"; };
 		0CFDF40D24F5B90700A6DE25 /* ContentSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSource.swift; sourceTree = "<group>"; };
 		8360890E250C4D7000BC6BD4 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		83608910250D925600BC6BD4 /* VersionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionManager.swift; sourceTree = "<group>"; };
 		8389446424FD6A1500BE9161 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		83F238642506E26100C757FA /* RadioModulationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModulationType.swift; sourceTree = "<group>"; };
 		83F238662507082A00C757FA /* NavaidType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavaidType.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				0C1ED45E24D587E900486255 /* SceneDelegate.swift */,
 				0CF79D1624E4CE53002608B5 /* SwiftBridgingHeader.h */,
 				0CF79D1424E4CE32002608B5 /* Version.h */,
+				83608910250D925600BC6BD4 /* VersionManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				0C15736424D70C0D00136274 /* NotepadDrawingViewController.swift in Sources */,
 				0CAFF49524DDAD3700AA8D8B /* AircraftModule.swift in Sources */,
 				0C9A18AF24DA27D70048BDFC /* AirportCollection.swift in Sources */,
+				83608911250D925600BC6BD4 /* VersionManager.swift in Sources */,
 				0C0A380224E8A63600D077C6 /* ReferenceViewController.swift in Sources */,
 				0C0A381124E8C30900D077C6 /* FolderViewController.swift in Sources */,
 				0C9A18A424D9FE210048BDFC /* AirportViewController.swift in Sources */,
@@ -1163,7 +1167,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = so.invictus.TacBoard;
 				PRODUCT_NAME = "DCS TacBoard";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Utility/SwiftBridgingHeader.h;
@@ -1188,7 +1192,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = so.invictus.TacBoard;
 				PRODUCT_NAME = "DCS TacBoard";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Utility/SwiftBridgingHeader.h;

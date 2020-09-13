@@ -23,6 +23,15 @@ class HomeTableViewCell: SelectableHighlightableTableViewCell {
     /// The subtitle label.
     @IBOutlet var subtitleLabel: UILabel?
     
+    /// The stack view for the auxiliary data field.
+    @IBOutlet var auxiliaryDataStackView: UIStackView?
+    
+    /// The image view for the auxiliary data icon.
+    @IBOutlet var auxiliaryDataIconImageView: UIImageView?
+    
+    /// The label for the auxiliary data text.
+    @IBOutlet var auxiliaryDataLabel: UILabel?
+    
     // MARK: UITableViewCell Overrides
     
     /// Initializes the cell when it is deserialized from the nib.
@@ -68,6 +77,14 @@ class HomeTableViewCell: SelectableHighlightableTableViewCell {
         
         subtitleLabel?.text = nil
         subtitleLabel?.safeIsHidden = true
+        
+        auxiliaryDataStackView?.safeIsHidden = true
+        
+        auxiliaryDataIconImageView?.image = nil
+        auxiliaryDataIconImageView?.safeIsHidden = true
+        
+        auxiliaryDataLabel?.text = nil
+        auxiliaryDataLabel?.safeIsHidden = true
         
     }
     

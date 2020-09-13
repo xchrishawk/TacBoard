@@ -111,6 +111,7 @@ enum LocalizableStringKey: String {
     case homeAllModulesPage
     case homeEnabledAircraftModulesSectionTitle
     case homeEnabledTerrainModulesSectionTitle
+    case homeAppUpdated
     
     // MARK: Cases (ISO3166)
     

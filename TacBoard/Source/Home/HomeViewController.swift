@@ -33,18 +33,21 @@ class HomeViewController: TableViewController {
     // MARK: Fields
     
     private let settingsManager: SettingsManager
+    private let versionManager: VersionManager
     
     // MARK: Initialization
     
     /// Initializes a new instance with the specified coder.
     required init?(coder: NSCoder) {
         self.settingsManager = SettingsManager.shared
+        self.versionManager = VersionManager.shared
         super.init(coder: coder)
     }
     
-    /// Initializes a new instance with the specified coder and settings manager.
-    init?(coder: NSCoder, settingsManager: SettingsManager) {
-        self.settingsManager = SettingsManager.shared
+    /// Initializes a new instance with the specified coder and managers.
+    init?(coder: NSCoder, settingsManager: SettingsManager, versionManager: VersionManager) {
+        self.settingsManager = settingsManager
+        self.versionManager = versionManager
         super.init(coder: coder)
     }
     
@@ -140,7 +143,9 @@ class HomeViewController: TableViewController {
                 
             case .help:
                 performSegue(withIdentifier: "ShowHelp", sender: nil)
-                
+                versionManager.userHasViewedReleaseNotesForThisVersion = true
+                tableView.reloadRows(at: [indexPath], with: .fade)
+                    
             }
             
         case .enabledAircraftModules:
@@ -221,11 +226,18 @@ class HomeViewController: TableViewController {
             
         case .settings:
             cell.titleLabel?.text = LocalizableString(.homeSettingsPage)
-            cell.iconImageView?.image = UIImage(systemName: "gear")
+            cell.iconImageView?.image = UIImage(systemName: "wrench.fill")
             
         case .help:
             cell.titleLabel?.text = LocalizableString(.homeHelpPage)
             cell.iconImageView?.image = UIImage(systemName: "questionmark.circle.fill")
+            if !versionManager.userHasViewedReleaseNotesForThisVersion {
+                cell.auxiliaryDataStackView?.safeIsHidden = false
+                cell.auxiliaryDataIconImageView?.image = UIImage(systemName: "info.circle.fill")
+                cell.auxiliaryDataIconImageView?.safeIsHidden = false
+                cell.auxiliaryDataLabel?.text = LocalizableString(.homeAppUpdated)
+                cell.auxiliaryDataLabel?.safeIsHidden = false
+            }
             
         }
         

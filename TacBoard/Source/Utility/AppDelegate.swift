@@ -20,9 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     /// Override point for customization after application launch.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         NSLog("Started \(AppInfo.shared.name)...\n- Version: \(AppInfo.shared.version) Build \(AppInfo.shared.build)\n- Build Date: \(AppInfo.shared.date)\n- Git Commit: \(AppInfo.shared.commit)")
+        
+        // Initialize version manager
+        _ = VersionManager.shared
+        
+        // Initialize global font replacements
         overrideFonts()
+        
         return true
+        
     }
 
     /// Called when a new scene session is being created.

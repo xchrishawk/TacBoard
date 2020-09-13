@@ -98,6 +98,7 @@
 "homeAllModulesPage"                        = "All Modules";
 "homeEnabledAircraftModulesSectionTitle"    = "Enabled Aircraft";
 "homeEnabledTerrainModulesSectionTitle"     = "Enabled Terrain";
+"homeAppUpdated"                            = "App Updated";
 
 // ISO3166
 "iso3166Georgia"                            = "Georgia";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9dT-BH-A84">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9dT-BH-A84">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -30,7 +30,7 @@
         <!--Home-->
         <scene sceneID="IPf-Xs-WFY">
             <objects>
-                <tableViewController id="5Vv-Nh-gJR" customClass="HomeViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5Vv-Nh-gJR" customClass="HomeViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HqF-TZ-iRd">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="119" id="Hwe-p6-Xq4" userLabel="Title Cell" customClass="HomeTitleTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="119" id="Hwe-p6-Xq4" userLabel="Title Cell" customClass="HomeTitleTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hwe-p6-Xq4" id="Y6z-1n-dEK">
@@ -48,8 +48,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nmr-pD-MJR">
                                             <rect key="frame" x="15" y="20" width="764" height="79"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DCS Kneeboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-Zu-Hyz">
-                                                    <rect key="frame" x="292" y="0.0" width="180.5" height="48.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DCS TacBoard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-Zu-Hyz">
+                                                    <rect key="frame" x="300.5" y="0.0" width="163" height="48.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                     <outletCollection property="primaryTextLabels" destination="lH1-Zu-Hyz" collectionClass="NSMutableArray" id="E84-yh-eNK"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="SNt-eL-znf" userLabel="Menu Item Cell" customClass="HomeTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="SNt-eL-znf" userLabel="Menu Item Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="174.5" width="794" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNt-eL-znf" id="CKz-c6-7sW">
@@ -107,18 +107,36 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="taT-ac-kVp">
-                                                    <rect key="frame" x="45" y="3" width="693" height="35"/>
+                                                    <rect key="frame" x="45" y="3" width="563" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBY-GI-JHb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="693" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="563" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="PrimaryTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uS-0R-gdo">
-                                                            <rect key="frame" x="0.0" y="20.5" width="693" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="563" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" name="SecondaryTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oaM-Bh-PoH">
+                                                    <rect key="frame" x="613" y="8.5" width="125" height="24"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-6k-hGQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="6DF-Do-Tt2"/>
+                                                                <constraint firstAttribute="height" constant="24" id="wed-Ej-Z0a"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="New Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv2-D4-BEq">
+                                                            <rect key="frame" x="29" y="0.0" width="96" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="TintColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -147,12 +165,15 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isTintInvertedWhenSelected" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="auxiliaryDataIconImageView" destination="bTO-6k-hGQ" id="SWk-a0-0TL"/>
+                                    <outlet property="auxiliaryDataLabel" destination="rv2-D4-BEq" id="BPO-qe-7OS"/>
+                                    <outlet property="auxiliaryDataStackView" destination="oaM-Bh-PoH" id="YnL-KA-pWC"/>
                                     <outlet property="iconImageView" destination="xBr-OB-0nk" id="mgA-wc-Ymh"/>
                                     <outlet property="subtitleLabel" destination="3uS-0R-gdo" id="C04-cp-WqS"/>
                                     <outlet property="titleLabel" destination="vBY-GI-JHb" id="FIw-Tk-Cjg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="TZ7-Rj-GPg" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="TZ7-Rj-GPg" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="235" width="794" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZ7-Rj-GPg" id="3tF-Nv-hx6">
@@ -242,7 +263,7 @@
         <!--Aircraft Module Selector-->
         <scene sceneID="qEM-io-ykr">
             <objects>
-                <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="IgY-fN-g6O">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +271,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="YE4-sy-a4g" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="YE4-sy-a4g" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YE4-sy-a4g" id="fKg-wV-8mo">
@@ -339,7 +360,7 @@
         <!--Terrain Module Selector-->
         <scene sceneID="epA-u0-vQe">
             <objects>
-                <tableViewController id="2fV-g0-50u" userLabel="Terrain Module Selector" customClass="TerrainModuleListViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2fV-g0-50u" userLabel="Terrain Module Selector" customClass="TerrainModuleListViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ton-5F-amD">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +368,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="9Q0-MW-mKh" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="9Q0-MW-mKh" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Q0-MW-mKh" id="EUC-vW-7f1">
@@ -438,7 +459,7 @@
         <!--About-->
         <scene sceneID="zdi-uO-How">
             <objects>
-                <tableViewController id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Od-NB-6KM">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,7 +467,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoItem" rowHeight="60" id="irn-Mw-0RX" userLabel="Info Item Cell" customClass="HomeAboutInfoItemTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoItem" rowHeight="60" id="irn-Mw-0RX" userLabel="Info Item Cell" customClass="HomeAboutInfoItemTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="irn-Mw-0RX" id="dAQ-B6-ugS">
@@ -480,14 +501,14 @@
                                     <outlet property="valueLabel" destination="XD1-Lc-CzW" id="tdE-iu-PDx"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutDebugItemTableViewCell" customModule="DCS_Kneeboard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutDebugItemTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="115.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ukp-zn-cwx" id="7Lj-N7-d8V">
                                     <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="DCS_TacBoard" customModuleProvider="target">
                                             <rect key="frame" x="371.5" y="13.5" width="51" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
@@ -518,7 +539,7 @@
         <!--Settings-->
         <scene sceneID="O3T-KP-JFF">
             <objects>
-                <tableViewController id="Mr1-vS-yD1" customClass="SettingsViewController" customModule="DCS_Kneeboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Mr1-vS-yD1" customClass="SettingsViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="p6K-qx-QCW">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,7 +562,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-Db-KNv" customClass="SegmentedControl" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-Db-KNv" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="PO4-Kr-vXa">
@@ -595,7 +616,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UkD-DF-9oo" customClass="SegmentedControl" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UkD-DF-9oo" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="9cJ-Tj-fIP"/>
@@ -644,7 +665,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="il5-mV-70b" customClass="SegmentedControl" customModule="DCS_Kneeboard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="il5-mV-70b" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="opK-6j-pJL">
