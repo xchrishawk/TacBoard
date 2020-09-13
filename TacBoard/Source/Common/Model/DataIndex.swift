@@ -59,8 +59,12 @@ class DataIndex<Object>: Decodable where Object: Decodable {
         
         assert(!url.isFileURL, "Must be called with a remote URL!")
         
+        // Create request
+        // NOTE: For data indices, we want to validate our cache in case it's been edited on the server
+        let request = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData)
+        
         // Create task
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             // Validate response
             guard

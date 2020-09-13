@@ -47,11 +47,14 @@
 "aboutDataInfoItemAirports"                 = "Airports";
 "aboutDataInfoItemChecklists"               = "Checklists";
 "aboutDataInfoItemReference"                = "Reference";
+"aboutDataInfoCheckForUpdatedData"          = "Check For Updated Data";
 "aboutDebugSection"                         = "Debug";
 "aboutDebugUseFallbackData"                 = "Use Fallback Data Indices";
 "aboutDebugUseLocalData"                    = "Use Local Data Indices";
 "aboutDebugUseStagingData"                  = "Use Staging Data Indices";
 "aboutDebugUseProductionData"               = "Use Production Data Indices";
+"aboutReloadingDataTitle"                   = "Updating Data";
+"aboutReloadingDataMessage"                 = "All data indices will be re-downloaded immediately.";
 
 // Airports
 "airportChartDisclaimer"                    = "Not for use in real-world navigation";

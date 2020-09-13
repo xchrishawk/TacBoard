@@ -56,11 +56,14 @@ enum LocalizableStringKey: String {
     case aboutDataInfoItemAirports
     case aboutDataInfoItemChecklists
     case aboutDataInfoItemReference
+    case aboutDataInfoCheckForUpdatedData
     case aboutDebugSection
     case aboutDebugUseFallbackData
     case aboutDebugUseLocalData
     case aboutDebugUseStagingData
     case aboutDebugUseProductionData
+    case aboutReloadingDataTitle
+    case aboutReloadingDataMessage
 
     // MARK: Cases (Airports)
     

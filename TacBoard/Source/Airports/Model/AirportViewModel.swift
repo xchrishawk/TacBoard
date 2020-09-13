@@ -156,17 +156,12 @@ class AirportViewModel {
         
         // Reload data index when the content manager source changes
         contentManager.source.producer.take(during: lifetime).startWithValues { [unowned self] source in
-            AirportDataIndex.load(source: source) { [weak self] dataIndex in
-                
-                guard
-                    let self = self,
-                    let dataIndex = dataIndex
-                    else { return }
-                
-                self.mutableDataIndex.value = dataIndex
-                self.mutableDataIndexSource.value = source
-                
-            }
+            self.loadData(from: source)
+        }
+        
+        // Also reload when commanded
+        contentManager.reloadContent.take(during: lifetime).observeValues { [unowned self] in
+            self.loadData(from: self.contentManager.source.value)
         }
         
         // Filter the displayed airports as needed
@@ -209,6 +204,21 @@ class AirportViewModel {
             }
         }
         
+    }
+
+    /// Loads data from the specified content source.
+    private func loadData(from source: ContentSource) {
+        AirportDataIndex.load(source: source) { [weak self] dataIndex in
+            
+            guard
+                let self = self,
+                let dataIndex = dataIndex
+                else { return }
+            
+            self.mutableDataIndex.value = dataIndex
+            self.mutableDataIndexSource.value = source
+            
+        }
     }
 
 }

@@ -59,6 +59,7 @@ class HomeAboutViewController: TableViewController {
         case airports
         case checklists
         case reference
+        case checkForUpdatedData
     }
     
     #if DEBUG
@@ -204,6 +205,30 @@ class HomeAboutViewController: TableViewController {
     /// Creates a cell for the specified `DataInfoItem` at the specified `IndexPath`.
     private func tableView(_ tableView: UITableView, cellForDataInfoItem dataInfoItem: DataInfoItem, at indexPath: IndexPath) -> UITableViewCell {
         
+        // The "check for updated data" cell is handled specially
+        guard dataInfoItem != .checkForUpdatedData else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
+            
+            cell.button?.setTitle(LocalizableString(.aboutDataInfoCheckForUpdatedData), for: .normal)
+            cell.button?.touchUpInside = { [weak self] in
+                
+                // Tell all of the data consumers to reload their data
+                ContentManager.shared.reloadContentNow()
+                
+                // Notify the user that we did something
+                let alert = UIAlertController(title: LocalizableString(.aboutReloadingDataTitle),
+                                              message: LocalizableString(.aboutReloadingDataMessage),
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+                
+            }
+            
+            return cell
+            
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoItem", for: indexPath) as! HomeAboutInfoItemTableViewCell
         
         func value<Object>(for index: DataIndex<Object>, source: ContentSource) -> String {
@@ -226,6 +251,9 @@ class HomeAboutViewController: TableViewController {
             cell.titleLabel?.text = LocalizableString(.aboutDataInfoItemReference)
             cell.valueLabel?.text = value(for: ReferenceViewModel.shared.dataIndex.value,
                                           source: ReferenceViewModel.shared.dataIndexSource.value)
+         
+        case .checkForUpdatedData:
+            fatalError("Not possible - see above")
             
         }
         
@@ -238,7 +266,7 @@ class HomeAboutViewController: TableViewController {
     /// Creates a cell for the specified `DebugItem` at the specified `IndexPath`.
     private func tableView(_ tableView: UITableView, cellForDebugItem debugItem: DebugItem, at indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DebugItem", for: indexPath) as! HomeAboutDebugItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
         
         func closure(for source: ContentSource) -> () -> Void {
             return { ContentManager.shared.source.value = source }
@@ -340,10 +368,10 @@ class HomeAboutInfoItemTableViewCell: UITableViewCell {
     
 }
 
-// MARK: - HomeAboutDebugItemTableViewCell
+// MARK: - HomeAboutCommandTableViewCell
 
-/// `UITableViewCell` subclass containing a button to execute a debug command.
-class HomeAboutDebugItemTableViewCell: UITableViewCell {
+/// `UITableViewCell` subclass containing a button to execute a command.
+class HomeAboutCommandTableViewCell: UITableViewCell {
 
     /// The button to execute the debug command.
     @IBOutlet var button: BlockButton?

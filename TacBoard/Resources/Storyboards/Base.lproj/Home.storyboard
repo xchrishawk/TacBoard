@@ -265,7 +265,7 @@
             <objects>
                 <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="IgY-fN-g6O">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
@@ -501,7 +501,7 @@
                                     <outlet property="valueLabel" destination="XD1-Lc-CzW" id="tdE-iu-PDx"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutDebugItemTableViewCell" customModule="TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommandItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutCommandTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="115.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ukp-zn-cwx" id="7Lj-N7-d8V">

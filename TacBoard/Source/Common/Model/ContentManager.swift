@@ -13,6 +13,10 @@ import ReactiveSwift
 /// - note: This class is not thread safe. All members are expected to be accessed on the main thread.
 class ContentManager {
     
+    // MARK: Fields
+    
+    private let (reloadContentSignal, reloadContentObserver) = Signal<Void, Never>.pipe()
+    
     // MARK: Initialization / Singleton
     
     /// The shared `ContentManager` instance.
@@ -28,6 +32,11 @@ class ContentManager {
     /// The currently selected content source for the application.
     let source: MutableProperty<ContentSource>
     
+    /// `Signal` sending a `Void` signal when content should be reloaded.
+    var reloadContent: Signal<Void, Never> {
+        return reloadContentSignal
+    }
+    
     // MARK: Methods
     
     /// The base URL for the currently selected content source.
@@ -38,6 +47,11 @@ class ContentManager {
     /// Returns the URL for the content at the specified relative path.
     func url(forRelativePath path: String) -> URL {
         return ContentManager.url(forRelativePath: path, source: source.value)
+    }
+    
+    /// Instructs the app to reload its content now.
+    func reloadContentNow() {
+        reloadContentObserver.send(value: ())
     }
     
     // MARK: Static Utility
