@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C1ED45824D587E900486255"
-               BuildableName = "TacBoard.app"
+               BuildableName = "DCS TacBoard.app"
                BlueprintName = "TacBoard"
                ReferencedContainer = "container:TacBoard.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C1ED45824D587E900486255"
-            BuildableName = "TacBoard.app"
+            BuildableName = "DCS TacBoard.app"
             BlueprintName = "TacBoard"
             ReferencedContainer = "container:TacBoard.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C1ED45824D587E900486255"
-            BuildableName = "TacBoard.app"
+            BuildableName = "DCS TacBoard.app"
             BlueprintName = "TacBoard"
             ReferencedContainer = "container:TacBoard.xcodeproj">
          </BuildableReference>

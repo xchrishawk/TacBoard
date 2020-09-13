@@ -46,7 +46,7 @@
 "aboutDataInfoSection"                      = "Data";
 "aboutDataInfoItemAirports"                 = "Airports";
 "aboutDataInfoItemChecklists"               = "Checklists";
-"aboutDataInfoItemReference"                = "Reference Documents";
+"aboutDataInfoItemReference"                = "Reference";
 "aboutDebugSection"                         = "Debug";
 "aboutDebugUseFallbackData"                 = "Use Fallback Data Indices";
 "aboutDebugUseLocalData"                    = "Use Local Data Indices";

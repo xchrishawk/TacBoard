@@ -15,9 +15,12 @@ class HomeHelpViewController: UIViewController, WKNavigationDelegate {
 
     // MARK: Outlets
     
-    @IBOutlet private var webView: WKWebView? {
-        didSet { webView?.navigationDelegate = self }
-    }
+    @IBOutlet private var webView: WKWebView?
+    
+    // MARK: Properties
+    
+    /// If set to `true`, the page will default to version history.
+    var showVersionHistory: Bool = false
     
     // MARK: UIViewController Overrides
     
@@ -49,8 +52,16 @@ class HomeHelpViewController: UIViewController, WKNavigationDelegate {
     
     /// Initializes the web view to display the help page.
     private func initializeWebView() {
-        guard let htmlURL = Bundle.main.url(forResource: "Help", withExtension: "html", subdirectory: "Help") else { return }
-        webView?.loadFileURL(htmlURL, allowingReadAccessTo: htmlURL.deletingLastPathComponent())
+        
+        webView?.navigationDelegate = self
+        
+        guard
+            let baseURL = Bundle.main.url(forResource: "Help", withExtension: "html", subdirectory: "Help"),
+            let loadURL = URL(string: "\(baseURL.absoluteString)\(showVersionHistory ? "#VersionHistory" : "")")
+            else { return }
+        
+        webView?.loadFileURL(loadURL, allowingReadAccessTo: loadURL.deletingLastPathComponent())
+        
     }
     
 }

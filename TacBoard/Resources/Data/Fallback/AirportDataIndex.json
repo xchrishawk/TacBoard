@@ -1,6 +1,6 @@
 {
     "version": "0.1.0",
-    "description": "TacBoard Airport Data",
+    "description": "TacBoard Airports",
     "objects": [
         {
             "terrainModule" : "Caucasus",

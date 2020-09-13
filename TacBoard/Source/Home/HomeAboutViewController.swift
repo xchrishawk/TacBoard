@@ -169,12 +169,19 @@ class HomeAboutViewController: TableViewController {
         case .date:
             cell.titleLabel?.text = LocalizableString(.aboutAppInfoItemDate)
             cell.valueLabel?.text = {
-               
+
+                var result = ""
                 let formatter = DateFormatter()
-                formatter.dateStyle = .medium
-                formatter.timeStyle = .long
                 
-                return formatter.string(from: appInfo.date)
+                formatter.timeStyle = .medium
+                formatter.dateStyle = .none
+                result += "\(formatter.string(from: appInfo.date))"
+                
+                formatter.timeStyle = .none
+                formatter.dateStyle = .long
+                result += "\n\(formatter.string(from: appInfo.date))"
+                
+                return result
                 
             }()
             
