@@ -23,7 +23,7 @@ struct Constants {
     static let defaultAnimationDuration: TimeInterval = (1.0 / 3.0)
     
     /// The default brightness to use for media in dark mode.
-    static let defaultDarkModeBrightness: CGFloat = 0.5
+    static let defaultDarkModeBrightness: CGFloat = 0.9
     
     /// The default row height.
     static let defaultRowHeight: CGFloat = 60.0

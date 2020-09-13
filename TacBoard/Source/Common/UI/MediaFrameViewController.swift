@@ -13,11 +13,6 @@ import UIKit
 /// View controller displaying a utility frame for some media type.
 class MediaFrameViewController: UIViewController, SplitDisplayModeTogglingViewController {
     
-    // MARK: Constants
-    
-    /// The default brightness to use for dark mode.
-    static let defaultDarkModeBrightness: CGFloat = 0.5
-    
     // MARK: Fields
     
     private let content: UIViewController

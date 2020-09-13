@@ -1,6 +1,6 @@
 {
     "version": "0.1.0",
-    "description": "TacBoard Checklist Data",
+    "description": "TacBoard Checklists",
     "objects": [
         {
             "aircraftModule": "A-10C",
@@ -11,6 +11,14 @@
                         {
                             "title": "Pre-Startup",
                             "sections": [
+                                {
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][b]NOTE[/b]: When selecting ramp startup in DCS, aircraft is already pre-configured according to this checklist. It is provided here for reference only.[/small]"
+                                        }
+                                    ]
+                                },
                                 {
                                     "title": "Radios",
                                     "items": [
@@ -619,7 +627,7 @@
                                         },
                                         {
                                             "text": "Flight Controls",
-                                            "subtext": "Control Stick / Rudder Pedals",
+                                            "subtext": "Control Stick - Rudder Pedals",
                                             "action": "Check"
                                         },
                                         {
@@ -819,7 +827,7 @@
                             ]
                         },
                         {
-                            "title": "Pre-Taxi / Taxi",
+                            "title": "Pre-Taxi",
                             "sections": [
                                 {
                                     "title": "Pre-Taxi",
@@ -878,25 +886,21 @@
                                     ]
                                 },
                                 {
-                                    "title": "Taxi",
+                                    "title": "Notes",
                                     "items": [
                                         {
                                             "type": "Comment",
-                                            "text": "Taxi speed between 15 KTS and 25 KTS. Use rudder pedals to steer aircraft on ground."
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "To stop, set throttles to IDLE and apply toe brakes."
+                                            "text": "[small][li]Taxi speed between 15 KTS and 25 KTS.[/li][li]Use rudder pedals to steer aircraft on ground.[/li][li]To stop, set throttles to IDLE and apply toe brakes.[/li][/small]"
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "title": "Before Takeoff",
+                            "title": "Pre-Takeoff",
                             "sections": [
                                 {
-                                    "title": "Before Takeoff",
+                                    "title": "Pre-Takeoff",
                                     "items": [
                                         {
                                             "text": "Anti-Skid",
@@ -1012,10 +1016,15 @@
                                             "subtext": "Control Stick",
                                             "action": "Deactivate",
                                             "comment": "Deactivate NWS when airspeed passes 70 KTS."
-                                        },
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Notes",
+                                    "items": [
                                         {
                                             "type": "Comment",
-                                            "text": "Rotate to 10° pitch approximately 10 KTS before takeoff speed. Takeoff speed is approximately 135 KTS with combat load."
+                                            "text": "[small][li]Rotate to 10° pitch approximately 10 KTS before takeoff speed.[/li][li]Takeoff speed is approximately 135 KTS with combat load.[/li][/small]"
                                         }
                                     ]
                                 }
@@ -1025,12 +1034,16 @@
                             "title": "Fence In",
                             "sections": [
                                 {
-                                    "title": "Fence In",
                                     "items": [
                                         {
                                             "type": "Comment",
-                                            "text": "Complete fence in checklist prior to entering combat area."
-                                        },
+                                            "text": "[small][b]NOTE[/b]: Complete fence in checklist prior to entering combat area.[/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Fence In",
+                                    "items": [
                                         {
                                             "text": "Exterior Lights Master",
                                             "subtext": "Throttle",
@@ -1157,7 +1170,7 @@
                                         {
                                             "type": "Comment",
                                             "text": "Flight Check",
-                                            "subtitle": "N/A",
+                                            "subtext": "N/A",
                                             "action": "Complete",
                                             "comment": "Assess aircraft control, damage, and fuel quantity."
                                         }
@@ -1339,7 +1352,7 @@
                                     "items": [
                                         {
                                             "type": "Comment",
-                                            "text": "Engines must be set to IDLE for 5 minutes before proceeding.",
+                                            "text": "[b]NOTE[/b]: Engines must be set to IDLE for 5 minutes before proceeding.",
                                             "comment": "Taxi time may be included if core RPM was < 80%."
                                         },
                                         {
@@ -1399,185 +1412,747 @@
                     ]
                 },
                 {
-                    "title": "Abnormal Procedures",
-                    "items": [
-                        {
-                            "title": "Engine Start After Failed Start",
-                            "sections": [
-                                {
-                                    "title": "Engine Start After Failed Start",
-                                    "items": [
-                                        {
-                                            "text": "Throttle",
-                                            "subtext": "Throttle Quadrant",
-                                            "action": "OFF"
-                                        },
-                                        {
-                                            "text": "ENG OPER",
-                                            "subtext": "Throttle Quadrant",
-                                            "action": "MOTOR",
-                                            "comment": "Hold switch in MOTOR position for at least 30 seconds."
-                                        },
-                                        {
-                                            "text": "ENG OPER",
-                                            "subtext": "Throttle Quadrant",
-                                            "action": "NORM"
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "Attempt normal engine start."
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Landing Gear Extension Failure",
-                            "sections": [
-                                {
-                                    "title": "Landing Gear Extension Failure",
-                                    "items": [
-                                        {
-                                            "text": "SIGNAL LIGHTS LAMP TEST",
-                                            "subtext": "Auxiliary Lighting Panel",
-                                            "action": "Press",
-                                            "comment": "Verify all landing gear indicators illuminate."
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "Check L HYD SYS hydraulic pressure. If pressure is normal:"
-                                        },
-                                        {
-                                            "text": "Landing Gear Handle",
-                                            "subtext": "Landing Gear Control Panel",
-                                            "action": "Cycle"
-                                        },
-                                        {
-                                            "text": "Airspeed",
-                                            "action": "Increase to 200 KTS",
-                                            "comment": "Roll aircraft rapidly to attempt to shake gear loose."
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "If the above actions fail:"
-                                        },
-                                        {
-                                            "text": "Airspeed",
-                                            "action": "Reduce to < 200 KTS"
-                                        },
-                                        {
-                                            "text": "Landing Gear Handle",
-                                            "subtext": "Landing Gear Control Panel",
-                                            "action": "Down"
-                                        },
-                                        {
-                                            "text": "AUX LG EXT Handle",
-                                            "subtext": "Front Dash",
-                                            "action": "Pull"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
                     "title": "Emergency Procedures",
-                    "items": [
+                    "subfolders": [
                         {
-                            "title": "APU Fire",
-                            "sections": [
+                            "title": "Flight Control",
+                            "items": [
                                 {
-                                    "title": "APU Fire",
-                                    "items": [
+                                    "title": "Flap Asymmetry / Failure",
+                                    "sections": [
                                         {
-                                            "text": "APU",
-                                            "subtext": "Throttle Quadrant",
-                                            "action": "OFF"
+                                            "title": "Flap Asymmetry / Failure",
+                                            "items": [
+                                                {
+                                                    "text": "Flaps",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "Reset",
+                                                    "comment": "Re-select the flap position at which the asymmetry first occurred."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If issue is not resolved:"
+                                                },
+                                                {
+                                                    "text": "Flaps",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "MVR",
+                                                    "comment": "Set flaps to MVR when speed and altitude permit."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If issue is not resolved:"
+                                                },
+                                                {
+                                                    "text": "FLAP EMER RETR",
+                                                    "subtext": "Emergency Flight Control Panel",
+                                                    "action": "RETR"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Speed Brake Asymmetry / Failure",
+                                    "sections": [
+                                        {
+                                            "title": "Speed Brake Asymmetry / Failure",
+                                            "items": [
+                                                {
+                                                    "text": "SPD BK EMER RETR",
+                                                    "subtext": "Emergency Flight Control Panel",
+                                                    "action": "RETR"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Aileron / Elevator Jam",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Aileron and elevator jams are indicated by the [b]AIL L / R[/b] and [b]ELEV L / R[/b] warning lights, respectively.[/small]"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "type": "Comment",
-                                            "text": "If APU fire T-handle light does not extinguish:"
+                                            "title": "Aileron / Elevator Jam",
+                                            "items": [
+                                                {
+                                                    "text": "EMER DISENGAGE",
+                                                    "subtext": "Emergency Flight Control Panel",
+                                                    "action": "Activate",
+                                                    "comment": "Move the appropriate emergency disengage switch in the direction indicated by the jam warning light."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Hypoxia",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: The effects of hypoxia are simulated in DCS. You will notice your vision slowly starting to fade, similar to G-induced loss of consciousness.[/small]"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "text": "APU Fire T-Handle",
-                                            "subtext": "Front Dash",
-                                            "action": "Pull"
-                                        },
-                                        {
-                                            "text": "Fire Agent Discharge Switch",
-                                            "subtext": "Front Dash",
-                                            "action": "L or R"
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "If both presses of discharge switch fail to extinguish fire, land as soon as possible."
+                                            "title": "Hypoxia",
+                                            "items": [
+                                                {
+                                                    "text": "Oxygen Supply",
+                                                    "subtext": "Environment System Panel",
+                                                    "action": "ON"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Oxygen Flow Indicator",
+                                                    "subtext": "Environment System Panel",
+                                                    "action": "Blinking"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Oxygen Supply Pressure",
+                                                    "subtext": "Environment System Panel",
+                                                    "action": "Above 55 PSI"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[b]NOTE[/b]: If oxygen system is set correctly and symptoms are not relieved, descend to below 13000 FT as soon as possible."
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "title": "Ejection",
-                            "sections": [
-                                {
-                                    "title": "Ejection",
-                                    "items": [
-                                        {
-                                            "type": "Comment",
-                                            "text": "If possible, eject above:\n• 2000 FT AGL in level flight\n• 4000 FT AGL in uncontrolled flight"
-                                        },
-                                        {
-                                            "text": "IFF Master Dial",
-                                            "subtext": "IFF Control Panel",
-                                            "action": "EMER"
-                                        },
-                                        {
-                                            "text": "UHF Guard Channel",
-                                            "subtext": "UHF Radio",
-                                            "action": "Transmit Mayday"
-                                        },
-                                        {
-                                            "type": "Comment",
-                                            "text": "Turn aircraft towards uninhabited area. Trim to lowest practical speed. Hold wings level."
-                                        },
-                                        {
-                                            "text": "Ejection Handle",
-                                            "subtext": "Seat",
-                                            "action": "Pull"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Engine Fire",
-                            "sections": [
+                            "title": "Engine / APU / Fuel",
+                            "items": [
                                 {
                                     "title": "Engine Fire",
-                                    "items": [
+                                    "sections": [
                                         {
-                                            "type": "Comment",
-                                            "text": "Reduce power to affected engine. If engine fire T-handle light does not extinguish:"
+                                            "title": "Engine Fire",
+                                            "items": [
+                                                {
+                                                    "text": "Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "IDLE"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If engine fire T-handle light does not extinguish:"
+                                                },
+                                                {
+                                                    "text": "Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "Engine Fire T-Handle",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Pull"
+                                                },
+                                                {
+                                                    "text": "Fire Agent Discharge Switch",
+                                                    "subtext": "Front Dash",
+                                                    "action": "L or R"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "text": "Throttle",
-                                            "subtext": "Throttle Quadrant",
-                                            "action": "OFF"
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: If both presses of discharge switch fail to extinguish fire, land and exit aircraft as soon as possible.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Be prepared to eject if aircraft becomes uncontrollable.[/small]"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "APU Fire",
+                                    "sections": [
+                                        {
+                                            "title": "APU Fire",
+                                            "items": [
+                                                {
+                                                    "text": "APU",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If APU fire T-handle light does not extinguish:"
+                                                },
+                                                {
+                                                    "text": "APU Fire T-Handle",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Pull"
+                                                },
+                                                {
+                                                    "text": "Fire Agent Discharge Switch",
+                                                    "subtext": "Front Dash",
+                                                    "action": "L or R"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "text": "Engine Fire T-Handle",
-                                            "subtext": "Front Dash",
-                                            "action": "Pull"
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: If both presses of discharge switch fail to extinguish fire, land and exit aircraft as soon as possible.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Be prepared to eject if aircraft becomes uncontrollable.[/small]"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "APU Overheat",
+                                    "sections": [
+                                        {
+                                            "title": "APU Overheat",
+                                            "items": [
+                                                {
+                                                    "text": "APU",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "text": "Fire Agent Discharge Switch",
-                                            "subtext": "Front Dash",
-                                            "action": "L or R"
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Land as soon as practical.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: In an emergency, an APU restart may be attempted if it is needed for electrical power or an engine restart. Closely monitor APU temperature and shut it down immediately if it overheats again.[/small]"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Engine Oil Malfunction",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: These instructions apply to engine oil over-pressure and under-pressure failures. Such failures are indicated by the [b]ENG OIL PRESS L / R[/b] warning lights.[/small]"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "type": "Comment",
-                                            "text": "If both presses of discharge switch fail to extinguish fire, land as soon as possible."
+                                            "title": "Engine Oil Malfunction",
+                                            "items": [
+                                                {
+                                                    "text": "Affected Engine Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "MIN"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If oil pressure can be maintained above 30 PSI:"
+                                                },
+                                                {
+                                                    "text": "Affected Engine Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "IDLE"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If oil pressure cannot be maintained above 30 PSI:"
+                                                },
+                                                {
+                                                    "text": "Affected Engine Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF",
+                                                    "comment": "If oil pressure cannot be maintained above 30 PSI, the engine must be shut down to avoid damage / failure."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Main Boost Pump Failure",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Main fuel boost pump failures are indicated by the [b]MAIN PUMP L / R[/b] warning lights.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Fuel pressure will still be provided by wing boost pumps if they are operating. If both main and wing boost pumps fail, suction feed will supply the engines below 10000 FT. Engine performance will be reduced above this altitude.[/small]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Main Boost Pump Failure",
+                                            "items": [
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "ON"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If fuel transfer between tanks is too fast:"
+                                                },
+                                                {
+                                                    "text": "FILL DISABLE Switches",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "Pull  All"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Wing Boost Pump Failure",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Wing fuel boost pump failures are indicated by the [b]WING PUMP L / R[/b] warning lights.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Fuel in the affected tank will not transfer until quantity is below 600 LB. This can lead to a weight imbalance if let unchecked.[/small]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Wing Boost Pump Failure",
+                                            "items": [
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "ON"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If fuel transfer between tanks is too fast:"
+                                                },
+                                                {
+                                                    "text": "FILL DISABLE Switches",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "Pull  All"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Fuel Low Pressure / Leak",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Fuel pressure faults are indicated by the [b]FUEL PRESS L / R[/b] warning lights.[/small]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Fuel Low Pressure / Leak",
+                                            "items": [
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "ON"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If warning light does not extinguish:"
+                                                },
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "Fuel Quantity",
+                                                    "subtext": "Fuel Quantity Panel",
+                                                    "action": "Monitor",
+                                                    "comment": "Monitor fuel quantities to determine if a leak exists."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If a fuel leak is detected in either engine:"
+                                                },
+                                                {
+                                                    "text": "Affected Engine Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "Affected Engine Fire T-Handle",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Pull"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If fuel leak continues:"
+                                                },
+                                                {
+                                                    "text": "Affected Engine Boost Pumps",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "Both OFF"
+                                                },
+                                                {
+                                                    "text": "Yaw / Pitch SAS",
+                                                    "subtext": "SAS Panel",
+                                                    "action": "All OFF",
+                                                    "comment": "Only necessary if fuel leak is in right engine."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Engine Start After Failed Start",
+                                    "sections": [
+                                        {
+                                            "title": "Engine Start After Failed Start",
+                                            "items": [
+                                                {
+                                                    "text": "Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "MOTOR",
+                                                    "comment": "Hold switch in MOTOR position for at least 30 seconds."
+                                                },
+                                                {
+                                                    "text": "ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "NORM"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Attempt normal engine start."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "In-Air Engine Restart",
+                                    "subtitle": "Restart with APU",
+                                    "sections": [
+                                        {
+                                            "title": "In-Air Engine Restart",
+                                            "items": [
+                                                {
+                                                    "text": "Inoperative Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "OFF",
+                                                    "comment": "Set throttle of affected engine to OFF. Engine ITT should cool rapidly."
+                                                },
+                                                {
+                                                    "text": "Altitude",
+                                                    "action": "Descend",
+                                                    "comment": "Descent to below 15000 FT prior to proceeding."
+                                                },
+                                                {
+                                                    "text": "APU",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "START"
+                                                },
+                                                {
+                                                    "text": "Operating Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "MAX"
+                                                },
+                                                {
+                                                    "text": "Inoperative ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "MOTOR",
+                                                    "comment": "Wait until inoperative engine ITT is below 100°C."
+                                                },
+                                                {
+                                                    "text": "Inoperative Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "IDLE",
+                                                    "comment": "Move throttle out of OFF detent."
+                                                },
+                                                {
+                                                    "text": "Inoperative ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "NORM"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Inoperative Engine Gauges",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Monitor",
+                                                    "comment": "Monitor engine gauges and ensure restart proceeds as expected."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If engine restart is successful:"
+                                                },
+                                                {
+                                                    "text": "Yaw / Pitch SAS",
+                                                    "subtext": "SAS Panel",
+                                                    "action": "All ENGAGE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "In-Air Engine Restart",
+                                    "subtitle": "Windmill Restart",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Engine restart using APU is preferred whenever possible.[/small]"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: Windmill starts require a dive of a 6000 - 8000 FT, and are therefore not possible when aircraft is below 10000 FT AGL.[/small]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "In-Air Engine Restart",
+                                            "items": [
+                                                {
+                                                    "text": "BLEED AIR",
+                                                    "subtext": "Environment System Panel",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "ON"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Once ITT of inoperative engine is below 150°C, place aircraft in a 30° dive."
+                                                },
+                                                {
+                                                    "text": "L / R Throttles",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "Both MAX"
+                                                },
+                                                {
+                                                    "text": "Inoperative ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "IGN"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Wait for inoperative engine to resume normal operation.",
+                                                    "comment": "Monitor altitude loss during dive. Abort engine restart if aircraft will descend below 2000 FT AGL."
+                                                },
+                                                {
+                                                    "text": "Inoperative ENG OPER",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "NORM"
+                                                },
+                                                {
+                                                    "text": "CROSS FEED",
+                                                    "subtext": "Fuel System Control Panel",
+                                                    "action": "OFF"
+                                                },
+                                                {
+                                                    "text": "BLEED AIR",
+                                                    "subtext": "Environment System Panel",
+                                                    "action": "ON"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Landing / Ejection",
+                            "items": [
+                                {
+                                    "title": "Ejection",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[small][b]NOTE[/b]: If possible, eject above:[li]2000 FT AGL in level flight[/li][li]4000 FT AGL in uncontrolled flight[/li][/small]"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Ejection",
+                                            "items": [
+                                                {
+                                                    "text": "IFF Master Dial",
+                                                    "subtext": "IFF Control Panel",
+                                                    "action": "EMER"
+                                                },
+                                                {
+                                                    "text": "UHF Guard Channel",
+                                                    "subtext": "UHF Radio",
+                                                    "action": "Transmit Mayday"
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Turn aircraft towards uninhabited area. Trim to lowest practical speed. Hold wings level."
+                                                },
+                                                {
+                                                    "text": "Ejection Handle",
+                                                    "subtext": "Seat",
+                                                    "action": "Pull"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Landing Gear Extension Failure",
+                                    "sections": [
+                                        {
+                                            "title": "Landing Gear Extension Failure",
+                                            "items": [
+                                                {
+                                                    "text": "SIGNAL LIGHTS LAMP TEST",
+                                                    "subtext": "Auxiliary Lighting Panel",
+                                                    "action": "Press",
+                                                    "comment": "Verify all landing gear indicators illuminate."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Check L HYD SYS hydraulic pressure. If pressure is normal:"
+                                                },
+                                                {
+                                                    "text": "Landing Gear Handle",
+                                                    "subtext": "Landing Gear Control Panel",
+                                                    "action": "Cycle"
+                                                },
+                                                {
+                                                    "text": "Airspeed",
+                                                    "action": "Increase to 200 KTS",
+                                                    "comment": "Roll aircraft rapidly to attempt to shake gear loose."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "If the above actions fail:"
+                                                },
+                                                {
+                                                    "text": "Airspeed",
+                                                    "action": "Reduce to < 200 KTS"
+                                                },
+                                                {
+                                                    "text": "Landing Gear Handle",
+                                                    "subtext": "Landing Gear Control Panel",
+                                                    "action": "Down"
+                                                },
+                                                {
+                                                    "text": "AUX LG EXT Handle",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Pull"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Gear Up Landing",
+                                    "sections": [
+                                        {
+                                            "title": "Preparation",
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "[b]NOTE[/b]: Burn as much fuel as possible prior to attempting a gear-up landing to reduce aircraft weight and possibility of fire."
+                                                },
+                                                {
+                                                    "text": "AUX LG EXT Handle",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Push In"
+                                                },
+                                                {
+                                                    "text": "Stores",
+                                                    "subtext": "Front Dash",
+                                                    "action": "Jettison All",
+                                                    "comment": "In addition to stores, fire all flares prior to attempting landing to reduce risk of fire."
+                                                },
+                                                {
+                                                    "text": "Emergency Brake",
+                                                    "subtext": "Left Console",
+                                                    "action": "Set"
+                                                },
+                                                {
+                                                    "text": "Speed Brakes",
+                                                    "subtext": "Throttle",
+                                                    "action":"40%"
+                                                },
+                                                {
+                                                    "text": "Flaps",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "DN"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Landing",
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Touch down on center of runway with [b]minimum possible[/b] sink rate."
+                                                },
+                                                {
+                                                    "text": "Speed Brakes",
+                                                    "subtext": "Throttle",
+                                                    "action": "Open"
+                                                },
+                                                {
+                                                    "text": "L / R Throttle",
+                                                    "subtext": "Throttle Quadrant",
+                                                    "action": "IDLE"
+                                                },
+                                                {
+                                                    "text": "Control Stick",
+                                                    "subtext": "Control Stick",
+                                                    "action": "Full Aft"
+                                                },
+                                                {
+                                                    "text": "L / R Throttle",
+                                                    "subtext":  "Throttle Quadrant",
+                                                    "action": "OFF",
+                                                    "comment": "Shut down engines as soon as aircraft comes to a complete stop."
+                                                },
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "Exit the aircraft as soon as possible."
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -1587,7 +2162,361 @@
                 },
                 {
                     "title": "Combat Employment",
-                    "items": []
+                    "items": [
+                        {
+                            "title": "GAU-8 Cannon",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "GUN / PAC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM",
+                                            "comment": "Set to GUNARM if PAC not desired."
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "GUNS"
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to HUD"
+                                        },
+                                        {
+                                            "text": "Gunsight",
+                                            "subtext": "Control Stick - DMS",
+                                            "action": "Select",
+                                            "comment": "Cycle gunsights by pressing DMS left / right."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to place pipper on target.[/li][li]Pull trigger to fire cannon.[/li][/small]"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small]Trigger actions are as follows:[li][b]First Stage[/b]: Activate PAC[/li][li][b]Second Stage[/b]: Fire Cannon[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Rockets",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "As Desired",
+                                            "comment": "Set to CCIP or CCRP as desired."
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to HUD"
+                                        },
+                                        {
+                                            "text": "Weapon Profile",
+                                            "subtext": "Control Stick - DMS",
+                                            "action": "Select",
+                                            "comment": "Cycle weapon profiles by pressing DMS left / right."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CCIP Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to place pipper on target.[/li][li]Press and hold Weapon Release Button until all rockets in ripple have fired.[/li][/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CCRP Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to align pipper over ASL on the HUD.[/li][li]As solution cue drops down ASL, press and hold Weapon Release Button.[/li][li]Rockets will fire when solution cue passes through pipper.[/li][li]Do not release Weapon Release Button until all rockets in ripple have fired.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Unguided Bombs",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "TEST"
+                                        },
+                                        {
+                                            "text": "CCIP CONSENT OPT",
+                                            "subtext": "IFFCC Test Menu",
+                                            "action": "As Desired",
+                                            "comment": "Set to 3/9, 5MIL, or OFF as desired."
+                                        },
+                                        {
+                                            "text": "IFFCC",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "As Desired",
+                                            "comment": "Set to CCIP or CCRP as desired."
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to HUD"
+                                        },
+                                        {
+                                            "text": "Weapon Profile",
+                                            "subtext": "Control Stick - DMS",
+                                            "action": "Select",
+                                            "comment": "Cycle weapon profiles by pressing DMS left / right."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CCIP Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to place pipper on target.[/li][li]Press and hold Weapon Release Button until all bombs in ripple have released.[/li][/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CCRP Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to align pipper over ASL on the HUD.[/li][li]As solution cue drops down ASL, press and hold Weapon Release Button.[/li][li]Bombs will release when solution cue passes through pipper.[/li][li]Do not release Weapon Release Button until all bombs in ripple have released.[/li][/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "CCIP / CR Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to place pipper on target.[/li][li]Press and hold Weapon Release Button, then pitch back to return to level flight.[/li][li]Maneuver aircraft to align pipper over ASL on the HUD.[/li][li]Bombs will release when solution cue passes through pipper.[/li][li]Do not release Weapon Release Button until all bombs in ripple have released.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Laser-Guided Bombs",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "TGP",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ON"
+                                        },
+                                        {
+                                            "text": "LASER",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "TGP Mode",
+                                            "subtext": "MFCD - TGP Page",
+                                            "action": "A-G"
+                                        },
+                                        {
+                                            "text": "TGP Laser Code",
+                                            "subtext": "MFCD - TGP Page",
+                                            "action": "Set",
+                                            "comment": "Ensure TGP laser code matches LGB seeker code as shown in DSMS."
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action": "Set to TGP"
+                                        },
+                                        {
+                                            "text": "TGP Reticle",
+                                            "subtext": "Throttle - Slew Control",
+                                            "action": "Slew to Target"
+                                        },
+                                        {
+                                            "text": "SPI",
+                                            "subtext": "Control Stick - TMS",
+                                            "action": "Designate TGP",
+                                            "comment": "Press TMS forward long to designate TGP as SPI."
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "Set to CCRP"
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to HUD"
+                                        },
+                                        {
+                                            "text": "Weapon Profile",
+                                            "subtext": "Control Stick - DMS",
+                                            "action": "Select",
+                                            "comment": "Cycle weapon profiles by pressing DMS left / right."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Pre-Release",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to align pipper over ASL on the HUD.[/li][li]As solution cue drops down ASL, press and hold Weapon Release Button.[/li][li]Bombs will release when solution cue passes through pipper.[/li][li]Do not release Weapon Release Button until all bombs in ripple have released.[/li][/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Post-Release",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Ensure that TGP has a clear line of sight to the target until bomb impact.[/li][li]If AUTO LASE option is not set, press NWS button on control stick to lase target.[/li][li]For best results, delay lasing until approximately 8 seconds before projected impact.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Inertially-Aided Munitions",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "SPI",
+                                            "subtext": "Control Stick - TMS",
+                                            "action": "Designate",
+                                            "comment": "Press TMS forward long to designate SPI. IAMs can target any type of SPI, including steerpoint, TDC, TGP, TAD, Maverick, etc."
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "Set to CCRP"
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to HUD"
+                                        },
+                                        {
+                                            "text": "Weapon Profile",
+                                            "subtext": "Control Stick - DMS",
+                                            "action": "Select",
+                                            "comment": "Cycle weapon profiles by pressing DMS left / right."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Maneuver aircraft to align pipper over ASL on the HUD.[/li][li]Release cue will move counter-clockwise around pipper as aircraft approaches the designated target.[/li][li]When release cue is between the minimum/maximum range carets, press and hold Weapon Release Button.[/li][li]Do not release Weapon Release Button until all bombs in ripple have released.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Mavericks",
+                            "sections": [
+                                {
+                                    "title": "Preparation",
+                                    "items": [
+                                        {
+                                            "text": "EO Power",
+                                            "subtext": "MFCD - MAV Page",
+                                            "action": "ON",
+                                            "comment": "Mavericks require 3 minute alignment before use, starting when EO power is turned on."
+                                        },
+                                        {
+                                            "text": "MASTER ARM",
+                                            "subtext": "Armament / HUD Control Panel",
+                                            "action": "ARM"
+                                        },
+                                        {
+                                            "text": "Master Mode",
+                                            "subtext": "Control Stick - MMCB",
+                                            "action": "Set to CCIP"
+                                        },
+                                        {
+                                            "text": "SOI",
+                                            "subtext": "Throttle - Coolie Hat",
+                                            "action" : "Set to MAV"
+                                        },
+                                        {
+                                            "text": "Maverick Target",
+                                            "subtext": "Throttle - Slew Control",
+                                            "action": "Designate",
+                                            "comment": "Pressing TMS forward short will command the MAV to attempt to lock on at the current reticle position."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Usage",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]It is normally easiest to designate an SPI using the TGP, TDC, or TAD, and then slave the Maverick seeker to the SPI by pressing China Hat Forward Long.[/li][li]Range caret will begin descending DLZ scale on MAV MFCD page at approximately 10 NM slant range.[/li][li]Maverick will normally lock on to target at a range of 3 - 7 NM.[/li][li]Once the seeker has locked the target, press and hold the Weapon Release Button until the Maverick has fully launched.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
