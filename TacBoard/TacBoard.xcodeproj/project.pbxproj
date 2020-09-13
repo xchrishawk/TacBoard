@@ -135,7 +135,6 @@
 		83F238652506E26100C757FA /* RadioModulationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238642506E26100C757FA /* RadioModulationType.swift */; };
 		83F238672507082A00C757FA /* NavaidType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238662507082A00C757FA /* NavaidType.swift */; };
 		83F2386925070A1400C757FA /* AirportNavaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2386825070A1400C757FA /* AirportNavaid.swift */; };
-		83F2386E25084E6000C757FA /* TacBoardData in Resources */ = {isa = PBXBuildFile; fileRef = 83F2386D25084E6000C757FA /* TacBoardData */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -271,7 +270,6 @@
 		83F238642506E26100C757FA /* RadioModulationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModulationType.swift; sourceTree = "<group>"; };
 		83F238662507082A00C757FA /* NavaidType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavaidType.swift; sourceTree = "<group>"; };
 		83F2386825070A1400C757FA /* AirportNavaid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportNavaid.swift; sourceTree = "<group>"; };
-		83F2386D25084E6000C757FA /* TacBoardData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TacBoardData; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -701,7 +699,6 @@
 		83F2386C25084E4D00C757FA /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				83F2386D25084E6000C757FA /* TacBoardData */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -780,7 +777,6 @@
 				0C0A37FC24E8A5FF00D077C6 /* Reference.storyboard in Resources */,
 				0CFDF40B24F5B86E00A6DE25 /* ChecklistDataIndex.json in Resources */,
 				0CFDF40A24F5B86E00A6DE25 /* AirportDataIndex.json in Resources */,
-				83F2386E25084E6000C757FA /* TacBoardData in Resources */,
 				0C58625224D58FBF009AF160 /* Checklists.storyboard in Resources */,
 				0C1ED46624D587E900486255 /* Assets.xcassets in Resources */,
 				0C1BEC2724F1EBFA001695E6 /* Common.storyboard in Resources */,
@@ -1167,7 +1163,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = NA5RSH5EHC;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1192,7 +1188,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = NA5RSH5EHC;
 				EXCLUDED_SOURCE_FILE_NAMES = Resources/Data/Hosted/TacBoardData;
 				INFOPLIST_FILE = Resources/Info.plist;
