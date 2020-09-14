@@ -30,7 +30,7 @@
         <!--Notepad-->
         <scene sceneID="POS-fE-9Nf">
             <objects>
-                <viewController id="3lL-be-Wdz" userLabel="Notepad" customClass="NotepadViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3lL-be-Wdz" userLabel="Notepad" customClass="NotepadViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1b-qV-d3y">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sG7-zC-NG6">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="60"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-7d-SCP" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-7d-SCP" customClass="SegmentedControl" customModule="TacBoard" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="814" height="41"/>
                                                 <segments>
                                                     <segment title="First"/>
@@ -141,7 +141,7 @@
         <!--Settings Popover Container-->
         <scene sceneID="zSm-iW-bky">
             <objects>
-                <viewController id="xGn-Wl-zhY" userLabel="Settings Popover Container" customClass="NotepadSettingsPopoverContainerViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xGn-Wl-zhY" userLabel="Settings Popover Container" customClass="NotepadSettingsPopoverContainerViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w3P-36-BrH">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="373"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
         <!--Settings Popover-->
         <scene sceneID="ALC-KT-2dC">
             <objects>
-                <tableViewController storyboardIdentifier="Settings" title="Settings" id="lqa-Jo-qOV" userLabel="Settings Popover" customClass="NotepadSettingsViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Settings" title="Settings" id="lqa-Jo-qOV" userLabel="Settings Popover" customClass="NotepadSettingsViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="E2z-eF-4Ad">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="360"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,12 +394,12 @@
         <!--Blank Drawing-->
         <scene sceneID="6rP-X4-oYV">
             <objects>
-                <viewController storyboardIdentifier="BlankDrawing" id="eha-IM-qmF" userLabel="Blank Drawing" customClass="NotepadDrawingViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlankDrawing" id="eha-IM-qmF" userLabel="Blank Drawing" customClass="NotepadDrawingViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LHm-Mc-5WL">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atm-gv-RQG" customClass="NotepadDrawingView" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atm-gv-RQG" customClass="NotepadDrawingView" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WZG-7l-WXN" appends="YES" id="qXx-u5-nMu"/>
@@ -422,7 +422,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAv-1b-jcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="WZG-7l-WXN" customClass="NotepadDrawingGestureRecognizer" customModule="DCS_TacBoard" customModuleProvider="target">
+                <gestureRecognizer id="WZG-7l-WXN" customClass="NotepadDrawingGestureRecognizer" customModule="TacBoard" customModuleProvider="target">
                     <connections>
                         <action selector="drawingGesture:" destination="eha-IM-qmF" id="lvr-qw-0QY"/>
                     </connections>
@@ -433,15 +433,15 @@
         <!--9-Line Drawing-->
         <scene sceneID="5A3-CC-hyB">
             <objects>
-                <viewController storyboardIdentifier="NineLineCASDrawing" id="kiv-7C-DbP" userLabel="9-Line Drawing" customClass="NotepadDrawingViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NineLineCASDrawing" id="kiv-7C-DbP" userLabel="9-Line Drawing" customClass="NotepadDrawingViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2g-in-FMR">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kU-x7-Vv5" customClass="NotepadNineLineCASBackgroundView" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kU-x7-Vv5" customClass="NotepadNineLineCASBackgroundView" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCq-Pe-2kh" customClass="NotepadDrawingView" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCq-Pe-2kh" customClass="NotepadDrawingView" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Vnc-a3-2Q3" appends="YES" id="ttU-hF-PXP"/>
@@ -469,7 +469,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATG-pp-xGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="Vnc-a3-2Q3" customClass="NotepadDrawingGestureRecognizer" customModule="DCS_TacBoard" customModuleProvider="target">
+                <gestureRecognizer id="Vnc-a3-2Q3" customClass="NotepadDrawingGestureRecognizer" customModule="TacBoard" customModuleProvider="target">
                     <connections>
                         <action selector="drawingGesture:" destination="kiv-7C-DbP" id="wOx-k6-05h"/>
                     </connections>

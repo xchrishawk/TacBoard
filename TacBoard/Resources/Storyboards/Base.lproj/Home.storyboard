@@ -30,7 +30,7 @@
         <!--Home-->
         <scene sceneID="IPf-Xs-WFY">
             <objects>
-                <tableViewController id="5Vv-Nh-gJR" customClass="HomeViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5Vv-Nh-gJR" customClass="HomeViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HqF-TZ-iRd">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="119" id="Hwe-p6-Xq4" userLabel="Title Cell" customClass="HomeTitleTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="119" id="Hwe-p6-Xq4" userLabel="Title Cell" customClass="HomeTitleTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hwe-p6-Xq4" id="Y6z-1n-dEK">
@@ -78,7 +78,7 @@
                                     <outletCollection property="primaryTextLabels" destination="lH1-Zu-Hyz" collectionClass="NSMutableArray" id="E84-yh-eNK"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="SNt-eL-znf" userLabel="Menu Item Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItemCell" id="SNt-eL-znf" userLabel="Menu Item Cell" customClass="HomeTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="174.5" width="794" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNt-eL-znf" id="CKz-c6-7sW">
@@ -173,7 +173,7 @@
                                     <outlet property="titleLabel" destination="vBY-GI-JHb" id="FIw-Tk-Cjg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="TZ7-Rj-GPg" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="TZ7-Rj-GPg" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="235" width="794" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZ7-Rj-GPg" id="3tF-Nv-hx6">
@@ -263,7 +263,7 @@
         <!--Aircraft Module Selector-->
         <scene sceneID="qEM-io-ykr">
             <objects>
-                <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="IgY-fN-g6O">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,7 +271,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="YE4-sy-a4g" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="YE4-sy-a4g" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YE4-sy-a4g" id="fKg-wV-8mo">
@@ -360,7 +360,7 @@
         <!--Terrain Module Selector-->
         <scene sceneID="epA-u0-vQe">
             <objects>
-                <tableViewController id="2fV-g0-50u" userLabel="Terrain Module Selector" customClass="TerrainModuleListViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2fV-g0-50u" userLabel="Terrain Module Selector" customClass="TerrainModuleListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ton-5F-amD">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,7 +368,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="9Q0-MW-mKh" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EnableModuleCell" id="9Q0-MW-mKh" userLabel="Enable Module Cell" customClass="HomeTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Q0-MW-mKh" id="EUC-vW-7f1">
@@ -459,7 +459,7 @@
         <!--About-->
         <scene sceneID="zdi-uO-How">
             <objects>
-                <tableViewController id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Od-NB-6KM">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +467,7 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoItem" rowHeight="60" id="irn-Mw-0RX" userLabel="Info Item Cell" customClass="HomeAboutInfoItemTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoItem" rowHeight="60" id="irn-Mw-0RX" userLabel="Info Item Cell" customClass="HomeAboutInfoItemTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="irn-Mw-0RX" id="dAQ-B6-ugS">
@@ -501,14 +501,14 @@
                                     <outlet property="valueLabel" destination="XD1-Lc-CzW" id="tdE-iu-PDx"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutDebugItemTableViewCell" customModule="DCS_TacBoard" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugItem" rowHeight="60" id="Ukp-zn-cwx" userLabel="Debug Item Cell" customClass="HomeAboutDebugItemTableViewCell" customModule="TacBoard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="115.5" width="794" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ukp-zn-cwx" id="7Lj-N7-d8V">
                                     <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="DCS_TacBoard" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="TacBoard" customModuleProvider="target">
                                             <rect key="frame" x="371.5" y="13.5" width="51" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
@@ -539,7 +539,7 @@
         <!--Settings-->
         <scene sceneID="O3T-KP-JFF">
             <objects>
-                <tableViewController id="Mr1-vS-yD1" customClass="SettingsViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Mr1-vS-yD1" customClass="SettingsViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="p6K-qx-QCW">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,7 +562,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-Db-KNv" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-Db-KNv" customClass="SegmentedControl" customModule="TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="PO4-Kr-vXa">
@@ -616,7 +616,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UkD-DF-9oo" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UkD-DF-9oo" customClass="SegmentedControl" customModule="TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="9cJ-Tj-fIP"/>
@@ -665,7 +665,7 @@
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="il5-mV-70b" customClass="SegmentedControl" customModule="DCS_TacBoard" customModuleProvider="target">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="il5-mV-70b" customClass="SegmentedControl" customModule="TacBoard" customModuleProvider="target">
                                                     <rect key="frame" x="539" y="10" width="240" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="opK-6j-pJL">
@@ -751,7 +751,7 @@
         <!--Help-->
         <scene sceneID="ShC-Wu-qrk">
             <objects>
-                <viewController id="Lrd-Cj-Qbt" userLabel="Help" customClass="HomeHelpViewController" customModule="DCS_TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lrd-Cj-Qbt" userLabel="Help" customClass="HomeHelpViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fam-gg-HDH">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVf-ue-zsi">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1129"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <connections>
                                     <segue destination="2YV-Aq-Xte" kind="embed" identifier="EmbedSplitViewController" id="9d7-tU-LuU"/>
                                 </connections>
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uVf-ue-zsi" firstAttribute="leading" secondItem="ZQ7-3Q-S7F" secondAttribute="leading" id="4z3-QA-YYD"/>
-                            <constraint firstItem="DGb-a7-M5u" firstAttribute="bottom" secondItem="uVf-ue-zsi" secondAttribute="bottom" id="8M3-Wn-x29"/>
+                            <constraint firstAttribute="bottom" secondItem="uVf-ue-zsi" secondAttribute="bottom" id="8M3-Wn-x29"/>
                             <constraint firstAttribute="trailing" secondItem="uVf-ue-zsi" secondAttribute="trailing" id="daz-r5-yUN"/>
                             <constraint firstItem="uVf-ue-zsi" firstAttribute="top" secondItem="ZQ7-3Q-S7F" secondAttribute="top" id="wRs-CC-gTJ"/>
                         </constraints>
@@ -223,7 +223,7 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="QGk-Cg-3Dg" userLabel="Binder" customClass="ChecklistBinderViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YYk-0G-0Ak">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
@@ -336,7 +336,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Folder" id="I7i-95-nMp" customClass="ChecklistFolderViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="Gzl-Nk-ENu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>

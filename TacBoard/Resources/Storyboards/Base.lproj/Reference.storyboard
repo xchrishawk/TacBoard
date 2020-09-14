@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-6M-Ggy">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1129"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <connections>
                                     <segue destination="x2S-D9-PtT" kind="embed" identifier="EmbedSplitViewController" id="tvi-6f-JIg"/>
                                 </connections>
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
                         <constraints>
-                            <constraint firstItem="iya-8o-ZMh" firstAttribute="bottom" secondItem="rg3-6M-Ggy" secondAttribute="bottom" id="3sQ-OY-ews"/>
+                            <constraint firstAttribute="bottom" secondItem="rg3-6M-Ggy" secondAttribute="bottom" id="3sQ-OY-ews"/>
                             <constraint firstItem="rg3-6M-Ggy" firstAttribute="leading" secondItem="6pd-dO-YfE" secondAttribute="leading" id="R2s-Qs-j4E"/>
                             <constraint firstItem="rg3-6M-Ggy" firstAttribute="top" secondItem="6pd-dO-YfE" secondAttribute="top" id="Sut-Nq-Yxv"/>
                             <constraint firstAttribute="trailing" secondItem="rg3-6M-Ggy" secondAttribute="trailing" id="zZ7-ho-1kW"/>
@@ -162,7 +162,7 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="anA-IL-nSP" userLabel="Binder" customClass="ReferenceBinderViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Iuy-KI-Uqq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
@@ -267,7 +267,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Folder" id="BJl-yn-j7A" customClass="ReferenceFolderViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="q4l-4I-3R3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>

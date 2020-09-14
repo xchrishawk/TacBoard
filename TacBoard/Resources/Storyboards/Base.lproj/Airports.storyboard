@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObY-Zs-RlW">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1129"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <connections>
                                     <segue destination="7NP-LE-waz" kind="embed" identifier="EmbedSplitViewController" id="vrB-Ez-Tow"/>
                                 </connections>
@@ -26,7 +26,7 @@
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GB4-qG-ZN3" firstAttribute="bottom" secondItem="ObY-Zs-RlW" secondAttribute="bottom" id="Fe0-ze-ygD"/>
+                            <constraint firstAttribute="bottom" secondItem="ObY-Zs-RlW" secondAttribute="bottom" id="Fe0-ze-ygD"/>
                             <constraint firstItem="ObY-Zs-RlW" firstAttribute="leading" secondItem="2ie-qe-Gwh" secondAttribute="leading" id="ZDa-4Y-ckU"/>
                             <constraint firstItem="ObY-Zs-RlW" firstAttribute="top" secondItem="2ie-qe-Gwh" secondAttribute="top" id="ftp-jw-CTx"/>
                             <constraint firstAttribute="trailing" secondItem="ObY-Zs-RlW" secondAttribute="trailing" id="hxN-hV-6y5"/>
@@ -45,11 +45,11 @@
             <objects>
                 <viewController id="tG6-7u-POb" userLabel="Airport List" customClass="AirportListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rAi-5C-WlK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="chw-md-yOC">
-                                <rect key="frame" x="0.0" y="50" width="320" height="1079"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="1124"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-v4-F9K" userLabel="Search Bar View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
@@ -95,7 +95,7 @@
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfA-oF-ecd" userLabel="Airport List Container View">
-                                        <rect key="frame" x="0.0" y="53" width="320" height="1026"/>
+                                        <rect key="frame" x="0.0" y="53" width="320" height="1071"/>
                                         <connections>
                                             <segue destination="Oyt-Ym-DBN" kind="embed" destinationCreationSelector="createAirportListTableViewController:" id="6OE-IH-fKz"/>
                                         </connections>
@@ -129,7 +129,7 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Oyt-Ym-DBN" userLabel="Airport List Table" customClass="AirportListTableViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="D2q-m6-Icv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1026"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1071"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
