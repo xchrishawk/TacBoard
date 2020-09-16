@@ -20,13 +20,15 @@ extension DataIndex where Object: ChecklistBinder {
     
     /// The embedded fallback checklist data index.
     static var fallback: ChecklistDataIndex {
-        return ChecklistDataIndex.load(localURL: ContentManager.url(forRelativePath: relativePath, source: .fallback))
+        let url = ContentManager.url(forRelativePath: relativePath, source: .fallback)
+        return ChecklistDataIndex.loadOrFatalError(localURL: url)
     }
     
     /// Asynchronously loads the checklist index from the specified content manager.
     /// - note: The completion block is guaranteed to be called on the main thread.
-    static func load(source: ContentSource, completion: @escaping (ChecklistDataIndex?) -> Void) {
-        ChecklistDataIndex.load(url: ContentManager.url(forRelativePath: relativePath, source: source), completion: completion)
+    static func load(source: ContentSource, completion: @escaping (ChecklistDataIndex.Result) -> Void) {
+        let url = ContentManager.url(forRelativePath: relativePath, source: source)
+        ChecklistDataIndex.load(url: url, completion: completion)
     }
     
     // MARK: Private Utility

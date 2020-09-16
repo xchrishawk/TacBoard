@@ -19,13 +19,15 @@ extension DataIndex where Object: AirportCollection {
     
     /// The embedded fallback airport data index.
     static var fallback: AirportDataIndex {
-        return AirportDataIndex.load(localURL: ContentManager.url(forRelativePath: relativePath, source: .fallback))
+        let url = ContentManager.url(forRelativePath: relativePath, source: .fallback)
+        return AirportDataIndex.loadOrFatalError(localURL: url)
     }
     
     /// Asynchronously loads the airport data index from the specified content manager.
     /// - note: The completion block is guaranteed to be called on the main thread.
-    static func load(source: ContentSource, completion: @escaping (AirportDataIndex?) -> Void) {
-        AirportDataIndex.load(url: ContentManager.url(forRelativePath: relativePath, source: source), completion: completion)
+    static func load(source: ContentSource, completion: @escaping (AirportDataIndex.Result) -> Void) {
+        let url = ContentManager.url(forRelativePath: relativePath, source: source)
+        AirportDataIndex.load(url: url, completion: completion)
     }
     
     // MARK: Private Utility

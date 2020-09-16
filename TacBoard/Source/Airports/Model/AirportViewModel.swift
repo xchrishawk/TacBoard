@@ -208,15 +208,12 @@ class AirportViewModel {
 
     /// Loads data from the specified content source.
     private func loadData(from source: ContentSource) {
-        AirportDataIndex.load(source: source) { [weak self] dataIndex in
+        AirportDataIndex.load(source: source) { [weak self] result in
             
-            guard
-                let self = self,
-                let dataIndex = dataIndex
-                else { return }
+            guard case .success(let dataIndex) = result else { return }
             
-            self.mutableDataIndex.value = dataIndex
-            self.mutableDataIndexSource.value = source
+            self?.mutableDataIndex.value = dataIndex
+            self?.mutableDataIndexSource.value = source
             
         }
     }

@@ -19,13 +19,15 @@ extension DataIndex where Object: ReferenceBinder {
     
     /// The embedded fallback reference documents index.
     static var fallback: ReferenceDataIndex {
-        return ReferenceDataIndex.load(localURL: ContentManager.url(forRelativePath: relativePath, source: .fallback))
+        let url = ContentManager.url(forRelativePath: relativePath, source: .fallback)
+        return ReferenceDataIndex.loadOrFatalError(localURL: url)
     }
     
     /// Asynchronously loads the reference documents index from the specified content manager.
     /// - note: The completion block is guaranteed to be called on the main thread.
-    static func load(source: ContentSource, completion: @escaping (ReferenceDataIndex?) -> Void) {
-        ReferenceDataIndex.load(url: ContentManager.url(forRelativePath: relativePath, source: source), completion: completion)
+    static func load(source: ContentSource, completion: @escaping (ReferenceDataIndex.Result) -> Void) {
+        let url = ContentManager.url(forRelativePath: relativePath, source: source)
+        ReferenceDataIndex.load(url: url, completion: completion)
     }
     
     // MARK: Private Utility
