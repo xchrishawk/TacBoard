@@ -90,7 +90,8 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String, subtitle: String? = nil, sections: [ChecklistSection] = []) {
+    init(key: String, title: String, subtitle: String? = nil, sections: [ChecklistSection] = []) {
+        self.key = key
         self.title = title
         self.subtitle = subtitle
         self.sections = sections
@@ -98,6 +99,9 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     }
     
     // MARK: Properties
+    
+    /// A unique key for this procedure.
+    let key: String
     
     /// The title of the procedure.
     let title: String
@@ -138,7 +142,8 @@ class ChecklistProcedure: Decodable, ReferenceEquatable {
     /// Initializes a new instance with the specified `Decoder`.
     convenience required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(title: try container.decode(String.self, forKey: .title),
+        self.init(key: ChecklistDataIndex.key(for: decoder),
+                  title: try container.decode(String.self, forKey: .title),
                   subtitle: try container.decodeOrDefault(String?.self, forKey: .subtitle, default: nil),
                   sections: try container.decodeOrDefault([ChecklistSection].self, forKey: .sections, default: []))
     }

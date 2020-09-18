@@ -211,17 +211,12 @@ class HomeAboutViewController: TableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
             
             cell.button?.setTitle(LocalizableString(.aboutDataInfoCheckForUpdatedData), for: .normal)
-            cell.button?.touchUpInside = { [weak self] in
+            cell.button?.touchUpInside = {
                 
                 // Tell all of the data consumers to reload their data
                 ContentManager.shared.reloadContentNow()
                 
-                // Notify the user that we did something
-                let alert = UIAlertController(title: LocalizableString(.aboutReloadingDataTitle),
-                                              message: LocalizableString(.aboutReloadingDataMessage),
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .default, handler: nil))
-                self?.present(alert, animated: true, completion: nil)
+                // TODO - UI feedback for user???
                 
             }
             

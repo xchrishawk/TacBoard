@@ -15,7 +15,8 @@ class Airport: Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(identifier: String,
+    init(key: DataIndexKey,
+         identifier: String,
          type: AirportType,
          callsign: String? = nil,
          name: String,
@@ -30,6 +31,7 @@ class Airport: Decodable {
          runways: [AirportRunway] = [],
          images: [AirportImage] = []) {
         
+        self.key = key
         self.identifier = identifier
         self.type = type
         self.callsign = callsign
@@ -48,6 +50,9 @@ class Airport: Decodable {
     }
     
     // MARK: Properties
+    
+    /// A unique key for this airport.
+    let key: DataIndexKey
     
     /// The ICAO identifier of this airport.
     let identifier: String
@@ -115,7 +120,8 @@ class Airport: Decodable {
     /// Initializes a new instance with the specified `Decoder`.
     convenience required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(identifier: try container.decode(String.self, forKey: .identifier),
+        self.init(key: AirportDataIndex.key(for: decoder),
+                  identifier: try container.decode(String.self, forKey: .identifier),
                   type: try container.decode(AirportType.self, forKey: .type),
                   callsign: try container.decodeOrDefault(String?.self, forKey: .callsign, default: nil),
                   name: try container.decode(String.self, forKey: .name),

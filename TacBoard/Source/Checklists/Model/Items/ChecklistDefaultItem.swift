@@ -15,15 +15,26 @@ class ChecklistDefaultItem: ChecklistCompletableItem, Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(text: NSAttributedString, subtext: String? = nil, action: String? = nil, comment: String? = nil, isComplete: Bool = false) {
+    init(key: DataIndexKey,
+         text: NSAttributedString,
+         subtext: String? = nil,
+         action: String? = nil,
+         comment: String? = nil,
+         isComplete: Bool = false) {
+        
+        self.key = key
         self.text = text
         self.subtext = subtext
         self.action = action
         self.comment = comment
         self.isComplete = MutableProperty(isComplete)
+        
     }
     
     // MARK: Properties
+    
+    /// A unique key for this checklist item.
+    let key: DataIndexKey
     
     /// The text of the item.
     let text: NSAttributedString
@@ -61,7 +72,8 @@ class ChecklistDefaultItem: ChecklistCompletableItem, Decodable {
             let text = NSAttributedString(markup: textMarkup)
             else { throw DecodingError.dataCorruptedError(forKey: .text, in: container, debugDescription: "Invalid text!") }
         
-        self.init(text: text,
+        self.init(key: ChecklistDataIndex.key(for: decoder),
+                  text: text,
                   subtext: try container.decodeOrDefault(String?.self, forKey: .subtext, default: nil),
                   action: try container.decodeOrDefault(String?.self, forKey: .action, default: nil),
                   comment: try container.decodeOrDefault(String?.self, forKey: .comment, default: nil),

@@ -55,15 +55,26 @@ class ReferenceDocument: Decodable, ReferenceEquatable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String, subtitle: String? = nil, type: ReferenceDocumentType, credit: String? = nil, location: ResourceLocation) {
+    init(key: DataIndexKey,
+         title: String,
+         subtitle: String? = nil,
+         type: ReferenceDocumentType,
+         credit: String? = nil,
+         location: ResourceLocation) {
+        
+        self.key = key
         self.title = title
         self.subtitle = subtitle
         self.type = type
         self.credit = credit
         self.location = location
+        
     }
     
     // MARK: Properties
+    
+    /// A unique key for this document.
+    let key: DataIndexKey
     
     /// The title of the document.
     let title: String
@@ -105,7 +116,8 @@ class ReferenceDocument: Decodable, ReferenceEquatable {
         if let asset = try? container.decode(String.self, forKey: .asset) {
             
             // Image is a local asset
-            self.init(title: title,
+            self.init(key: ReferenceDataIndex.key(for: decoder),
+                      title: title,
                       subtitle: subtitle,
                       type: type,
                       credit: credit,
@@ -114,7 +126,8 @@ class ReferenceDocument: Decodable, ReferenceEquatable {
         } else if let path = try? container.decode(String.self, forKey: .path) {
             
             // Image is a remote file
-            self.init(title: title,
+            self.init(key: ReferenceDataIndex.key(for: decoder),
+                      title: title,
                       subtitle: subtitle,
                       type: type,
                       credit: credit,

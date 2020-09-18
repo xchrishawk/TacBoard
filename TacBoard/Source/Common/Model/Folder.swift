@@ -14,13 +14,19 @@ class Folder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String, subfolders: [Folder<Item>], items: [Item] = []) {
+    init(key: DataIndexKey, title: String, subfolders: [Folder<Item>], items: [Item] = []) {
+        
+        self.key = key
         self.title = title
         self.subfolders = subfolders
         self.items = items
+        
     }
 
     // MARK: Properties
+    
+    /// A unique key for this folder.
+    let key: DataIndexKey
     
     /// The title of this folder.
     let title: String
@@ -77,7 +83,8 @@ class Folder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     /// Initializes a new instance with the specified `Decoder`.
     convenience required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(title: try container.decode(String.self, forKey: .title),
+        self.init(key: DataIndex<Binder<Item>>.key(for: decoder),
+                  title: try container.decode(String.self, forKey: .title),
                   subfolders: try container.decodeOrDefault([Folder<Item>].self, forKey: .subfolders, default: []),
                   items: try container.decodeOrDefault([Item].self, forKey: .items, default: []))
     }

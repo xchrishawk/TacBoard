@@ -42,6 +42,9 @@ fileprivate enum Setting: String {
     /// The split display mode for the checklist page.
     case checklistSplitDisplayMode
     
+    /// The "is complete" lookup for checklist items.
+    case checklistIsCompleteLookup
+    
     /// The currently selected notepad page.
     case notepadSelectedPage
     
@@ -86,6 +89,7 @@ class SettingsManager {
         self.airportSplitDisplayMode = defaults.mutableProperty(setting: .airportSplitDisplayMode)
         self.airportDarkModeBrightness = defaults.mutableProperty(setting: .airportDarkModeBrightness, defaultValue: Constants.defaultDarkModeBrightness)
         self.checklistSplitDisplayMode = defaults.mutableProperty(setting: .checklistSplitDisplayMode)
+        self.checklistIsCompleteLookup = defaults.mutableProperty(setting: .checklistIsCompleteLookup, defaultValue: [:])
         self.notepadSelectedPage = defaults.mutableProperty(setting: .notepadSelectedPage)
         self.notepadActivePathColor = defaults.mutableProperty(setting: .notepadActivePathColor, defaultValue: NotepadPath.defaultColor)
         self.notepadActivePathWidth = defaults.mutableProperty(setting: .notepadActivePathWidth, defaultValue: NotepadPath.defaultWidth)
@@ -118,6 +122,9 @@ class SettingsManager {
     
     /// The split display mode for the Checklist page.
     let checklistSplitDisplayMode: MutableProperty<SplitDisplayMode>
+    
+    /// The currently active checklist items.
+    let checklistIsCompleteLookup: MutableProperty<[String: Set<DataIndexKey>]>
     
     /// The currently selected Notepad page.
     let notepadSelectedPage: MutableProperty<NotepadPage>
@@ -228,14 +235,43 @@ fileprivate extension UserDefaults {
             defaults.set(data, forKey: setting.key)
         }
     }
+
+    /// Returns a `T` value for the specified `Setting`.
+    func get<T>(setting: Setting, defaultValue: T) -> T where T: Codable {
+        guard
+            let data = self.data(forKey: setting.key)
+            else { return defaultValue }
+        let decoder = PropertyListDecoder()
+        return (try? decoder.decode(T.self, from: data)) ?? defaultValue
+    }
+    
+    /// Returns a `MutableProperty<T>` for the specified `Setting`.
+    func mutableProperty<T>(setting: Setting, defaultValue: T) -> MutableProperty<T> where T: Codable {
+        return mutableProperty(value: get(setting: setting, defaultValue: defaultValue)) { defaults, value in
+            let encoder = PropertyListEncoder()
+            encoder.outputFormat = .binary
+            guard
+                let data = try? encoder.encode(value)
+                else { return }
+            defaults.set(data, forKey: setting.key)
+        }
+    }
     
     // MARK: Private Utility
     
     /// Returns a `MutableProperty` with the specified initial value which calls the specified closure for any update.
     private func mutableProperty<T>(value: T, update: @escaping (UserDefaults, T) -> Void) -> MutableProperty<T> {
+        
         let property = MutableProperty(value)
-        property.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] value in update(self, value) }
+        
+        // When the value changes, call the update closure to write the data to user prefs.
+        // Throttle to only allow updates once per second.
+        property.producer.skip(first: 1).take(duringLifetimeOf: self).throttle(1.0, on: QueueScheduler.main).startWithValues { [unowned self] value in
+            update(self, value)
+        }
+        
         return property
+        
     }
 
 }

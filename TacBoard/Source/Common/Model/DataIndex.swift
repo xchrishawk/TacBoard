@@ -6,6 +6,7 @@
 //  Copyright © 2020 Christopher Vig. All rights reserved.
 //
 
+import CryptoKit
 import Foundation
 
 /// Class representing a data index containing application data.
@@ -14,13 +15,17 @@ class DataIndex<Object>: Decodable where Object: Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified fields.
-    init(version: String, description: String, objects: [Object]) {
+    init(key: DataIndexKey, version: String, description: String, objects: [Object]) {
+        self.key = key
         self.version = version
         self.description = description
         self.objects = objects
     }
     
     // MARK: Properties
+    
+    /// A unique key for this data index.
+    let key: DataIndexKey
     
     /// The version number of the data index.
     let version: String
@@ -30,7 +35,7 @@ class DataIndex<Object>: Decodable where Object: Decodable {
     
     /// The list objects contained in the data index.
     let objects: [Object]
- 
+    
     // MARK: Decodable
     
     /// `CodingKey` enum for this class.
@@ -39,11 +44,12 @@ class DataIndex<Object>: Decodable where Object: Decodable {
         case description
         case objects
     }
-
+    
     /// Initializes a new instance with the specified `Decoder`.
-    convenience init(with decoder: Decoder) throws {
+    required convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(version: try container.decode(String.self, forKey: .version),
+        self.init(key: Self.key(for: decoder),
+                  version: try container.decode(String.self, forKey: .version),
                   description: try container.decode(String.self, forKey: .description),
                   objects: try container.decode([Object].self, forKey: .objects))
     }
@@ -103,6 +109,13 @@ extension DataIndex {
         }
     }
     
+    /// Returns a unique key for a decoded object in a `DataIndex` instance.
+    static func key(for decoder: Decoder) -> DataIndexKey {
+        guard let dataIndexKey = decoder.userInfo[.dataIndexKey] as? String else { fatalError() }
+        guard !decoder.codingPath.isEmpty else { return dataIndexKey }
+        return "\(dataIndexKey)/\(decoder.codingPathString)"
+    }
+    
     // MARK: Private Static Utility
     
     /// Synchronously loads a `DataIndex` from the specified local `URL`.
@@ -114,12 +127,9 @@ extension DataIndex {
         
         do {
             
-            // Load data
+            // Load data and decode
             let data = try Data(contentsOf: url)
-        
-            // Decode and return
-            let decoder = JSONDecoder()
-            return try decoder.decode(DataIndex<Object>.self, from: data)
+            return try dataIndex(from: data)
             
         } catch {
             
@@ -195,8 +205,7 @@ extension DataIndex {
             do {
                 
                 // Parse the data and return if successful
-                let decoder = JSONDecoder()
-                let index = try decoder.decode(DataIndex<Object>.self, from: data)
+                let index = try dataIndex(from: data)
                 complete(result: .success(index))
                 
             } catch {
@@ -210,6 +219,18 @@ extension DataIndex {
         
         // Start task
         task.resume()
+        
+    }
+
+    /// Decodes a `DataIndex<Object>` from the specified JSON data.
+    private static func dataIndex(from data: Data) throws -> DataIndex<Object> {
+        
+        // Pass the SHA digest to the initialized objects
+        let decoder = JSONDecoder()
+        decoder.userInfo = [.dataIndexKey: data.sha256DigestString]
+        
+        // Decode
+        return try decoder.decode(DataIndex<Object>.self, from: data)
         
     }
     

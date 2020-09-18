@@ -221,13 +221,6 @@ class FolderViewController<ViewModel>: TableViewController where ViewModel: Bind
             
         }
         
-        // If the folder for this binder becomes unavailable, pop to the root view controller
-        viewModel.binders.producer.skip(first: 1).take(duringLifetimeOf: self).startWithValues { [unowned self] binders in
-            if !binders.contains(where: { $0.contains(folder: self.folder) }) {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-        }
-        
     }
     
     /// Reloads the items section, if it is displayed.

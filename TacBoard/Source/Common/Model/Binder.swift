@@ -42,14 +42,24 @@ class Binder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String? = nil, aircraftModule: AircraftModule? = nil, terrainModule: TerrainModule? = nil, folders: [Folder<Item>] = []) {
+    init(key: DataIndexKey,
+         title: String? = nil,
+         aircraftModule: AircraftModule? = nil,
+         terrainModule: TerrainModule? = nil,
+         folders: [Folder<Item>] = []) {
+        
+        self.key = key
         self.title = title ?? aircraftModule?.title ?? terrainModule?.title
         self.aircraftModule = aircraftModule
         self.terrainModule = terrainModule
         self.folders = folders
+        
     }
     
     // MARK: Properties
+    
+    /// A unique key for this binder.
+    let key: DataIndexKey
     
     /// The title for this binder.
     let title: String?
@@ -60,7 +70,7 @@ class Binder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     /// The terrain module with which this binder is associated, if any.
     let terrainModule: TerrainModule?
     
-    /// The folders contained in this binder.
+    /// The top-level folders contained in this binder.
     let folders: [Folder<Item>]
     
     // MARK: Methods
@@ -134,7 +144,8 @@ class Binder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
             
         }()
         
-        self.init(title: try container.decodeOrDefault(String?.self, forKey: .title, default: nil),
+        self.init(key: DataIndex<Binder<Item>>.key(for: decoder),
+                  title: try container.decodeOrDefault(String?.self, forKey: .title, default: nil),
                   aircraftModule: aircraftModule,
                   terrainModule: terrainModule,
                   folders: try container.decodeOrDefault([Folder<Item>].self, forKey: .folders, default: []))

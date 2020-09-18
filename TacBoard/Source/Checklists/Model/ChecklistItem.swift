@@ -16,6 +16,9 @@ protocol ChecklistItem: class, Decodable {
     
     // MARK: Properties
     
+    /// A unique key for this item.
+    var key: String { get }
+    
     /// The main text of the item.
     var text: NSAttributedString { get }
     

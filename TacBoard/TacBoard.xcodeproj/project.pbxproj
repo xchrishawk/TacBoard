@@ -132,6 +132,10 @@
 		83608914250D9B6200BC6BD4 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 83608913250D9B6200BC6BD4 /* Help */; };
 		83608916250D9B9100BC6BD4 /* HomeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */; };
 		8389446524FD6A1500BE9161 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389446424FD6A1500BE9161 /* URL.swift */; };
+		83D9207025156F2A00B13C19 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */; };
+		83D9207325156F8700B13C19 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9207225156F8700B13C19 /* Data.swift */; };
+		83D920772515717E00B13C19 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D920762515717E00B13C19 /* Decoder.swift */; };
+		83D9207E2515781300B13C19 /* DataIndexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9207D2515781300B13C19 /* DataIndexKey.swift */; };
 		83F238652506E26100C757FA /* RadioModulationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238642506E26100C757FA /* RadioModulationType.swift */; };
 		83F238672507082A00C757FA /* NavaidType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F238662507082A00C757FA /* NavaidType.swift */; };
 		83F2386925070A1400C757FA /* AirportNavaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2386825070A1400C757FA /* AirportNavaid.swift */; };
@@ -268,6 +272,10 @@
 		83608913250D9B6200BC6BD4 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
 		83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHelpViewController.swift; sourceTree = "<group>"; };
 		8389446424FD6A1500BE9161 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
+		83D9207225156F8700B13C19 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		83D920762515717E00B13C19 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		83D9207D2515781300B13C19 /* DataIndexKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataIndexKey.swift; sourceTree = "<group>"; };
 		83F238642506E26100C757FA /* RadioModulationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModulationType.swift; sourceTree = "<group>"; };
 		83F238662507082A00C757FA /* NavaidType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavaidType.swift; sourceTree = "<group>"; };
 		83F2386825070A1400C757FA /* AirportNavaid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportNavaid.swift; sourceTree = "<group>"; };
@@ -393,6 +401,7 @@
 				0CFDF40524F59DB200A6DE25 /* ContentManager.swift */,
 				0CFDF40D24F5B90700A6DE25 /* ContentSource.swift */,
 				0C1BEC3124F33806001695E6 /* DataIndex.swift */,
+				83D9207D2515781300B13C19 /* DataIndexKey.swift */,
 				0C4E3DE724D904D5004269CB /* Defaultable.swift */,
 				0C0A380824E8B06500D077C6 /* Folder.swift */,
 				0C9A18BA24DA35720048BDFC /* ISO3166.swift */,
@@ -652,6 +661,9 @@
 			isa = PBXGroup;
 			children = (
 				0CB6AB4224D5A1D80030447D /* Array.swift */,
+				83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */,
+				83D9207225156F8700B13C19 /* Data.swift */,
+				83D920762515717E00B13C19 /* Decoder.swift */,
 				0C1BEC1C24F199E4001695E6 /* Double.swift */,
 				0C1BEC2E24F2E4B6001695E6 /* HTTPURLResponse.swift */,
 				0C1BEC1E24F19A04001695E6 /* Int.swift */,
@@ -876,11 +888,13 @@
 				0CA7404F24D6254E00E7DDA9 /* ChecklistItem.swift in Sources */,
 				0C1BEC2424F1E638001695E6 /* MediaFrameViewController.swift in Sources */,
 				0C9A18B924DA31860048BDFC /* AirportTableViewCell.swift in Sources */,
+				83D9207E2515781300B13C19 /* DataIndexKey.swift in Sources */,
 				0C0A380724E8A85800D077C6 /* UISplitViewController.swift in Sources */,
 				0CAFF49324DDAD2B00AA8D8B /* TerrainModule.swift in Sources */,
 				0C1BEC2B24F1FB9B001695E6 /* UIStoryboard.swift in Sources */,
 				0CF79D1A24E4D188002608B5 /* HomeAboutViewController.swift in Sources */,
 				0CA7405124D6257A00E7DDA9 /* ChecklistDefaultItem.swift in Sources */,
+				83D9207025156F2A00B13C19 /* CodingUserInfoKey.swift in Sources */,
 				0C1BEC1D24F199E4001695E6 /* Double.swift in Sources */,
 				0C832A2A24D77FAE00493E5F /* DisplayMode.swift in Sources */,
 				0CA7405524D62D0200E7DDA9 /* String.swift in Sources */,
@@ -922,6 +936,8 @@
 				0C9A18B324DA27FD0048BDFC /* AirportRunway.swift in Sources */,
 				83F2386925070A1400C757FA /* AirportNavaid.swift in Sources */,
 				0CBE446D24DCDDC8002144FD /* LocalizableString.swift in Sources */,
+				83D9207325156F8700B13C19 /* Data.swift in Sources */,
+				83D920772515717E00B13C19 /* Decoder.swift in Sources */,
 				0C15736424D70C0D00136274 /* NotepadDrawingViewController.swift in Sources */,
 				0CAFF49524DDAD3700AA8D8B /* AircraftModule.swift in Sources */,
 				0C9A18AF24DA27D70048BDFC /* AirportCollection.swift in Sources */,

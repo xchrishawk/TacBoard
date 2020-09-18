@@ -77,6 +77,12 @@ class ChecklistViewController: UIViewController {
     /// Initializes ReactiveSwift bindings.
     private func initializeBindings() {
         
+        // Pop to the root master view controller (i.e., the binder controller) if the binders change, since the folders are no longer valid
+        viewModel.binders.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+            guard let masterNavigationController = self.embeddedSplitViewController?.viewControllers.first as? UINavigationController else { return }
+            masterNavigationController.popToRootViewController(animated: true)
+        }
+        
         // Update the detail view controller when the selected procedure changes
         viewModel.selectedItem.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] selectedItem in
             self.embeddedSplitViewController?.showDetailViewController({

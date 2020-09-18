@@ -45,13 +45,19 @@ class AirportCollection: Decodable {
     // MARK: Initialization
     
     /// Initializes a new instance with the specified values.
-    init(title: String? = nil, terrainModule: TerrainModule? = nil, airports: [Airport]) {
+    init(key: DataIndexKey, title: String? = nil, terrainModule: TerrainModule? = nil, airports: [Airport]) {
+        
+        self.key = key
         self.title = title ?? terrainModule?.title
         self.terrainModule = terrainModule
         self.airports = airports
+        
     }
     
     // MARK: Properties
+    
+    /// A unique key for this collection.
+    let key: DataIndexKey
     
     /// The display title for this collection.
     let title: String?
@@ -98,7 +104,8 @@ class AirportCollection: Decodable {
             
         }()
         
-        self.init(title: try container.decodeOrDefault(String?.self, forKey: .title, default: nil),
+        self.init(key: AirportDataIndex.key(for: decoder),
+                  title: try container.decodeOrDefault(String?.self, forKey: .title, default: nil),
                   terrainModule: terrainModule,
                   airports: try container.decode([Airport].self, forKey: .airports).sorted { $0.name < $1.name })
         

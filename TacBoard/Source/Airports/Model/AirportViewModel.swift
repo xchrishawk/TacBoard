@@ -175,7 +175,7 @@ class AirportViewModel {
                 }
                 
                 // Return a copy of the aircraft collection with all non-matching airports filtered out
-                return AirportCollection(title: collection.title, terrainModule: collection.terrainModule, airports: collection.airports.filter { airport in
+                return AirportCollection(key: collection.key, title: collection.title, terrainModule: collection.terrainModule, airports: collection.airports.filter { airport in
                     
                     guard let searchText = searchText, !searchText.isEmpty else { return true }
                     
