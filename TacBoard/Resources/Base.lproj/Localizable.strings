@@ -17,6 +17,8 @@
 "genericNA"                                 = "N/A";
 "genericOther"                              = "Other";
 "genericSelected"                           = "Selected";
+"genericSelectAll"                          = "Select All";
+"genericSelectNone"                         = "Select None";
 "genericVersion"                            = "Version";
 "genericDebug"                              = "Debug";
 "genericRelease"                            = "Release";

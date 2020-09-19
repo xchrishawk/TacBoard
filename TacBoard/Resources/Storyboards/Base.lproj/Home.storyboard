@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9dT-BH-A84">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9dT-BH-A84">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,7 +56,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Version X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGg-BE-f0N">
-                                                    <rect key="frame" x="338" y="58.5" width="88.5" height="20.5"/>
+                                                    <rect key="frame" x="338" y="58.5" width="88" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="SecondaryTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,11 +83,11 @@
                                 <rect key="frame" x="20" y="174.5" width="794" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNt-eL-znf" id="CKz-c6-7sW">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="767" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9iH-vw-bMW">
-                                            <rect key="frame" x="15" y="10" width="738" height="40.5"/>
+                                            <rect key="frame" x="15" y="10" width="737" height="40.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjG-3g-u3E">
                                                     <rect key="frame" x="0.0" y="0.5" width="40" height="40"/>
@@ -107,16 +108,16 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="taT-ac-kVp">
-                                                    <rect key="frame" x="45" y="3" width="563" height="35"/>
+                                                    <rect key="frame" x="45" y="3" width="562.5" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBY-GI-JHb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="563" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="562.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="PrimaryTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uS-0R-gdo">
-                                                            <rect key="frame" x="0.0" y="20.5" width="563" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="562.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" name="SecondaryTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -124,7 +125,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oaM-Bh-PoH">
-                                                    <rect key="frame" x="613" y="8.5" width="125" height="24"/>
+                                                    <rect key="frame" x="612.5" y="8.5" width="124.5" height="24"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-6k-hGQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -134,7 +135,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="New Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv2-D4-BEq">
-                                                            <rect key="frame" x="29" y="0.0" width="96" height="24"/>
+                                                            <rect key="frame" x="29" y="0.0" width="95.5" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="TintColor"/>
                                                             <nil key="highlightedColor"/>
@@ -265,7 +266,7 @@
             <objects>
                 <tableViewController id="6gT-tn-scM" userLabel="Aircraft Module Selector" customClass="AircraftModuleListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="IgY-fN-g6O">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SecondaryBackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
@@ -343,7 +344,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Enabled Aircraft" id="G1B-2Q-ZV6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="SGi-gq-zca">
+                        <barButtonItem key="rightBarButtonItem" title="Select All" id="SGi-gq-zca">
                             <connections>
                                 <action selector="toggleEnablementBarButtonItemPressed:" destination="6gT-tn-scM" id="WNN-vO-a80"/>
                             </connections>
@@ -441,7 +442,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enabled Terrain" id="ls8-lW-8gI">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="lh8-0r-tvX">
+                        <barButtonItem key="rightBarButtonItem" title="Select All" id="lh8-0r-tvX">
                             <connections>
                                 <action selector="toggleEnablementBarButtonItemPressed:" destination="2fV-g0-50u" id="mzV-mH-H2x"/>
                             </connections>
@@ -475,7 +476,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecd-Ii-h8M">
-                                            <rect key="frame" x="15" y="19.5" width="33.5" height="21"/>
+                                            <rect key="frame" x="15" y="19.5" width="33" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" name="PrimaryTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -508,7 +509,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="TacBoard" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-oS-MA1" customClass="BlockButton" customModule="TacBoard" customModuleProvider="target">
                                             <rect key="frame" x="371.5" y="13.5" width="51" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
@@ -611,7 +612,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit Format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-ER-qDE">
-                                                    <rect key="frame" x="15" y="19.5" width="90.5" height="21"/>
+                                                    <rect key="frame" x="15" y="19.5" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -660,7 +661,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lat/Lon Format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2Z-Mc-8Ri">
-                                                    <rect key="frame" x="15" y="19.5" width="116.5" height="21"/>
+                                                    <rect key="frame" x="15" y="19.5" width="115.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -713,8 +714,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-4l-joB">
-                                                    <rect key="frame" x="329.5" y="13.5" width="135" height="33"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-4l-joB">
+                                                    <rect key="frame" x="330" y="13.5" width="134" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Reset All Settings"/>
                                                     <connections>
@@ -764,6 +765,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ubj-Vu-B1D"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <color key="tintColor" name="TintColor"/>
                         <constraints>
@@ -772,7 +774,6 @@
                             <constraint firstItem="ena-gM-Fk2" firstAttribute="leading" secondItem="ubj-Vu-B1D" secondAttribute="leading" id="bue-Cm-LuH"/>
                             <constraint firstItem="ubj-Vu-B1D" firstAttribute="bottom" secondItem="ena-gM-Fk2" secondAttribute="bottom" id="h4a-3U-L9r"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ubj-Vu-B1D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Help" id="wys-CM-Jtt"/>
                     <connections>
@@ -785,7 +786,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

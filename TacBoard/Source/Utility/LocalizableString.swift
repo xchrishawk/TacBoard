@@ -24,6 +24,8 @@ enum LocalizableStringKey: String {
     case genericNA
     case genericOther
     case genericSelected
+    case genericSelectAll
+    case genericSelectNone
     case genericVersion
     case genericDebug
     case genericRelease

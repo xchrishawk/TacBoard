@@ -93,12 +93,12 @@ class ModuleListViewController<ModuleType>: TableViewController where ModuleType
             // Reload the table view
             self.tableView.reloadData()
             
-            // Update the toggle button image, if needed
-            self.toggleEnablementBarButtonItem?.image = {
+            // Update the toggle button title, if needed
+            self.toggleEnablementBarButtonItem?.title = {
                 if self.isAllSelected {
-                    return UIImage(systemName: "xmark")
+                    return LocalizableString(.genericSelectNone)
                 } else {
-                    return UIImage(systemName: "checkmark")
+                    return LocalizableString(.genericSelectAll)
                 }
             }()
             
