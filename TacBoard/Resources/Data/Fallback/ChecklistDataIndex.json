@@ -1514,7 +1514,7 @@
                                             "type": "Comment",
                                             "text": "Refuel Status Light",
                                             "subtext": "Canopy Bow",
-                                            "action": "Conform DISCONNECT"
+                                            "action": "Confirm DISCONNECT"
                                         },
                                         {
                                             "text": "NWS Button",
@@ -1540,7 +1540,7 @@
                                             "type": "Comment",
                                             "text": "Refuel Status Light",
                                             "subtext": "Canopy Bow",
-                                            "action": "Conform DISCONNECT"
+                                            "action": "Confirm DISCONNECT"
                                         },
                                         {
                                             "type": "Comment",
