@@ -150,6 +150,8 @@
 "nineLineCASRemarksShort"                   = "REMARKS";
 
 // NotepadPage
+"notepadClearConfirmationTitle"             = "Clear Notepad?";
+"notepadClearConfirmationMessage"           = "This notepad page will be completely erased.";
 "notepadPageBlank1"                         = "Blank 1";
 "notepadPageBlank2"                         = "Blank 2";
 "notepadPageNineLineCAS"                    = "9-Line CAS";

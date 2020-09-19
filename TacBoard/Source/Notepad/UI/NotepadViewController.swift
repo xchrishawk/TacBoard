@@ -105,7 +105,16 @@ class NotepadViewController: UIViewController {
     /// The user pressed the clear button.
     @IBAction
     private func clearBarButtonItemPressed(_ sender: UIBarButtonItem) {
-        embeddedViewController?.clear()
+        
+        // Issue #10: Display a confirmation box asking the user if they want to clear the entire page
+        let alert = UIAlertController(title: LocalizableString(.notepadClearConfirmationTitle),
+                                      message: LocalizableString(.notepadClearConfirmationMessage),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .destructive, handler: { [weak self] _ in self?.embeddedViewController?.clear() }))
+        alert.addAction(UIAlertAction(title: LocalizableString(.genericCancel), style: .cancel, handler: nil))
+
+        present(alert, animated: true, completion: nil)
+
     }
 
     /// The user changed the page segmented control.

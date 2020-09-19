@@ -168,6 +168,8 @@ enum LocalizableStringKey: String {
     
     // MARK: Cases (NotepadPage)
     
+    case notepadClearConfirmationTitle
+    case notepadClearConfirmationMessage
     case notepadPageBlank1
     case notepadPageBlank2
     case notepadPageNineLineCAS
