@@ -83,7 +83,7 @@ class SettingsViewController: TableViewController {
         
         controller.addAction(UIAlertAction(title: LocalizableString(.genericReset),
                                            style: .destructive,
-                                           handler: { _ in settingsManager.reset() }))
+                                           handler: { _ in settingsManager.resetAllSettings() }))
         controller.addAction(UIAlertAction(title: LocalizableString(.genericCancel),
                                            style: .cancel,
                                            handler: nil))

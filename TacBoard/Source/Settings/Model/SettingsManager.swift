@@ -16,7 +16,7 @@ import UIKit
 /// Enumeration of the available settings.
 fileprivate enum Setting: String {
  
-    // MARK: Cases
+    // MARK: Cases (Settings)
     
     /// The currently enabled aircraft modules.
     case enabledAircraftModules
@@ -42,9 +42,6 @@ fileprivate enum Setting: String {
     /// The split display mode for the checklist page.
     case checklistSplitDisplayMode
     
-    /// The "is complete" lookup for checklist items.
-    case checklistIsCompleteLookup
-    
     /// The currently selected notepad page.
     case notepadSelectedPage
     
@@ -59,6 +56,11 @@ fileprivate enum Setting: String {
     
     /// The brightness to use for reference pages in dark mode.
     case referenceDarkModeBrightness
+    
+    // MARK: Cases (Application State)
+    
+    /// The "is complete" lookup for checklist items.
+    case checklistIsCompleteLookup
     
     // MARK: Properties
     
@@ -81,6 +83,8 @@ class SettingsManager {
     
     /// Not publicly instantiable.
     private init(defaults: UserDefaults = UserDefaults.standard) {
+        
+        // Settings
         self.enabledAircraftModules = defaults.mutableProperty(setting: .enabledAircraftModules, defaultValue: Set(AircraftModule.defaultEnabledModules))
         self.enabledTerrainModules = defaults.mutableProperty(setting: .enabledTerrainModules, defaultValue: Set(TerrainModule.defaultEnabledModules))
         self.displayMode = defaults.mutableProperty(setting: .displayMode)
@@ -89,15 +93,18 @@ class SettingsManager {
         self.airportSplitDisplayMode = defaults.mutableProperty(setting: .airportSplitDisplayMode)
         self.airportDarkModeBrightness = defaults.mutableProperty(setting: .airportDarkModeBrightness, defaultValue: Constants.defaultDarkModeBrightness)
         self.checklistSplitDisplayMode = defaults.mutableProperty(setting: .checklistSplitDisplayMode)
-        self.checklistIsCompleteLookup = defaults.mutableProperty(setting: .checklistIsCompleteLookup, defaultValue: [:])
         self.notepadSelectedPage = defaults.mutableProperty(setting: .notepadSelectedPage)
         self.notepadActivePathColor = defaults.mutableProperty(setting: .notepadActivePathColor, defaultValue: NotepadPath.defaultColor)
         self.notepadActivePathWidth = defaults.mutableProperty(setting: .notepadActivePathWidth, defaultValue: NotepadPath.defaultWidth)
         self.referenceSplitDisplayMode = defaults.mutableProperty(setting: .referenceSplitDisplayMode)
         self.referenceDarkModeBrightness = defaults.mutableProperty(setting: .referenceDarkModeBrightness, defaultValue: Constants.defaultDarkModeBrightness)
+        
+        // Application state
+        self.checklistIsCompleteLookup = defaults.mutableProperty(setting: .checklistIsCompleteLookup, defaultValue: [:])
+        
     }
     
-    // MARK: Properties
+    // MARK: Properties (Settings)
     
     /// The set of currently enabled aircraft modules.
     let enabledAircraftModules: MutableProperty<Set<AircraftModule>>
@@ -123,9 +130,6 @@ class SettingsManager {
     /// The split display mode for the Checklist page.
     let checklistSplitDisplayMode: MutableProperty<SplitDisplayMode>
     
-    /// The currently active checklist items.
-    let checklistIsCompleteLookup: MutableProperty<[String: Set<DataIndexKey>]>
-    
     /// The currently selected Notepad page.
     let notepadSelectedPage: MutableProperty<NotepadPage>
     
@@ -141,10 +145,16 @@ class SettingsManager {
     /// The brightness to use for reference pages in dark mode.
     let referenceDarkModeBrightness: MutableProperty<CGFloat>
     
+    // MARK: Properties (Application State)
+    
+    /// The currently active checklist items.
+    let checklistIsCompleteLookup: MutableProperty<[String: Set<DataIndexKey>]>
+    
     // MARK: Methods
     
     /// Resets all settings to their default state.
-    func reset() {
+    /// - note: This only reset *settings*, not application state items like checklist completion.
+    func resetAllSettings() {
         enabledAircraftModules.value = Set(AircraftModule.defaultEnabledModules)
         enabledTerrainModules.value = Set(TerrainModule.defaultEnabledModules)
         displayMode.value = .default
