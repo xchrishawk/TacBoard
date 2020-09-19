@@ -34,6 +34,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
+        // Open URLs if there are any specified
+        if !connectionOptions.urlContexts.isEmpty {
+            self.scene(scene, openURLContexts: connectionOptions.urlContexts)
+        }
+        
     }
 
     /// Called as the scene is being released by the system.
@@ -66,6 +71,56 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// Called as the scene transitions from the foreground to the background.
     func sceneDidEnterBackground(_ scene: UIScene) {
         // no-op
+    }
+    
+    /// Called when the application should open a URL.
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        for context in URLContexts {
+            UserContentManager.shared.importFile(at: context.url) { [weak self] error in
+
+                // Alert contents depend on whether the operation succeeded
+                let alert: UIAlertController = {
+                    if let error = error as? UserContentError, case .invalidFile = error {
+                        
+                        // The file was imported successfully, but was invalid
+                        return UIAlertController(title: LocalizableString(.userContentImportInvalidTitle),
+                                                 message: LocalizableString(.userContentImportInvalidMessage),
+                                                 preferredStyle: .alert)
+                        
+                    } else if error != nil {
+                        
+                        // The file could not be copied to the user content directory
+                        return UIAlertController(title: LocalizableString(.userContentImportFailedTitle),
+                                                 message: LocalizableString(.userContentImportFailedMessage),
+                                                 preferredStyle: .alert)
+                        
+                    } else {
+                        
+                        // The import succeeded
+                        return UIAlertController(title: LocalizableString(.userContentImportSucceededTitle),
+                                                 message: LocalizableString(.userContentImportSucceededMessage),
+                                                 preferredStyle: .alert)
+                        
+                    }
+                }()
+                
+                // Present the alert
+                alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .default, handler: nil))
+                self?.frontMostViewController?.present(alert, animated: true, completion: nil)
+
+            }
+        }
+    }
+    
+    // MARK: Private Utility
+    
+    /// Returns the "frontmost" view controller which is not presenting another view controller.
+    private var frontMostViewController: UIViewController? {
+        var controller = window?.rootViewController
+        while controller?.presentedViewController != nil {
+            controller = controller?.presentedViewController
+        }
+        return controller
     }
 
 }

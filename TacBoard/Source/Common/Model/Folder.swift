@@ -37,6 +37,11 @@ class Folder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     /// The items contained in this folder.
     let items: [Item]
     
+    /// The total number of items contained in this folder and all of its subfolders.
+    lazy var itemCount: Int = {
+        return items.count + subfolders.reduce(0) { $0 + $1.itemCount }
+    }()
+    
     // MARK: Methods
     
     /// Returns `true` if this folder (or any of its subfolders) contains the specified folder.

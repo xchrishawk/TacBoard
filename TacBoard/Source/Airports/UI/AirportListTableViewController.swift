@@ -49,7 +49,7 @@ class AirportListTableViewController: TableViewController {
     
     /// Returns the number of sections to display.
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.collections.value.count
+        return viewModel.displayedCollections.value.count
     }
     
     /// Returns the title for the specified section.
@@ -107,10 +107,10 @@ class AirportListTableViewController: TableViewController {
     private func initializeBindings() {
         
         // Reload the table view when the available data changes
-        viewModel.collections.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+        viewModel.displayedCollections.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
             self.tableView.reloadData()
             self.noAirportsText = {
-                guard self.viewModel.collections.value.isEmpty else { return nil }
+                guard self.viewModel.displayedCollections.value.isEmpty else { return nil }
                 if self.viewModel.enabledTerrainModules.value.isEmpty {
                     return LocalizableString(.airportListEnableTerrainModule)
                 } else {
@@ -123,7 +123,7 @@ class AirportListTableViewController: TableViewController {
     
     /// Returns the `AirportCollection` for the specified section index.
     private func collection(at section: Int) -> AirportCollection {
-        return viewModel.collections.value[section]
+        return viewModel.displayedCollections.value[section]
     }
     
     /// Returns the `Airport` for the specified index path.

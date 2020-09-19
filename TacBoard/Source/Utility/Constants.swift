@@ -28,6 +28,9 @@ struct Constants {
     /// The default row height.
     static let defaultRowHeight: CGFloat = 60.0
     
+    /// The URL for the document directory.
+    static let documentDirectoryURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+    
     /// A zero-length duration to disable animations.
     static let noAnimationDuration: TimeInterval = 0.0
     

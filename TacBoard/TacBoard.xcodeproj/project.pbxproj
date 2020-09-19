@@ -132,6 +132,8 @@
 		83608914250D9B6200BC6BD4 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 83608913250D9B6200BC6BD4 /* Help */; };
 		83608916250D9B9100BC6BD4 /* HomeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */; };
 		8389446524FD6A1500BE9161 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389446424FD6A1500BE9161 /* URL.swift */; };
+		83D2B7892516D41300615FFF /* UserContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2B7882516D41300615FFF /* UserContentManager.swift */; };
+		83D2B7902516EE9F00615FFF /* UserContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2B78F2516EE9F00615FFF /* UserContentListViewController.swift */; };
 		83D9207025156F2A00B13C19 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */; };
 		83D9207325156F8700B13C19 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9207225156F8700B13C19 /* Data.swift */; };
 		83D920772515717E00B13C19 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D920762515717E00B13C19 /* Decoder.swift */; };
@@ -272,6 +274,8 @@
 		83608913250D9B6200BC6BD4 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
 		83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHelpViewController.swift; sourceTree = "<group>"; };
 		8389446424FD6A1500BE9161 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		83D2B7882516D41300615FFF /* UserContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentManager.swift; sourceTree = "<group>"; };
+		83D2B78F2516EE9F00615FFF /* UserContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListViewController.swift; sourceTree = "<group>"; };
 		83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
 		83D9207225156F8700B13C19 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		83D920762515717E00B13C19 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 				0C15735B24D70A8500136274 /* Notepad */,
 				0C0A37FF24E8A62400D077C6 /* Reference */,
 				0C67C12D24D77A410053308F /* Settings */,
+				83D2B7842516D24200615FFF /* User Content */,
 				0C1ED47124D5881900486255 /* Utility */,
 			);
 			path = Source;
@@ -710,6 +715,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		83D2B7842516D24200615FFF /* User Content */ = {
+			isa = PBXGroup;
+			children = (
+				83D2B78F2516EE9F00615FFF /* UserContentListViewController.swift */,
+				83D2B7882516D41300615FFF /* UserContentManager.swift */,
+			);
+			path = "User Content";
+			sourceTree = "<group>";
+		};
 		83F2386C25084E4D00C757FA /* Remote */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,6 +902,7 @@
 				0CA7404F24D6254E00E7DDA9 /* ChecklistItem.swift in Sources */,
 				0C1BEC2424F1E638001695E6 /* MediaFrameViewController.swift in Sources */,
 				0C9A18B924DA31860048BDFC /* AirportTableViewCell.swift in Sources */,
+				83D2B7902516EE9F00615FFF /* UserContentListViewController.swift in Sources */,
 				83D9207E2515781300B13C19 /* DataIndexKey.swift in Sources */,
 				0C0A380724E8A85800D077C6 /* UISplitViewController.swift in Sources */,
 				0CAFF49324DDAD2B00AA8D8B /* TerrainModule.swift in Sources */,
@@ -924,6 +939,7 @@
 				0C9D9A1C24E9B68C00064F9C /* ReferenceBinderViewController.swift in Sources */,
 				8360890F250C4D7000BC6BD4 /* NSAttributedString.swift in Sources */,
 				0C0A380B24E8B30A00D077C6 /* Binder.swift in Sources */,
+				83D2B7892516D41300615FFF /* UserContentManager.swift in Sources */,
 				0CA7403F24D5B84C00E7DDA9 /* ChecklistFolderViewController.swift in Sources */,
 				0C9D9A2224E9BDB900064F9C /* ReferenceDocumentType.swift in Sources */,
 				0C9A18B524DA2C0D0048BDFC /* AirportType.swift in Sources */,

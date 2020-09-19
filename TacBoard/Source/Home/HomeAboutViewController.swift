@@ -17,21 +17,12 @@ class HomeAboutViewController: TableViewController {
     
     // MARK: Fields
     
-    private let appInfo: AppInfo
-    
-    // MARK: Initialization
-    
-    /// Initializes a new instance with the specified coder.
-    required init?(coder: NSCoder) {
-        self.appInfo = AppInfo.shared
-        super.init(coder: coder)
-    }
-    
-    /// Initializes a new instance with the specified coder and app info.
-    init?(coder: NSCoder, appInfo: AppInfo) {
-        self.appInfo = appInfo
-        super.init(coder: coder)
-    }
+    private let airportViewModel = AirportViewModel.shared
+    private let appInfo = AppInfo.shared
+    private let checklistViewModel = ChecklistViewModel.shared
+    private let contentManager = ContentManager.shared
+    private let referenceViewModel = ReferenceViewModel.shared
+    private let userContentManager = UserContentManager.shared
 
     // MARK: Types
 
@@ -59,6 +50,7 @@ class HomeAboutViewController: TableViewController {
         case airports
         case checklists
         case reference
+        case userContent
         case checkForUpdatedData
     }
     
@@ -138,6 +130,28 @@ class HomeAboutViewController: TableViewController {
         return Constants.defaultRowHeight
     }
     
+    /// The user selected the cell at the specified index path.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        switch section(at: indexPath.section) {
+        
+        case .dataInfo:
+            switch dataInfoItem(at: indexPath) {
+            
+            case .userContent:
+                performSegue(withIdentifier: "ShowUserContentList", sender: nil)
+                
+            default:
+                break
+                
+            }
+        
+        default:
+            break
+        
+        }
+    }
+    
     // MARK: Cell Generation
     
     /// Creates a cell for the specified `AppInfoItem` at the specified `IndexPath`.
@@ -211,10 +225,11 @@ class HomeAboutViewController: TableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
             
             cell.button?.setTitle(LocalizableString(.aboutDataInfoCheckForUpdatedData), for: .normal)
-            cell.button?.touchUpInside = {
+            cell.button?.touchUpInside = { [weak self] in
                 
                 // Tell all of the data consumers to reload their data
-                ContentManager.shared.reloadContentNow()
+                self?.contentManager.reloadContentNow()
+                self?.userContentManager.reloadContentNow()
                 
                 // TODO - UI feedback for user???
                 
@@ -234,19 +249,27 @@ class HomeAboutViewController: TableViewController {
             
         case .airports:
             cell.titleLabel?.text = LocalizableString(.aboutDataInfoItemAirports)
-            cell.valueLabel?.text = value(for: AirportViewModel.shared.dataIndex.value,
-                                          source: AirportViewModel.shared.dataIndexSource.value)
+            cell.valueLabel?.text = value(for: airportViewModel.primaryDataIndex.value,
+                                          source: airportViewModel.primaryDataIndexSource.value)
+            cell.accessoryType = .none
             
         case .checklists:
             cell.titleLabel?.text = LocalizableString(.aboutDataInfoItemChecklists)
-            cell.valueLabel?.text = value(for: ChecklistViewModel.shared.dataIndex.value,
-                                          source: ChecklistViewModel.shared.dataIndexSource.value)
+            cell.valueLabel?.text = value(for: checklistViewModel.primaryDataIndex.value,
+                                          source: checklistViewModel.primaryDataIndexSource.value)
             
         case .reference:
             cell.titleLabel?.text = LocalizableString(.aboutDataInfoItemReference)
-            cell.valueLabel?.text = value(for: ReferenceViewModel.shared.dataIndex.value,
-                                          source: ReferenceViewModel.shared.dataIndexSource.value)
+            cell.valueLabel?.text = value(for: referenceViewModel.primaryDataIndex.value,
+                                          source: referenceViewModel.primaryDataIndexSource.value)
          
+        case .userContent:
+            let count = userContentManager.count
+            cell.titleLabel?.text = LocalizableString(.aboutDataInfoItemUserContentList)
+            cell.valueLabel?.text = "\(count) \(LocalizableString(count == 1 ? .genericFile : .genericFiles))"
+            cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = .blue
+            
         case .checkForUpdatedData:
             fatalError("Not possible - see above")
             
@@ -264,7 +287,7 @@ class HomeAboutViewController: TableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
         
         func closure(for source: ContentSource) -> () -> Void {
-            return { ContentManager.shared.source.value = source }
+            return { [weak self] in self?.contentManager.source.value = source }
         }
         
         switch debugItem {
@@ -299,13 +322,14 @@ class HomeAboutViewController: TableViewController {
     private func initializeBindings() {
         
         // Reload the table view whenever any of the data indices change
-        let updateProducer = SignalProducer.combineLatest(AirportViewModel.shared.dataIndex.producer,
-                                                          AirportViewModel.shared.dataIndexSource.producer,
-                                                          ChecklistViewModel.shared.dataIndex.producer,
-                                                          ChecklistViewModel.shared.dataIndexSource.producer,
-                                                          ReferenceViewModel.shared.dataIndex.producer,
-                                                          ReferenceViewModel.shared.dataIndexSource.producer)
-        updateProducer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+        let updateProducer = SignalProducer.combineLatest(airportViewModel.primaryDataIndex.producer,
+                                                          airportViewModel.primaryDataIndexSource.producer,
+                                                          checklistViewModel.primaryDataIndex.producer,
+                                                          checklistViewModel.primaryDataIndexSource.producer,
+                                                          referenceViewModel.primaryDataIndex.producer,
+                                                          referenceViewModel.primaryDataIndexSource.producer,
+                                                          userContentManager.updated)
+        updateProducer.throttle(0.25, on: QueueScheduler.main).take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
             self.tableView.reloadData()
         }
         
@@ -353,13 +377,42 @@ class HomeAboutViewController: TableViewController {
 // MARK: - HomeAboutInfoItemTableViewCell
 
 /// `UITableViewCell` subclass for the `HomeAboutViewController` table view controller.
-class HomeAboutInfoItemTableViewCell: UITableViewCell {
+class HomeAboutInfoItemTableViewCell: SelectableHighlightableTableViewCell {
 
+    // MARK: Outlets
+    
     /// The label for the item title.
     @IBOutlet var titleLabel: UILabel?
     
     /// The label for the item value.
     @IBOutlet var valueLabel: UILabel?
+
+    // MARK: UITableViewCell Overrides
+    
+    /// Configures the cell when it is awoken from the nib.
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        initialize()
+    }
+    
+    /// Configures the cell when it is about to be reused.
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        initialize()
+    }
+    
+    // MARK: Private Utility
+    
+    /// Initializes the cell to a default state.
+    private func initialize() {
+        
+        accessoryType = .none
+        selectionStyle = .none
+        
+        titleLabel?.text = nil
+        valueLabel?.text = nil
+        
+    }
     
 }
 

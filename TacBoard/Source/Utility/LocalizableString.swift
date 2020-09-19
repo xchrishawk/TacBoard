@@ -23,6 +23,7 @@ enum LocalizableStringKey: String {
     case genericReset
     case genericNA
     case genericOther
+    case genericDelete
     case genericSelected
     case genericSelectAll
     case genericSelectNone
@@ -44,6 +45,8 @@ enum LocalizableStringKey: String {
     case genericChannel
     case genericRunway
     case genericIdentifier
+    case genericFile
+    case genericFiles
     
     // MARK: Cases (About Page)
     
@@ -58,6 +61,7 @@ enum LocalizableStringKey: String {
     case aboutDataInfoItemAirports
     case aboutDataInfoItemChecklists
     case aboutDataInfoItemReference
+    case aboutDataInfoItemUserContentList
     case aboutDataInfoCheckForUpdatedData
     case aboutDebugSection
     case aboutDebugUseFallbackData
@@ -213,6 +217,21 @@ enum LocalizableStringKey: String {
     
     case unitFormatImperial
     case unitFormatMetric
+    
+    // MARK: Cases (User content list)
+    
+    case userContentImportSucceededTitle
+    case userContentImportSucceededMessage
+    case userContentImportInvalidTitle
+    case userContentImportInvalidMessage
+    case userContentImportFailedTitle
+    case userContentImportFailedMessage
+    case userContentDeleteConfirmationTitle
+    case userContentDeleteConfirmationMessage
+    case userContentListChecklistsSectionTitle
+    case userContentListInvalidsSectionTitle
+    case userContentListInvalidsSectionFooter
+    case userContentListInvalidsErrorMessageTitle
     
     // MARK: Properties
     

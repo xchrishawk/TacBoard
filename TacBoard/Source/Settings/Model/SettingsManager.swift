@@ -276,7 +276,7 @@ fileprivate extension UserDefaults {
         
         // When the value changes, call the update closure to write the data to user prefs.
         // Throttle to only allow updates once per second.
-        property.producer.skip(first: 1).take(duringLifetimeOf: self).throttle(1.0, on: QueueScheduler.main).startWithValues { [unowned self] value in
+        property.producer.skip(first: 1).throttle(1.0, on: QueueScheduler.main).take(duringLifetimeOf: self).startWithValues { [unowned self] value in
             update(self, value)
         }
         

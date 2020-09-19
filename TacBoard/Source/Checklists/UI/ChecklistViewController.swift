@@ -78,7 +78,7 @@ class ChecklistViewController: UIViewController {
     private func initializeBindings() {
         
         // Pop to the root master view controller (i.e., the binder controller) if the binders change, since the folders are no longer valid
-        viewModel.binders.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+        viewModel.displayedBinders.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
             guard let masterNavigationController = self.embeddedSplitViewController?.viewControllers.first as? UINavigationController else { return }
             masterNavigationController.popToRootViewController(animated: true)
         }

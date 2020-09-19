@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   TacBoard
 
@@ -16,6 +16,7 @@
 "genericReset"                              = "Reset";
 "genericNA"                                 = "N/A";
 "genericOther"                              = "Other";
+"genericDelete"                             = "Delete";
 "genericSelected"                           = "Selected";
 "genericSelectAll"                          = "Select All";
 "genericSelectNone"                         = "Select None";
@@ -36,6 +37,8 @@
 "genericChannel"                            = "Channel";
 "genericRunway"                             = "Runway";
 "genericIdentifier"                         = "ID";
+"genericFile"                               = "File";
+"genericFiles"                              = "Files";
 
 // About Page
 "aboutAppInfoSection"                       = "App Info";
@@ -49,6 +52,7 @@
 "aboutDataInfoItemAirports"                 = "Airports";
 "aboutDataInfoItemChecklists"               = "Checklists";
 "aboutDataInfoItemReference"                = "Reference";
+"aboutDataInfoItemUserContentList"          = "User Content";
 "aboutDataInfoCheckForUpdatedData"          = "Check For Updated Data";
 "aboutDebugSection"                         = "Debug";
 "aboutDebugUseFallbackData"                 = "Use Fallback Data Indices";
@@ -189,3 +193,17 @@
 // UnitFormat
 "unitFormatImperial"                        = "Imperial";
 "unitFormatMetric"                          = "Metric";
+
+// User content list
+"userContentImportSucceededTitle"           = "Import Succeeded";
+"userContentImportSucceededMessage"         = "The file was successfully imported.";
+"userContentImportInvalidTitle"             = "Invalid File";
+"userContentImportInvalidMessage"           = "The imported file is not valid. See About → User Content for more details.";
+"userContentImportFailedTitle"              = "Import Failed";
+"userContentImportFailedMessage"            = "The file could not be imported.";
+"userContentDeleteConfirmationTitle"        = "Delete File?";
+"userContentDeleteConfirmationMessage"      = "The file will be deleted and will no longer be usable.";
+"userContentListChecklistsSectionTitle"     = "Checklists";
+"userContentListInvalidsSectionTitle"       = "Invalid Files";
+"userContentListInvalidsSectionFooter"      = "The files in this section could not be loaded. For more details on what failed, tap on the info icon for the file.";
+"userContentListInvalidsErrorMessageTitle"  = "Invalid File";

@@ -20,9 +20,12 @@ class ReferenceViewModel: BinderViewModel {
     private let contentManager: ContentManager
     private let settingsManager: SettingsManager
     
-    private let mutableDataIndex: MutableProperty<ReferenceDataIndex>
-    private let mutableDataIndexSource: MutableProperty<ContentSource>
-    private let mutableBinders: MutableProperty<[ReferenceBinder]>
+    private let mutablePrimaryDataIndex: MutableProperty<ReferenceDataIndex>
+    private let mutablePrimaryDataIndexSource: MutableProperty<ContentSource>
+    private let mutableSecondaryDataIndices: MutableProperty<[ReferenceDataIndex]>
+    
+    private let mutableAllBinders: MutableProperty<[ReferenceBinder]>
+    private let mutableDisplayedBinders: MutableProperty<[ReferenceBinder]>
     
     // MARK: Initialization
 
@@ -38,9 +41,11 @@ class ReferenceViewModel: BinderViewModel {
         self.settingsManager = settingsManager
         
         // Misc
-        self.mutableDataIndex = MutableProperty(ReferenceDataIndex.fallback)
-        self.mutableDataIndexSource = MutableProperty(.fallback)
-        self.mutableBinders = MutableProperty(self.mutableDataIndex.value.objects)
+        self.mutablePrimaryDataIndex = MutableProperty(ReferenceDataIndex.fallback)
+        self.mutablePrimaryDataIndexSource = MutableProperty(.fallback)
+        self.mutableSecondaryDataIndices = MutableProperty([])
+        self.mutableAllBinders = MutableProperty([])        // initialized in initializeBindings()
+        self.mutableDisplayedBinders = MutableProperty([])  // initialized in initializeBindings()
         
         // Persisted properties
         self.enabledAircraftModules = Property(settingsManager.enabledAircraftModules)
@@ -49,9 +54,11 @@ class ReferenceViewModel: BinderViewModel {
         self.darkModeBrightness = settingsManager.referenceDarkModeBrightness
      
         // Temporary properties
-        self.dataIndex = Property(self.mutableDataIndex)
-        self.dataIndexSource = Property(self.mutableDataIndexSource)
-        self.binders = Property(self.mutableBinders)
+        self.primaryDataIndex = Property(self.mutablePrimaryDataIndex)
+        self.primaryDataIndexSource = Property(self.mutablePrimaryDataIndexSource)
+        self.secondaryDataIndices = Property(self.mutableSecondaryDataIndices)
+        self.allBinders = Property(self.mutableAllBinders)
+        self.displayedBinders = Property(self.mutableDisplayedBinders)
         self.selectedItem = MutableProperty(nil)
         
         initializeBindings()
@@ -72,14 +79,20 @@ class ReferenceViewModel: BinderViewModel {
     /// The brightness to use for pages in dark mode.
     let darkModeBrightness: MutableProperty<CGFloat>
     
-    /// The currently active reference documents data index.
-    let dataIndex: Property<ReferenceDataIndex>
+    /// The currently active primary reference documents data index.
+    let primaryDataIndex: Property<ReferenceDataIndex>
     
-    /// The content source for the currently active reference documents data index.
-    let dataIndexSource: Property<ContentSource>
+    /// The content source for the currently active primary reference documents data index.
+    let primaryDataIndexSource: Property<ContentSource>
     
-    /// The collection of available reference document binders.
-    let binders: Property<[ReferenceBinder]>
+    /// The currently active secondary reference document data indices.
+    let secondaryDataIndices: Property<[ReferenceDataIndex]>
+    
+    /// The collection of all available reference document binders, regardless of filter settings.
+    let allBinders: Property<[ReferenceBinder]>
+    
+    /// The collection of currently displayed reference document binders, based on the current filter settings.
+    let displayedBinders: Property<[Binder<ReferenceDocument>]>
     
     /// The currently selected reference document.
     var selectedItem: MutableProperty<ReferenceDocument?>
@@ -105,7 +118,7 @@ class ReferenceViewModel: BinderViewModel {
         let relativePath = urlAbsoluteString.replacingOccurrences(of: baseAbsoluteString, with: String.empty)
         
         // Select the matching item, if we find one
-        for binder in binders.value {
+        for binder in displayedBinders.value {
             
             guard let item = binder.firstItem(where: {
                 guard case .relative(let itemRelativePath) = $0.location else { return false }
@@ -126,18 +139,24 @@ class ReferenceViewModel: BinderViewModel {
         
         // Reload data index when the content manager source changes
         contentManager.source.producer.take(during: lifetime).startWithValues { [unowned self] source in
-            self.loadData(from: source)
+            self.loadPrimaryDataIndex(from: source)
         }
         
         // Also reload when commanded
         contentManager.reloadContent.take(during: lifetime).observeValues { [unowned self] in
-            self.loadData(from: self.contentManager.source.value)
+            self.loadPrimaryDataIndex(from: self.contentManager.source.value)
         }
         
-        // Filter the displayed reference documents as needed
-        let bindersProducer = SignalProducer.combineLatest(dataIndex.producer, enabledAircraftModules.producer, enabledTerrainModules.producer)
-        mutableBinders <~ bindersProducer.map { (dataIndex, enabledAircraftModules, enabledTerrainModules) in
-            return dataIndex.objects.filter { binder in
+        // Update the `allBinders` property based on the current data indices
+        let allBindersProducer = SignalProducer.combineLatest(primaryDataIndex.producer, secondaryDataIndices.producer)
+        mutableAllBinders <~ allBindersProducer.map { (primaryDataIndex, secondaryDataIndices) in
+            return primaryDataIndex.objects + secondaryDataIndices.reduce(into: []) { $0.append(contentsOf: $1.objects) }
+        }
+        
+        // Update the `displayedBinders` property based on the current filter settings
+        let displayedBindersProducer = SignalProducer.combineLatest(allBinders.producer, enabledAircraftModules.producer, enabledTerrainModules.producer)
+        mutableDisplayedBinders <~ displayedBindersProducer.map { (allBinders, enabledAircraftModules, enabledTerrainModules) in
+            return allBinders.filter { binder in
                 
                 // Filter by aircraft module
                 if let aircraftModule = binder.aircraftModule {
@@ -156,16 +175,16 @@ class ReferenceViewModel: BinderViewModel {
         }
         
         // Reset the displayed document if it gets filtered out for any reason
-        binders.producer.startWithValues { [unowned self] _ in
+        displayedBinders.producer.startWithValues { [unowned self] displayedBinders in
             guard let selectedItem = self.selectedItem.value else { return }
-            if !self.binders.value.contains(where: { $0.contains(item: selectedItem) }) {
+            if !displayedBinders.contains(where: { $0.contains(item: selectedItem) }) {
                 self.selectedItem.value = nil
             }
         }
         
         // If the selected item gets reset to nil, and the menu is currently set to hide, then display the menu
-        selectedItem.producer.startWithValues { [unowned self] _ in
-            if self.selectedItem.value == nil, self.splitDisplayMode.value == .hide {
+        selectedItem.producer.startWithValues { [unowned self] selectedItem in
+            if selectedItem == nil, self.splitDisplayMode.value == .hide {
                 self.splitDisplayMode.value = .show
             }
         }
@@ -173,13 +192,13 @@ class ReferenceViewModel: BinderViewModel {
     }
 
     /// Loads reference data from the specified content source.
-    private func loadData(from source: ContentSource) {
+    private func loadPrimaryDataIndex(from source: ContentSource) {
         ReferenceDataIndex.load(source: source) { [weak self] result in
             
-            guard case .success(let dataIndex) = result else { return }
+            guard case .success(let primaryDataIndex) = result else { return }
             
-            self?.mutableDataIndex.value = dataIndex
-            self?.mutableDataIndexSource.value = source
+            self?.mutablePrimaryDataIndex.value = primaryDataIndex
+            self?.mutablePrimaryDataIndexSource.value = source
             
         }
     }

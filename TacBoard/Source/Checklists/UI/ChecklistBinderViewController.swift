@@ -51,7 +51,7 @@ class ChecklistBinderViewController: BinderViewController<ChecklistViewModel> {
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .destructive, handler: { _ in
-            for binder in self.viewModel.dataIndex.value.objects {
+            for binder in self.viewModel.allBinders.value {
                 for folder in binder.folders {
                     folder.setIsComplete(false)
                 }

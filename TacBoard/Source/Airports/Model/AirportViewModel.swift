@@ -20,10 +20,12 @@ class AirportViewModel {
     private let contentManager: ContentManager
     private let settingsManager: SettingsManager
     
-    private let mutableDataIndex: MutableProperty<AirportDataIndex>
-    private let mutableDataIndexSource: MutableProperty<ContentSource>
-    private let mutableIsDataIndexValid: MutableProperty<Bool>
-    private let mutableCollections: MutableProperty<[AirportCollection]>
+    private let mutablePrimaryDataIndex: MutableProperty<AirportDataIndex>
+    private let mutablePrimaryDataIndexSource: MutableProperty<ContentSource>
+    private let mutableSecondaryDataIndices: MutableProperty<[AirportDataIndex]>
+
+    private let mutableAllCollections: MutableProperty<[AirportCollection]>
+    private let mutableDisplayedCollections: MutableProperty<[AirportCollection]>
     
     // MARK: Initialization
     
@@ -39,10 +41,11 @@ class AirportViewModel {
         self.settingsManager = settingsManager
         
         // Misc
-        self.mutableDataIndex = MutableProperty(AirportDataIndex.fallback)
-        self.mutableDataIndexSource = MutableProperty(.fallback)
-        self.mutableIsDataIndexValid = MutableProperty(false)
-        self.mutableCollections = MutableProperty(self.mutableDataIndex.value.objects)
+        self.mutablePrimaryDataIndex = MutableProperty(AirportDataIndex.fallback)
+        self.mutablePrimaryDataIndexSource = MutableProperty(.fallback)
+        self.mutableSecondaryDataIndices = MutableProperty([])
+        self.mutableAllCollections = MutableProperty([])        // initialized in initializeBindings()
+        self.mutableDisplayedCollections = MutableProperty([])  // initialized in initializeBindings()
         
         // Persisted properties
         self.enabledTerrainModules = Property(settingsManager.enabledTerrainModules)
@@ -52,9 +55,11 @@ class AirportViewModel {
         self.darkModeBrightness = settingsManager.airportDarkModeBrightness
         
         // Temporary properties
-        self.dataIndex = Property(self.mutableDataIndex)
-        self.dataIndexSource = Property(self.mutableDataIndexSource)
-        self.collections = Property(self.mutableCollections)
+        self.primaryDataIndex = Property(self.mutablePrimaryDataIndex)
+        self.primaryDataIndexSource = Property(self.mutablePrimaryDataIndexSource)
+        self.secondaryDataIndices = Property(self.mutableSecondaryDataIndices)
+        self.allCollections = Property(self.mutableAllCollections)
+        self.displayedCollections = Property(self.mutableDisplayedCollections)
         self.selectedAirport = MutableProperty(nil)
         self.searchText = MutableProperty(nil)
         
@@ -76,14 +81,20 @@ class AirportViewModel {
     /// The split display mode.
     let splitDisplayMode: MutableProperty<SplitDisplayMode>
     
-    /// The current data index file in use.
-    let dataIndex: Property<AirportDataIndex>
+    /// The currently active primary airport data index.
+    let primaryDataIndex: Property<AirportDataIndex>
     
-    /// The source for the current data index file in use.
-    let dataIndexSource: Property<ContentSource>
+    /// The source for the currently active primary airport data index.
+    let primaryDataIndexSource: Property<ContentSource>
+    
+    /// The currently active secondary airport data indices.
+    let secondaryDataIndices: Property<[AirportDataIndex]>
+    
+    /// An array of all available airport collections, regardless of filter settings.
+    let allCollections: Property<[AirportCollection]>
 
-    /// An array of the of the available airport collections according to the current filters.
-    let collections: Property<[AirportCollection]>
+    /// An array of the currently displayed airport collections, based on filter settings.
+    let displayedCollections: Property<[AirportCollection]>
     
     /// The currently selected airport.
     let selectedAirport: MutableProperty<Airport?>
@@ -156,18 +167,24 @@ class AirportViewModel {
         
         // Reload data index when the content manager source changes
         contentManager.source.producer.take(during: lifetime).startWithValues { [unowned self] source in
-            self.loadData(from: source)
+            self.loadPrimaryDataIndex(from: source)
         }
         
         // Also reload when commanded
         contentManager.reloadContent.take(during: lifetime).observeValues { [unowned self] in
-            self.loadData(from: self.contentManager.source.value)
+            self.loadPrimaryDataIndex(from: self.contentManager.source.value)
         }
         
-        // Filter the displayed airports as needed
-        let producer = SignalProducer.combineLatest(dataIndex.producer, enabledTerrainModules.producer, searchText.producer)
-        mutableCollections <~ producer.map { (dataIndex, enabledTerrainModules, searchText) in
-            return dataIndex.objects.compactMap { collection in
+        // Update the `allCollections` property based on the current data indices
+        let allCollectionsProducer = SignalProducer.combineLatest(primaryDataIndex.producer, secondaryDataIndices.producer)
+        mutableAllCollections <~ allCollectionsProducer.map { (primaryDataIndex, secondaryDataIndices) in
+            return primaryDataIndex.objects + secondaryDataIndices.reduce(into: []) { $0.append(contentsOf: $1.objects) }
+        }
+        
+        // Update the `displayedCollections` property based on the current filter settings
+        let displayedCollectionsProducer = SignalProducer.combineLatest(allCollections.producer, enabledTerrainModules.producer, searchText.producer)
+        mutableDisplayedCollections <~ displayedCollectionsProducer.map { (allCollections, enabledTerrainModules, searchText) in
+            return allCollections.compactMap { collection in
                 
                 // Only display collections for enabled modules
                 if let terrainModule = collection.terrainModule {
@@ -189,17 +206,17 @@ class AirportViewModel {
         }
         
         // Reset the displayed airport if it's not contained in the available collections
-        collections.producer.startWithValues { [unowned self] _ in
+        displayedCollections.producer.startWithValues { [unowned self] displayedCollections in
             guard let selectedAirport = self.selectedAirport.value else { return }
-            if !self.collections.value.contains(where: { $0.contains(airport: selectedAirport) }) {
+            if !displayedCollections.contains(where: { $0.contains(airport: selectedAirport) }) {
                 self.selectedAirport.value = nil
             }
         }
         
         // If the if selected airport is nil and the display mode is set to hide the menu, then switch it back
         // to show to prevent the menu from unexpectedly disappearing when the user selects something
-        selectedAirport.producer.startWithValues { [unowned self] _ in
-            if self.selectedAirport.value == nil, self.splitDisplayMode.value == .hide {
+        selectedAirport.producer.startWithValues { [unowned self] selectedAirport in
+            if selectedAirport == nil, self.splitDisplayMode.value == .hide {
                 self.splitDisplayMode.value = .show
             }
         }
@@ -207,13 +224,13 @@ class AirportViewModel {
     }
 
     /// Loads data from the specified content source.
-    private func loadData(from source: ContentSource) {
+    private func loadPrimaryDataIndex(from source: ContentSource) {
         AirportDataIndex.load(source: source) { [weak self] result in
             
-            guard case .success(let dataIndex) = result else { return }
+            guard case .success(let primaryDataIndex) = result else { return }
             
-            self?.mutableDataIndex.value = dataIndex
-            self?.mutableDataIndexSource.value = source
+            self?.mutablePrimaryDataIndex.value = primaryDataIndex
+            self?.mutablePrimaryDataIndexSource.value = source
             
         }
     }

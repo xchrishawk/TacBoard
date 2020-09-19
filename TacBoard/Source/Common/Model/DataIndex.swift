@@ -109,17 +109,8 @@ extension DataIndex {
         }
     }
     
-    /// Returns a unique key for a decoded object in a `DataIndex` instance.
-    static func key(for decoder: Decoder) -> DataIndexKey {
-        guard let dataIndexKey = decoder.userInfo[.dataIndexKey] as? String else { fatalError() }
-        guard !decoder.codingPath.isEmpty else { return dataIndexKey }
-        return "\(dataIndexKey)/\(decoder.codingPathString)"
-    }
-    
-    // MARK: Private Static Utility
-    
     /// Synchronously loads a `DataIndex` from the specified local `URL`.
-    private static func loadSync(localURL url: URL) throws -> DataIndex<Object> {
+    static func loadSync(localURL url: URL) throws -> DataIndex<Object> {
         
         guard url.isFileURL else {
             fatalError("Must be called with a local URL!")
@@ -139,6 +130,15 @@ extension DataIndex {
         }
         
     }
+    
+    /// Returns a unique key for a decoded object in a `DataIndex` instance.
+    static func key(for decoder: Decoder) -> DataIndexKey {
+        guard let dataIndexKey = decoder.userInfo[.dataIndexKey] as? String else { fatalError() }
+        guard !decoder.codingPath.isEmpty else { return dataIndexKey }
+        return "\(dataIndexKey)/\(decoder.codingPathString)"
+    }
+    
+    // MARK: Private Static Utility
     
     /// Asynchronously loads a `DataIndex` from the specified local `URL`.
     private static func loadAsync(localURL url: URL, completion: @escaping (Result) -> Void) {

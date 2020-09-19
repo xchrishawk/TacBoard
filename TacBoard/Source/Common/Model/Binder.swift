@@ -26,8 +26,8 @@ protocol BinderViewModel {
     
     // MARK: Properties
     
-    /// The currently available binders.
-    var binders: Property<[Binder<Item>]> { get }
+    /// The currently displayed binders, based on the active filter settings.
+    var displayedBinders: Property<[Binder<Item>]> { get }
     
     /// The currently selected item.
     var selectedItem: MutableProperty<Item?> { get }
@@ -72,6 +72,11 @@ class Binder<Item>: Decodable, ReferenceEquatable where Item: BinderItem {
     
     /// The top-level folders contained in this binder.
     let folders: [Folder<Item>]
+    
+    /// The total number of items contained in this binder.
+    lazy var itemCount: Int = {
+        return folders.reduce(0) { $0 + $1.itemCount }
+    }()
     
     // MARK: Methods
     

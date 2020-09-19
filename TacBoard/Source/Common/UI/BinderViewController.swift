@@ -47,7 +47,7 @@ class BinderViewController<ViewModel>: TableViewController where ViewModel: Bind
     
     /// Returns the number of sections to display.
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.binders.value.count
+        return viewModel.displayedBinders.value.count
     }
     
     /// Returns the title to display for the section at the specified index.
@@ -108,10 +108,10 @@ class BinderViewController<ViewModel>: TableViewController where ViewModel: Bind
     private func initializeBindings() {
         
         // Reload the table view when the available binders change
-        viewModel.binders.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+        viewModel.displayedBinders.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
             self.tableView.reloadData()
             self.noItemsAvailableText = {
-                guard self.viewModel.binders.value.isEmpty else { return nil }
+                guard self.viewModel.displayedBinders.value.isEmpty else { return nil }
                 return self.noItemsAvailableExplanation(viewModel: self.viewModel)
             }()
         }
@@ -120,7 +120,7 @@ class BinderViewController<ViewModel>: TableViewController where ViewModel: Bind
     
     /// Returns the binder for the specified section index.
     private func binder(at section: Int) -> Binder<ViewModel.Item> {
-        return viewModel.binders.value[section]
+        return viewModel.displayedBinders.value[section]
     }
     
     /// Returns the folder for the specified index path.
