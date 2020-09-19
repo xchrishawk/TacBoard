@@ -450,6 +450,12 @@
                                             "text": "Oxygen Flow",
                                             "subtext": "Environment System Panel",
                                             "action": "NORMAL"
+                                        },
+                                        {
+                                            "text": "OXY IND TEST",
+                                            "subtext": "Environment System Panel",
+                                            "action": "Press",
+                                            "comment": "Verify OXY LOW caution light illuminates when oxygen quantity is less than 0.5 liters."
                                         }
                                     ]
                                 },
