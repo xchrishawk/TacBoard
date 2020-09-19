@@ -370,8 +370,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="activePathWidthSlider" destination="Lmk-HL-18d" id="GzH-Z4-85z"/>
                         <outlet property="eraseButton" destination="J0R-ua-heS" id="wBP-DT-3qb"/>
+                        <outlet property="selectedPathWidthSlider" destination="Lmk-HL-18d" id="GzH-Z4-85z"/>
                         <outlet property="tintColorButton" destination="5HE-xI-gDS" id="5NN-Jc-kBf"/>
                         <outletCollection property="activeColorButtons" destination="J0R-ua-heS" collectionClass="NSMutableArray" id="wgN-fY-0K5"/>
                         <outletCollection property="activeColorButtons" destination="5HE-xI-gDS" collectionClass="NSMutableArray" id="ZcF-lw-22C"/>

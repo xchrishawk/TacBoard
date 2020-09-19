@@ -37,7 +37,7 @@ class NotepadSettingsViewController: TableViewController {
     
     // MARK: Outlets
     
-    @IBOutlet private var activePathWidthSlider: UISlider?
+    @IBOutlet private var selectedPathWidthSlider: UISlider?
     @IBOutlet private var activeColorButtons: [UIButton]?
     @IBOutlet private var eraseButton: UIButton?
     @IBOutlet private var tintColorButton: UIButton?
@@ -94,9 +94,9 @@ class NotepadSettingsViewController: TableViewController {
         
         // Update the color
         if sender === eraseButton {
-            viewModel.activePathColor.value = UIColor(application: .notepadBackground)
+            viewModel.selectedPathColor.value = UIColor(application: .notepadBackground)
         } else {
-            viewModel.activePathColor.value = sender.tintColor
+            viewModel.selectedPathColor.value = sender.tintColor
         }
         
         // Unwind to the notepad view controller
@@ -110,20 +110,20 @@ class NotepadSettingsViewController: TableViewController {
     private func initializeBindings() {
         
         // Color buttons
-        viewModel.activePathColor.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
+        viewModel.selectedPathColor.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] _ in
             self.updateColorButtons()
         }
      
         // Path width slider
-        if let activePathWidthSlider = activePathWidthSlider {
+        if let selectedPathWidthSlider = selectedPathWidthSlider {
             
-            activePathWidthSlider.minimumValue = 0.0
-            activePathWidthSlider.maximumValue = 1.0
+            selectedPathWidthSlider.minimumValue = 0.0
+            selectedPathWidthSlider.maximumValue = 1.0
             
             // We add a bit of a curve here to give more resolution at the low end
             let curvature: Float = 2.5
-            activePathWidthSlider.value = pow(Float((viewModel.activePathWidth.value - NotepadPath.minimumWidth) / (NotepadPath.maximumWidth - NotepadPath.minimumWidth)), 1.0 / curvature)
-            viewModel.activePathWidth <~ activePathWidthSlider.reactive.values.map { value in
+            selectedPathWidthSlider.value = pow(Float((viewModel.selectedPathWidth.value - NotepadPath.minimumWidth) / (NotepadPath.maximumWidth - NotepadPath.minimumWidth)), 1.0 / curvature)
+            viewModel.selectedPathWidth <~ selectedPathWidthSlider.reactive.values.map { value in
                 return NotepadPath.minimumWidth + ((NotepadPath.maximumWidth - NotepadPath.minimumWidth) * CGFloat(pow(value, curvature)))
             }
             
@@ -138,11 +138,11 @@ class NotepadSettingsViewController: TableViewController {
         
         // Update all buttons
         for activeColorButton in activeColorButtons {
-            activeColorButton.isSelected = viewModel.activePathColor.value.isEqualToColor(activeColorButton.tintColor)
+            activeColorButton.isSelected = viewModel.selectedPathColor.value.isEqualToColor(activeColorButton.tintColor)
         }
         
         // Erase button is handled specially
-        eraseButton?.isSelected = viewModel.activePathColor.value.isEqualToColor(UIColor(application: .notepadBackground))
+        eraseButton?.isSelected = viewModel.selectedPathColor.value.isEqualToColor(UIColor(application: .notepadBackground))
         
     }
 

@@ -26,10 +26,9 @@ class NotepadViewModel {
         
         // Persisted properties
         self.selectedPage = settingsManager.notepadSelectedPage
-        self.activePathColor = settingsManager.notepadActivePathColor
-        self.activePathWidth = settingsManager.notepadActivePathWidth
-        
-        // Temporary properties
+        self.selectedPathColor = settingsManager.notepadSelectedPathColor
+        self.selectedPathWidth = settingsManager.notepadSelectedPathWidth
+
         self.pathsLookup = NotepadPage.allCases.reduce(into: [:]) { lookup, page in
             lookup[page] = MutableProperty([])
         }
@@ -51,10 +50,33 @@ class NotepadViewModel {
     let selectedPage: MutableProperty<NotepadPage>
     
     /// The currently active path color.
-    let activePathColor: MutableProperty<UIColor>
+    let selectedPathColor: MutableProperty<UIColor>
     
     /// The currently active path width.
-    let activePathWidth: MutableProperty<CGFloat>
+    let selectedPathWidth: MutableProperty<CGFloat>
+
+    /// The color to be used for the currently active path.
+    lazy var activePathColor: Property<UIColor> = {
+        return Property(self.selectedPathColor)
+    }()
+    
+    /// The line width to be used for the currently active path.
+    lazy var activePathWidth: Property<CGFloat> = {
+        let producer = SignalProducer.combineLatest(self.selectedPathColor.producer, self.selectedPathWidth.producer)
+        return Property(initial: self.selectedPathWidth.value, then: producer.map { (color, width) -> CGFloat in
+            if color.isEqualToColor(UIColor(application: .notepadBackground)) {
+                
+                // If the eraser is selected, then make the pen wider to make it easier to erase things
+                return width * 4.0
+                
+            } else {
+             
+                // Otherwise, just use the user-selected width
+                return width
+                
+            }
+        })
+    }()
     
     /// Returns a `MutableProperty` containing the paths for the specified page.
     func paths(page: NotepadPage) -> MutableProperty<[NotepadPath]> {

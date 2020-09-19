@@ -46,10 +46,10 @@ fileprivate enum Setting: String {
     case notepadSelectedPage
     
     /// The currently active notepad path color.
-    case notepadActivePathColor
+    case notepadSelectedPathColor
     
     /// The currently active notepad path width.
-    case notepadActivePathWidth
+    case notepadSelectedPathWidth
     
     /// The split display mode for the reference page.
     case referenceSplitDisplayMode
@@ -94,8 +94,8 @@ class SettingsManager {
         self.airportDarkModeBrightness = defaults.mutableProperty(setting: .airportDarkModeBrightness, defaultValue: Constants.defaultDarkModeBrightness)
         self.checklistSplitDisplayMode = defaults.mutableProperty(setting: .checklistSplitDisplayMode)
         self.notepadSelectedPage = defaults.mutableProperty(setting: .notepadSelectedPage)
-        self.notepadActivePathColor = defaults.mutableProperty(setting: .notepadActivePathColor, defaultValue: NotepadPath.defaultColor)
-        self.notepadActivePathWidth = defaults.mutableProperty(setting: .notepadActivePathWidth, defaultValue: NotepadPath.defaultWidth)
+        self.notepadSelectedPathColor = defaults.mutableProperty(setting: .notepadSelectedPathColor, defaultValue: NotepadPath.defaultColor)
+        self.notepadSelectedPathWidth = defaults.mutableProperty(setting: .notepadSelectedPathWidth, defaultValue: NotepadPath.defaultWidth)
         self.referenceSplitDisplayMode = defaults.mutableProperty(setting: .referenceSplitDisplayMode)
         self.referenceDarkModeBrightness = defaults.mutableProperty(setting: .referenceDarkModeBrightness, defaultValue: Constants.defaultDarkModeBrightness)
         
@@ -134,10 +134,10 @@ class SettingsManager {
     let notepadSelectedPage: MutableProperty<NotepadPage>
     
     /// The currently active notepad color.
-    let notepadActivePathColor: MutableProperty<UIColor>
+    let notepadSelectedPathColor: MutableProperty<UIColor>
     
     /// The currently active notepad path width.
-    let notepadActivePathWidth: MutableProperty<CGFloat>
+    let notepadSelectedPathWidth: MutableProperty<CGFloat>
     
     /// The split display mode for the Reference page.
     let referenceSplitDisplayMode: MutableProperty<SplitDisplayMode>
@@ -164,8 +164,8 @@ class SettingsManager {
         airportDarkModeBrightness.value = Constants.defaultDarkModeBrightness
         checklistSplitDisplayMode.value = .default
         notepadSelectedPage.value = .default
-        notepadActivePathColor.value = NotepadPath.defaultColor
-        notepadActivePathWidth.value = NotepadPath.defaultWidth
+        notepadSelectedPathColor.value = NotepadPath.defaultColor
+        notepadSelectedPathWidth.value = NotepadPath.defaultWidth
         referenceSplitDisplayMode.value = .default
         referenceDarkModeBrightness.value = Constants.defaultDarkModeBrightness
     }

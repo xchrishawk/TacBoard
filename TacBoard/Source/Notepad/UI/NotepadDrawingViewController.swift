@@ -81,7 +81,9 @@ class NotepadDrawingViewController: UIViewController {
         switch sender.state {
             
         case .began:
-            activePath.value = NotepadPath(at: point, color: viewModel.activePathColor.value, width: viewModel.activePathWidth.value)
+            activePath.value = NotepadPath(at: point,
+                                           color: viewModel.activePathColor.value,
+                                           width: viewModel.activePathWidth.value)
             
         case .changed:
             activePath.value?.addLine(to: point)
