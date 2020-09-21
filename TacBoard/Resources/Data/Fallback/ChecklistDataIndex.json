@@ -2730,6 +2730,474 @@
                     ]
                 }
             ]
+        },
+        {
+            "aircraftModule": "Ka-50",
+            "folders": [
+                {
+                    "title": "Normal Procedures",
+                    "items": [
+                        {
+                            "title": "Startup",
+                            "sections": [
+                                {
+                                    "title": "Electric Power",
+                                    "items": [
+                                        {
+                                            "text": "BAT 1/2",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both On"
+                                        },
+                                        {
+                                            "text": "INV",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "AUTO"
+                                        },
+                                        {
+                                            "text": "INTERCOM",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "Ground Electric Power",
+                                            "subtext": "Ground Crew Communication",
+                                            "action": "Request On"
+                                        },
+                                        {
+                                            "text": "EXT DC/AC",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both On"
+                                        },
+                                        {
+                                            "text": "EKRAN HYD TRANS PWR",
+                                            "subtext": "Rear Right Panel",
+                                            "action": "OPER"
+                                        },
+                                        {
+                                            "text": "Master Caution Push-Light",
+                                            "subtext": "Left Front Panel",
+                                            "action": "Press",
+                                            "comment": "If light indicates failure by blinking, first press once to acknowledge failure then press again to start EKRAN self test. Verify EKRAN shows САМОКОНТ and then ЭКРАН ГОДЕН after 5 seconds."
+                                        },
+                                        {
+                                            "text": "VL/ADV LAMP TEST",
+                                            "subtext": "Left Front Panel",
+                                            "action": "Press",
+                                            "comment": "Verify all caution/warning light illuminate."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lights",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[b]Night only[/b]."
+                                        },
+                                        {
+                                            "text": "CKPT LT",
+                                            "subtext": "Left Rear Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "Cockpit Gauges Illumination",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "On",
+                                            "comment": "Turn off when using night vision goggles."
+                                        },
+                                        {
+                                            "text": "COCKPIT LIGHTING PANEL HSI ADI",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On",
+                                            "comment": "Turn off when using night vision goggles."
+                                        },
+                                        {
+                                            "text": "NAV LIGHTS",
+                                            "subtext": "Overhead Controller",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "BLADE TIP LIGHTS",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "FORM LIGHT",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "ANTI-COL BEACKON",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "LAND LIGHTS",
+                                            "subtext": "Front Panel",
+                                            "action": "LDH LIGHT"
+                                        },
+                                        {
+                                            "text": "COCKPIT LIGHTING NVG",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On",
+                                            "comment": "When using night vision goggles only."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Navigation Systems",
+                                    "items": [
+                                        {
+                                            "text": "ABRIS",
+                                            "subtext": "Right Front Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "K-041",
+                                            "subtext": "Targeting Modes Control Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "INU",
+                                            "subtext": "Rear Right Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "INU HEAT ON",
+                                            "subtext": "Rear Right Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "STANDBY SAI ON",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "PVI Mode Switch",
+                                            "subtext": "PVI Input Controller",
+                                            "action": "OPER"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Weapon Systems",
+                                    "items": [
+                                        {
+                                            "text": "W-SYS",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Engines Startup Preparations",
+                                    "items": [
+                                        {
+                                            "text": "Cockpit Door",
+                                            "subtext": "Left Wall",
+                                            "action": "Close"
+                                        },
+                                        {
+                                            "text": "ENGINE EGT TEST STOP",
+                                            "subtext": "Right Front Panel",
+                                            "action": "Press",
+                                            "comment": "EGT gauge should indicate more then 800°C."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM OPER",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "TEST"
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM WARN",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM TEST",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "I GR",
+                                            "comment": "Verify FIRE LH ENG, FIRE APU, FIRE HYDR, FIRE RH ENG, FIRE GRBX on right wall panel and MASTER CAUTION, FIRE on left front panel illuminate."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM WARN",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Cycle",
+                                            "comment": "Fire warning lights should go out."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM TEST",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "II GR",
+                                            "comment": "Verify FIRE LH ENG, FIRE APU, FIRE HYDR, FIRE RH ENG, FIRE GRBX on right wall panel and MASTER CAUTION, FIRE on left front panel illuminate."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM WARN",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Cycle",
+                                            "comment": "Fire warning lights should go out."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM TEST",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "III GR",
+                                            "comment": "Verify FIRE LH ENG, FIRE APU, FIRE HYDR, FIRE RH ENG, FIRE GRBX on right wall panel and MASTER CAUTION, FIRE on left front panel illuminate."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM WARN",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Cycle",
+                                            "comment": "Fire warning lights should go out."
+                                        },
+                                        {
+                                            "text": "FIRE EXTINGUISHER SYSTEM OPER",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "VHF-2",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "BATTY VOICE TEST",
+                                            "subtext": "Rear Right Panel",
+                                            "action": "Press",
+                                            "comment": "Voice message should play."
+                                        },
+                                        {
+                                            "text": "Startup Clearance",
+                                            "subtext": "ATC Communication",
+                                            "action": "Request",
+                                            "comment": "Wait until cleared by ATC."
+                                        },
+                                        {
+                                            "text": "FUEL-QTY",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "APU Startup",
+                                    "items": [
+                                        {
+                                            "text": "FUEL SHUTOFF VLV APU",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On",
+                                            "comment": "Verify APU VLV OPEN indicator on APU panel illuminates."
+                                        },
+                                        {
+                                            "text": "FUEL PUMP FWD/AFT",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both On",
+                                            "comment": "Verify FWD TANK PUMP ON and AFT TANK PUMP ON on overhead panel illuminate."
+                                        },
+                                        {
+                                            "text": "START Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "Start"
+                                        },
+                                        {
+                                            "text": "START Engine Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "APU"
+                                        },
+                                        {
+                                            "text": "START Button",
+                                            "subtext": "Start Panel",
+                                            "action": "Press"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "APU Panel",
+                                            "action": "Monitor",
+                                            "comment": "Wait for APU ON indicator to illuminate. This should not take more then 24 seconds. APU EGT should not exceed 850°C. After APU is on verify EGT is below 720°C and APU OIL P. NORM indicator is illuminated. Wait for 1 minute while APU warms up after successfull start."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Engines Startup",
+                                    "items": [
+                                        {
+                                            "text": "Rotor Brake",
+                                            "subtext": "Engine Controls and Levers",
+                                            "action": "Down"
+                                        },
+                                        {
+                                            "text": "FUEL SHUTOFF LEFT",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On",
+                                            "comment": "Verify LH VLV CLOSED indicator on overhead panel goes off."
+                                        },
+                                        {
+                                            "text": "FUEL PUMP Indicator Lights",
+                                            "subtext": "Overhead Panel",
+                                            "action": "Check"
+                                        },
+                                        {
+                                            "text": "EEG LH",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "START Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "Start"
+                                        },
+                                        {
+                                            "text": "START Engine Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "ENG LH"
+                                        },
+                                        {
+                                            "text": "START Button",
+                                            "subtext": "Start Panel",
+                                            "action": "Hold for 1-2s"
+                                        },
+                                        {
+                                            "text": "ENGINE CUTOFF VALVES LH",
+                                            "subtext": "Engine Controls and Levers",
+                                            "action": "OPEN"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "ENGINE 1 RPM",
+                                            "subtext": "Front Right Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should evenly grow without freezes and stabilize in (70...75)%."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "EGT Left",
+                                            "subtext": "Front Right Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should grow and stabilize around 600°C."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Rotor Blades",
+                                            "action": "Monitor",
+                                            "comment": "Should start moving while RPM is below 25%."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "START VLV indicator",
+                                            "subtext": "Start Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should go off on RPM (60...65)%."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "HYD PRESS",
+                                            "subtext": "Rear Right Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should grow."
+                                        },
+                                        {
+                                            "text": "FUEL SHUTOFF RIGHT",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On",
+                                            "comment": "Verify RH VLV CLOSED indicator on overhead panel goes off."
+                                        },
+                                        {
+                                            "text": "EEG RH",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "START Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "Start"
+                                        },
+                                        {
+                                            "text": "START Engine Switch",
+                                            "subtext": "Start Panel",
+                                            "action": "ENG RH"
+                                        },
+                                        {
+                                            "text": "START Button",
+                                            "subtext": "Start Panel",
+                                            "action": "Hold for 1-2s"
+                                        },
+                                        {
+                                            "text": "ENGINE CUTOFF VALVES RH",
+                                            "subtext": "Engine Controls and Levers",
+                                            "action": "OPEN"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "ENGINE 2 RPM",
+                                            "subtext": "Front Right Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should evenly grow without freezes and stabilize in (70...75)%."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "EGT Left",
+                                            "subtext": "Front Right Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should grow and stabilize around 600°C."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "START VLV indicator",
+                                            "subtext": "Start Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should go off on RPM (60...65)%."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Rotor RPM",
+                                            "subtext": "Front Left Panel",
+                                            "action": "Monitor",
+                                            "comment": "Should stabilize between 62-70%."
+                                        },
+                                        {
+                                            "text": "APU SHUTOFF",
+                                            "subtext": "Start Panel",
+                                            "action": "Press"
+                                        },
+                                        {
+                                            "text": "FUEL SHUTOFF VLV APU",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "CLOSED",
+                                            "comment": "Verify all lights on APU panel go off."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "OIL TEMP",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Monitor",
+                                            "comment": "ENG LH and RH should be at least +30°C and GRBX at least -15°C."
+                                        },
+                                        {
+                                            "text": "DIF ENG CONTROL L/R",
+                                            "subtext": "Engine Controls and Levers",
+                                            "action": "Both AUTO"
+                                        },
+                                        {
+                                            "text": "AC SYS GEN LH/RH",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both On"
+                                        },
+                                        {
+                                            "text": "EXT DC/AC",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both DISABLED"
+                                        },
+                                        {
+                                            "text": "Ground Electric Power",
+                                            "subtext": "Ground Crew Communication",
+                                            "action": "Request Off"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
