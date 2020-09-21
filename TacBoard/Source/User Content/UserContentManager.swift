@@ -107,8 +107,14 @@ class UserContentManager {
     // MARK: Properties
     
     /// `SignalProducer` sending a `Void` signal whenever the user content has been updated.
+    /// - note: This signal fires immediately on subscription for consistency with other producers used by the app.
     var updated: SignalProducer<Void, Never> {
-        return SignalProducer(updatedSignal)
+        
+        let head = SignalProducer(value: ())
+        let tail = SignalProducer(updatedSignal)
+        
+        return head.concat(tail)
+        
     }
     
     /// The currently available user checklists.
