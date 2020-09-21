@@ -2744,7 +2744,7 @@
                                     "title": "Electric Power",
                                     "items": [
                                         {
-                                            "text": "BAT 1 / 2",
+                                            "text": "BAT 1/2",
                                             "subtext": "Right Wall Panel",
                                             "action": "Both On"
                                         },
@@ -2760,18 +2760,13 @@
                                         },
                                         {
                                             "text": "Ground Electric Power",
-                                            "subtext": "Ground Crew Communication Menu",
+                                            "subtext": "Ground Crew Communication",
                                             "action": "Request On"
                                         },
                                         {
-                                            "text": "EXT DC",
+                                            "text": "EXT DC/AC",
                                             "subtext": "Right Wall Panel",
-                                            "action": "On"
-                                        },
-                                        {
-                                            "text": "EXT AC",
-                                            "subtext": "Right Wall Panel",
-                                            "action": "On"
+                                            "action": "Both On"
                                         },
                                         {
                                             "text": "EKRAN HYD TRANS PWR",
@@ -2972,7 +2967,7 @@
                                         },
                                         {
                                             "text": "Startup Clearance",
-                                            "subtext": "ATC Communication Menu",
+                                            "subtext": "ATC Communication",
                                             "action": "Request",
                                             "comment": "Wait until cleared by ATC."
                                         },
@@ -2993,14 +2988,9 @@
                                             "comment": "Verify APU VLV OPEN indicator on APU panel illuminates."
                                         },
                                         {
-                                            "text": "FUEL PUMP FWD",
+                                            "text": "FUEL PUMP FWD/AFT",
                                             "subtext": "Right Wall Panel",
-                                            "action": "On"
-                                        },
-                                        {
-                                            "text": "FUEL PUMP AFT",
-                                            "subtext": "Right Wall Panel",
-                                            "action": "On",
+                                            "action": "Both On",
                                             "comment": "Verify FWD TANK PUMP ON and AFT TANK PUMP ON on overhead panel illuminate."
                                         },
                                         {
@@ -3182,9 +3172,24 @@
                                             "comment": "ENG LH and RH should be at least +30°C and GRBX at least -15°C."
                                         },
                                         {
-                                            "text": "DIF ENG CONTROL",
+                                            "text": "DIF ENG CONTROL L/R",
                                             "subtext": "Engine Controls and Levers",
-                                            "action": "AUTO"
+                                            "action": "Both AUTO"
+                                        },
+                                        {
+                                            "text": "AC SYS GEN LH/RH",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both On"
+                                        },
+                                        {
+                                            "text": "EXT DC/AC",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "Both DISABLED"
+                                        },
+                                        {
+                                            "text": "Ground Electric Power",
+                                            "subtext": "Ground Crew Communication",
+                                            "action": "Request Off"
                                         }
                                     ]
                                 }
