@@ -69,6 +69,7 @@ class UserContentManager {
     private let mutableInvalids: MutableProperty<[InvalidUserContent]>
 
     private var skipUserContentDirectoryEvents: Int = 0
+    private var pendingUserContentDirectoryEventWorkItem: DispatchWorkItem? = nil
     
     // MARK: Singleton / Initialization
     
@@ -186,8 +187,24 @@ class UserContentManager {
             return
         }
         
-        // Reload user content
-        internalReloadContentNow()
+        //
+        // Issue #21
+        //
+        // When transferring checklist files through iTunes file transfer, it appears that the file system event
+        // fires *before* the file is actually ready to be read. The result is that the file read fails the first time.
+        //
+        // To work around this, we add a short delay to allow the file system to get back into a good state before
+        // attempting to read the file. If there was already a pending reload, then we cancel it and reschedule.
+        //
+
+        // Cancel the currently pending work item, if it exists
+        pendingUserContentDirectoryEventWorkItem?.cancel()
+        pendingUserContentDirectoryEventWorkItem = nil
+        
+        // Create a new work item and schedule it for execution after 0.5 seconds
+        let item = DispatchWorkItem { [weak self] in self?.internalReloadContentNow() }
+        queue.asyncAfter(deadline: .now() + .seconds(1), execute: item)
+        pendingUserContentDirectoryEventWorkItem = item
         
     }
     
