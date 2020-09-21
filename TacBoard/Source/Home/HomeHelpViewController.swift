@@ -19,8 +19,8 @@ class HomeHelpViewController: UIViewController, WKNavigationDelegate {
     
     // MARK: Properties
     
-    /// If set to `true`, the page will default to version history.
-    var showVersionHistory: Bool = false
+    /// If set to a non-`nil` value, the page will start at the specified anchor.
+    var initialAnchor: String? = nil
     
     // MARK: UIViewController Overrides
     
@@ -55,9 +55,14 @@ class HomeHelpViewController: UIViewController, WKNavigationDelegate {
         
         webView?.navigationDelegate = self
         
+        let fragment: String = {
+            guard let initialAnchor = initialAnchor else { return "" }
+            return "#\(initialAnchor)"
+        }()
+        
         guard
             let baseURL = Bundle.main.url(forResource: "Help", withExtension: "html", subdirectory: "Help"),
-            let loadURL = URL(string: "\(baseURL.absoluteString)\(showVersionHistory ? "#VersionHistory" : "")")
+            let loadURL = URL(string: "\(baseURL.absoluteString)\(fragment)")
             else { return }
         
         webView?.loadFileURL(loadURL, allowingReadAccessTo: loadURL.deletingLastPathComponent())

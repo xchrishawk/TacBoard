@@ -132,6 +132,7 @@
 		83608914250D9B6200BC6BD4 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 83608913250D9B6200BC6BD4 /* Help */; };
 		83608916250D9B9100BC6BD4 /* HomeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */; };
 		8389446524FD6A1500BE9161 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389446424FD6A1500BE9161 /* URL.swift */; };
+		83A8FDB52519752B003CB228 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8FDB42519752B003CB228 /* MainViewController.swift */; };
 		83D2B7892516D41300615FFF /* UserContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2B7882516D41300615FFF /* UserContentManager.swift */; };
 		83D2B7902516EE9F00615FFF /* UserContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2B78F2516EE9F00615FFF /* UserContentListViewController.swift */; };
 		83D9207025156F2A00B13C19 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */; };
@@ -274,6 +275,7 @@
 		83608913250D9B6200BC6BD4 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
 		83608915250D9B9100BC6BD4 /* HomeHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHelpViewController.swift; sourceTree = "<group>"; };
 		8389446424FD6A1500BE9161 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		83A8FDB42519752B003CB228 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		83D2B7882516D41300615FFF /* UserContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentManager.swift; sourceTree = "<group>"; };
 		83D2B78F2516EE9F00615FFF /* UserContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListViewController.swift; sourceTree = "<group>"; };
 		83D9206F25156F2A00B13C19 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				0C1ED47824D58C5200486255 /* Checklists */,
 				0C1BEC2024F1E5A8001695E6 /* Common */,
 				0C1ED47224D58B6600486255 /* Home */,
+				83A8FDB32519751F003CB228 /* Main */,
 				0CAFF4A424DEDA1C00AA8D8B /* Modules */,
 				0C15735B24D70A8500136274 /* Notepad */,
 				0C0A37FF24E8A62400D077C6 /* Reference */,
@@ -713,6 +716,14 @@
 				0C1ED47B24D58C7600486255 /* ChecklistViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		83A8FDB32519751F003CB228 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				83A8FDB42519752B003CB228 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		83D2B7842516D24200615FFF /* User Content */ = {
@@ -971,6 +982,7 @@
 				0CA7404D24D6253C00E7DDA9 /* ChecklistSection.swift in Sources */,
 				8389446524FD6A1500BE9161 /* URL.swift in Sources */,
 				0C9C6D3324F35FFE00F73E89 /* BlockButton.swift in Sources */,
+				83A8FDB52519752B003CB228 /* MainViewController.swift in Sources */,
 				0C9A18B124DA27DF0048BDFC /* Airport.swift in Sources */,
 				0C1ED47724D58B9700486255 /* HomeViewController.swift in Sources */,
 				0C0A380D24E8B65F00D077C6 /* ReferenceEquatable.swift in Sources */,

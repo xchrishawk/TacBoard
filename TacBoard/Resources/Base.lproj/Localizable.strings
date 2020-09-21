@@ -52,7 +52,7 @@
 "aboutDataInfoItemAirports"                 = "Airports";
 "aboutDataInfoItemChecklists"               = "Checklists";
 "aboutDataInfoItemReference"                = "Reference";
-"aboutDataInfoItemUserContentList"          = "User Content";
+"aboutDataInfoItemUserContentList"          = "Custom Files";
 "aboutDataInfoCheckForUpdatedData"          = "Check For Updated Data";
 "aboutDebugSection"                         = "Debug";
 "aboutDebugUseFallbackData"                 = "Use Fallback Data Indices";
@@ -198,7 +198,7 @@
 "userContentImportSucceededTitle"           = "Import Succeeded";
 "userContentImportSucceededMessage"         = "The file was successfully imported.";
 "userContentImportInvalidTitle"             = "Invalid File";
-"userContentImportInvalidMessage"           = "The imported file is not valid. See About → User Content for more details.";
+"userContentImportInvalidMessage"           = "The imported file is not valid. See About → Custom Files for more details.";
 "userContentImportFailedTitle"              = "Import Failed";
 "userContentImportFailedMessage"            = "The file could not be imported.";
 "userContentDeleteConfirmationTitle"        = "Delete File?";
@@ -207,3 +207,4 @@
 "userContentListInvalidsSectionTitle"       = "Invalid Files";
 "userContentListInvalidsSectionFooter"      = "The files in this section could not be loaded. For more details on what failed, tap on the info icon for the file.";
 "userContentListInvalidsErrorMessageTitle"  = "Invalid File";
+"userContentListShowUserContentList"        = "View Custom Files";

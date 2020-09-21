@@ -1,0 +1,107 @@
+{
+    "version": "1.0",
+    "description": "Example Custom Checklist",
+    "objects": [
+        {
+            "title": "Example Binder",
+            "folders": [
+                {
+                    "title": "Example Checklists",
+                    "subfolders": [
+                        {
+                            "title": "Example Subfolder",
+                            "items": [
+                                {
+                                    "title": "Example Checklist #3",
+                                    "sections": [
+                                        {
+                                            "items": [
+                                                {
+                                                    "type": "Comment",
+                                                    "text": "This is an example of a checklist in a subfolder."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "items": [
+                        {
+                            "title": "Example Checklist #1",
+                            "sections": [
+                                {
+                                    "title": "Normal Items",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "Each checklist item supports four JSON fields: [b]text[/b], [b]subtext[/b], [b]action[/b], and [b]comment[/b]. The only [i]required[/i] item is [b]text[/b].\n\nThe items below show some examples of these fields."
+                                        },
+                                        {
+                                            "text": "Text"
+                                        },
+                                        {
+                                            "text": "Text",
+                                            "subtext": "Subtext"
+                                        },
+                                        {
+                                            "text": "Text",
+                                            "subtext": "Subtext",
+                                            "action": "Action"
+                                        },
+                                        {
+                                            "text": "Text",
+                                            "subtext": "Subtext",
+                                            "action": "Action",
+                                            "comment": "Comment"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Comment Items",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "This item is a comment. It does not show a check mark and is not completable by the user. Comment items support all of the same items as a regular item, as shown below."
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Text",
+                                            "subtext": "Subtext",
+                                            "action": "Action",
+                                            "comment": "Comment"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Formatting",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "The [b]text[/b] field supports simple formatting. Text can be made [b]bold[/b], [large]large[/large], and [small]small[/small].[li]List items are also supported.[/li][li]Like this.[/li]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Example Checklist #2",
+                            "sections": [
+                                {
+                                    "title": "Checklist Structure",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[li]Each checklist file contains 1 or more binders.[/li][li]Each binder contains 1 or more folders.[/li][li]Each folder contains 1 or more checklists and 0 or more sub-folders.[/li][li]Each checklist contains 1 or more sections.[/li][li]Each section contains 1 or more items.[/li]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

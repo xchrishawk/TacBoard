@@ -232,6 +232,7 @@ enum LocalizableStringKey: String {
     case userContentListInvalidsSectionTitle
     case userContentListInvalidsSectionFooter
     case userContentListInvalidsErrorMessageTitle
+    case userContentListShowUserContentList
     
     // MARK: Properties
     

@@ -159,6 +159,14 @@ class UserContentListViewController: UITableViewController {
         }
     }
     
+    // MARK: Actions
+    
+    /// The user tapped the help button.
+    @IBAction
+    private func showHelpButtonTapped(_ sender: UIBarButtonItem) {
+        MainViewController.active?.showHelp(initialAnchor: "UserContent")
+    }
+    
     // MARK: Cell Generation
     
     /// Returns a cell for the `UserChecklistDataIndex` at the specified index path.

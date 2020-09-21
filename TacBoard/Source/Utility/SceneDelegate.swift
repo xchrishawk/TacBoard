@@ -105,7 +105,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 }()
                 
                 // Present the alert
-                alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: LocalizableString(.genericOK), style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: LocalizableString(.userContentListShowUserContentList), style: .default) { _ in MainViewController.active?.showUserContentList() })
                 self?.frontMostViewController?.present(alert, animated: true, completion: nil)
 
             }

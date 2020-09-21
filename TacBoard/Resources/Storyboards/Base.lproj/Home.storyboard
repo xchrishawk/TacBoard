@@ -461,7 +461,7 @@
         <!--About-->
         <scene sceneID="zdi-uO-How">
             <objects>
-                <tableViewController id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="About" id="9Mq-Wb-YA2" customClass="HomeAboutViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Od-NB-6KM">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,10 +553,10 @@
             </objects>
             <point key="canvasLocation" x="865" y="-1365"/>
         </scene>
-        <!--User Content-->
+        <!--Custom Files-->
         <scene sceneID="yBu-6S-DCq">
             <objects>
-                <tableViewController id="6Be-lU-nHd" customClass="UserContentListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserContentList" id="6Be-lU-nHd" customClass="UserContentListViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="9B0-lU-pEF">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -697,7 +697,13 @@
                             <outlet property="delegate" destination="6Be-lU-nHd" id="Zko-bG-G1r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="User Content" id="hHu-D4-4Ex"/>
+                    <navigationItem key="navigationItem" title="Custom Files" id="hHu-D4-4Ex">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="questionmark.circle.fill" catalog="system" id="8aU-bJ-3O3">
+                            <connections>
+                                <action selector="showHelpButtonTapped:" destination="6Be-lU-nHd" id="Y6D-rO-Kgu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="noUserContentView" destination="mQA-l9-XA3" id="PNU-rT-T9H"/>
                     </connections>
@@ -940,7 +946,7 @@
         <!--Help-->
         <scene sceneID="ShC-Wu-qrk">
             <objects>
-                <viewController id="Lrd-Cj-Qbt" userLabel="Help" customClass="HomeHelpViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help" id="Lrd-Cj-Qbt" userLabel="Help" customClass="HomeHelpViewController" customModule="TacBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fam-gg-HDH">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,6 +982,7 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -70,9 +70,8 @@ class HomeViewController: TableViewController {
         switch segue.identifier {
          
         case "ShowHelp":
-            // If the user hasn't looked at the version history for this version, then default to it
             guard let controller = segue.destination as? HomeHelpViewController else { fatalInvalidSegue() }
-            controller.showVersionHistory = !versionManager.userHasViewedReleaseNotesForThisVersion
+            controller.initialAnchor = sender as? String
             
         default:
             break
@@ -157,7 +156,8 @@ class HomeViewController: TableViewController {
                 performSegue(withIdentifier: "ShowSettings", sender: nil)
                 
             case .help:
-                performSegue(withIdentifier: "ShowHelp", sender: nil)
+                // Default to the version history if the user hasn't viewed it for this release
+                performSegue(withIdentifier: "ShowHelp", sender: (versionManager.userHasViewedReleaseNotesForThisVersion ? nil : "VersionHistory"))
                 versionManager.userHasViewedReleaseNotesForThisVersion = true
                 tableView.reloadData() // trying to reload only the relevant cell results in the help icon being mis-sized
                     
