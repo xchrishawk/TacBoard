@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Fields
     
-    private var isFontSetupComplete = false
+    private var isAppearanceSetupComplete = false
 
     // MARK: UIApplicationDelegate
 
@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize version manager
         _ = VersionManager.shared
         
-        // Initialize global font replacements
-        overrideFonts()
+        // Initialize global appearance
+        overrideAppearance()
         
         return true
         
@@ -45,11 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Private Utility
     
-    /// Overrides the system fonts to the correct customized font.
-    private func overrideFonts() {
+    /// Overrides the the default system appearance with our customized settings.
+    private func overrideAppearance() {
         
-        guard !isFontSetupComplete else { return }
-        defer { isFontSetupComplete = true }
+        guard !isAppearanceSetupComplete else { return }
+        defer { isAppearanceSetupComplete = true }
         
         // Override system fonts
         UIFont.overrideSystemFonts()
@@ -60,6 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: Constants.verySmallTextSize)], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: Constants.verySmallTextSize)], for: .selected) // TODO: doesn't work???
         
+        // Set tint color of UIAlertControllers
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(application: .tint)
+        
     }
-
+    
 }
