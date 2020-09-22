@@ -80,8 +80,14 @@ extension NSAttributedString {
                 // Some things depend on whether or not we're at the beginning of the string...
                 let isFirstLine = (entireRange.location == 0)
                 
+                // We need the attributes of the text. If the font is not set, then set it to
+                // make sure that the bullet width is calculated correctly.
+                var attributes = attributedContent.attributes(at: 0, effectiveRange: nil)
+                if attributes[.font] == nil {
+                    attributes[.font] = UIFont.systemFont(ofSize: Constants.defaultTextSize)
+                }
+                
                 // Insert the bullet
-                let attributes = attributedContent.attributes(at: 0, effectiveRange: nil)
                 let bullet = "•  "
                 attributedContent.insert(NSAttributedString(string: "\(isFirstLine ? "" : "\n")\(bullet)", attributes: attributes), at: 0)
                 
