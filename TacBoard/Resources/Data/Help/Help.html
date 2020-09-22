@@ -21,6 +21,11 @@
                 <li><a href="#FeaturesReference">Reference</a></li>
             </ul>
             <li><a href="#UserContent">Custom Checklists</a></li>
+            <ul>
+                <li><a href="#UserContentChecklistFileFormat">Checklist File Format</a></li>
+                <li><a href="#UserContentAddingFiles">Adding Files to the App</a></li>
+                <li><a href="#UserContentManagingFiles">Managing Custom Checklists</a></li>
+            </ul>
             <li><a href="#VersionHistory">Version History</a></li>
             <li><a href="#Credits">Credits</a></li>
         </ul>
@@ -33,7 +38,6 @@
         </ul>
         <p>The following features have not yet been implemented, but are planned to be completed before the first official release:</p>
         <ul>
-            <li>User-customizable checklists</li>
             <li>"Simplified" checklist mode for experienced pilots</li>
             <li>Built-in checklists for additional aircraft models (starting with F/A-18C and Black Shark)</li>
             <li>Airport info for all terrain regions (starting with Persian Gulf and Syria)</li>
@@ -52,8 +56,24 @@
         <p>TODO - complete help section.</p>
         <h3><a name="FeaturesReference"/>Reference</h3>
         <p>TODO - complete help section.</p>
-        <h2><a name="UserContent"/>Custom Files</h2>
-        <p>You can create your own checklist files and add them to the app.</p>
+        <h2><a name="UserContent"/>Custom Checklists</h2>
+        <p>You can create your own checklist files and add them to the app, or download and use checklist files that others have created.</p>
+        <h3><a name="UserContentChecklistFileFormat"/>Checklist File Format</h3>
+        <p>Checklists are simple <a href="https://www.w3schools.com/whatis/whatis_json.asp">JSON files</a>. They must have the <b>.dcschecklist</b> file extension in order to be recognized by the app.</p>
+        <p>There is an example checklist file showing the format and several usage examples on GitHub at <a href="https://raw.githubusercontent.com/xchrishawk/TacBoard/master/TacBoard/Resources/Data/Help/Example.dcschecklist">this link</a>. When creating a new checklist, you can start with this file and update or add to it as needed. For a more comprehensive example, the full default checklists used by the app are available <a href="https://raw.githubusercontent.com/xchrishawk/TacBoard/master/TacBoard/Resources/Data/Fallback/ChecklistDataIndex.json">here</a>.</p>
+        <h3><a name="UserContentAddingFiles"/>Adding Files to the App</h3>
+        <p>There are several options available to add custom checklists to the app.</p>
+        <ul>
+            <li><a href="https://support.apple.com/en-us/HT204144">AirDrop</a> the <b>.dcschecklist</b> file to your iPhone or iPad. DCS TacBoard will automatically open and import the checklist.</li>
+            <li>Transfer the file directly to the app. This can be done using the <a href="https://support.apple.com/en-us/HT210598">Finder</a> app on MacOS or using <a href="https://support.apple.com/en-us/HT201301">iTunes</a> on Windows.</li>
+        </ul>
+        <img class="screenshot" src="ChecklistITunesExample.jpg"/>
+        <ul>
+            <li>E-mail the file to yourself as an attachment. Open the attachment in your e-mail app, then select the <b>Share</b> button, then <B>Copy to DCS TacBoard</b>.</li>
+        </ul>
+        <img class="screenshot" src="ChecklistShareExample.jpg"/>
+        <h3><a name="UserContentManagingFiles"/>Managing Custom Checklists</h3>
+        <p>You can view all of your currently installed custom checklists from the <b>Home → About → Custom Files</b> page. On this page you can view the errors for any files which were not successfully loaded, as well as delete any files that you no longer want to use.</p>
         <h2><a name="VersionHistory"/>Version History</h2>
         <h3>Version 0.1.1</h3>
         <ul>
