@@ -130,7 +130,7 @@
         "key": "Ka-50",
         "title": "Ka-50 Black Shark",
         "author": "Eagle Dynamics",
-        "isDefaultEnabled": false,
+        "isDefaultEnabled": true,
         "isPrimary": true
     },
     {
