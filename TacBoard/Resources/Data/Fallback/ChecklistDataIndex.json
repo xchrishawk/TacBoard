@@ -3194,6 +3194,234 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "title": "Pre-Taxi",
+                            "sections": [
+                                {
+                                    "title": "Pre-Taxi",
+                                    "items": [
+                                        {
+                                            "text": "Taxi Clearance",
+                                            "subtext": "ATC Communication",
+                                            "action": "Request",
+                                            "comment": "When using runway for takeoff"
+                                        },
+                                        {
+                                            "text": "BANK HOLD",
+                                            "subtext": "Autopilot Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "PITCH HOLD",
+                                            "subtext": "Autopilot Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "HDG HOLD",
+                                            "subtext": "Autopilot Panel",
+                                            "action": "On"
+                                        },
+                                        {
+                                            "text": "EJECT-SEAT-SYS 1/2/3",
+                                            "subtext": "Right Wall Panel",
+                                            "action": "All On"
+                                        },
+                                        {
+                                            "text": "Standby Attitude Indicator",
+                                            "subtext": "Front Right Panel",
+                                            "action": "Uncage"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Taxi",
+                            "sections": [
+                                {
+                                    "title": "Taxi",
+                                    "items": [
+                                        {
+                                            "text": "Wheel Parking Brake",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "Disengage"
+                                        },
+                                        {
+                                            "text": "Collective",
+                                            "subtext": "Collective Stick",
+                                            "action": "25%"
+                                        },
+                                        {
+                                            "text": "Cyclic",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "FWD"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Notes",
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][li]Control speed with cyclic, collective and wheel brake using ground as reference for speed. Taxiing is allowed with speed up to 15 km/h and wind speed up to 20 m/s.[/li][li]To stop set cyclic to neutral and reduce collective while using wheel brake. In case of brake failure or emergency braking it's allowed to pull cyclic aft while increasing collective up to hovering. Avoid overturning with cyclic.[/li][li]Turning is performed by smooth simultaneous deflection of rudder and cyclic in turn direction while avoiding bank more then 5° and high speed turns.[/li][li][b]CAUTION![/b] Backwards steering and pivoting around single wheel are forbidden.[/li][li]In crosswind conditions helicopter has a tendency of turning against the wind. Don't counter natural wind induced banking up to 5° to avoid this.[/li][li]Taxiing on soft ground or show should be performed with extra caution with speed up to 5 km/h. To keep front wheels from digging in use cyclic and collective.[/li][/small]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Hover Check",
+                            "sections": [
+                                {
+                                    "title": "Hover Check",
+                                    "items": [
+                                        {
+                                            "text": "Align helicopter against the wind"
+                                        },
+                                        {
+                                            "text": "Taxi 2-3 meters to align wheels"
+                                        },
+                                        {
+                                            "text": "Wheel Parking Brake",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "Engage"
+                                        },
+                                        {
+                                            "text": "Hover Check Clearance",
+                                            "subtext": "ATC Communication",
+                                            "action": "Request"
+                                        },
+                                        {
+                                            "text": "Wheel Parking Brake",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "Disengage"
+                                        },
+                                        {
+                                            "text": "Use collective to gain required altitude",
+                                            "comment": "Keep helicopter from turning and banking. Land and reduce weight if unable to climb. Required altitude depends on takeoff method"
+                                        },
+                                        {
+                                            "text": "Trim",
+                                            "subtext": "Cyclic Stick"
+                                        },
+                                        {
+                                            "text": "Hover Mode",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "On",
+                                            "comment": "Verify HOVER light on overhead panel illuminates, HSI arrows are perpendicular."
+                                        },
+                                        {
+                                            "text": "ADI Pitch",
+                                            "subtext": "Front Left Panel",
+                                            "action": "Trim"
+                                        },
+                                        {
+                                            "text": "Hover Mode",
+                                            "subtext": "Cyclic Stick",
+                                            "action": "Off"
+                                        },
+                                        {
+                                            "type": "Comment",
+                                            "text": "Further actions depend on takeoff method."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Vertical Takeoff Using Cushion Effect",
+                            "sections": [
+                                {
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][b]NOTE[/b]: Used when helicopter is able to hover steadily on at least 2 m altitude.[/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Takeoff",
+                                    "items": [
+                                        {
+                                            "text": "Hover check on 2-3 m",
+                                            "comment": "See Hover Check checklist."
+                                        },
+                                        {
+                                            "text": "Descend to 1 m"
+                                        },
+                                        {
+                                            "text": "Accelerate while gaining altitude",
+                                            "comment": "Smoothly move cyclic forward and increase collective to gain 90-100 km/h indicated at 15 m altitude. Keep accelerating with lower climb rate."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Vertical Takeoff Without Cushion Effect",
+                            "sections": [
+                                {
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][b]NOTE[/b]: Used when helicopter is able to hover steadily on altitude of at least 10 m and higher then any obstacle in takeoff direction.[/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Takeoff",
+                                    "items": [
+                                        {
+                                            "text": "Hover check on at least 10 m"
+                                        },
+                                        {
+                                            "text": "Accelerate while maintaining altitude",
+                                            "comment": "Smoothly move cyclic forward and increase collective to prevent descent. Lower acceleration by increasing pitch if unable to prevent descent by collective."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Running Takeoff",
+                            "sections": [
+                                {
+                                    "items": [
+                                        {
+                                            "type": "Comment",
+                                            "text": "[small][b]NOTE[/b]: Used when helicopter is able to hover steadily on at least 1 m altitude and runway is hard and long enough.[/small]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Takeoff",
+                                    "items": [
+                                        {
+                                            "text": "Hover check on at least 1 m"
+                                        },
+                                        {
+                                            "text": "Land"
+                                        },
+                                        {
+                                            "text": "Move forward with maximum acceleration",
+                                            "comment": "Smoothly move cyclic forward and increase collective keeping high pitch angle but not exceeding -10°. Rear wheels may separate from runway."
+                                        },
+                                        {
+                                            "text": "Gain speed",
+                                            "comment": "About 30-40 km/h."
+                                        },
+                                        {
+                                            "text": "Take off",
+                                            "comment": "On 30-40 km/h slightly pull cyclic aft to take off."
+                                        },
+                                        {
+                                            "text": "Accelerate while gaining altitude",
+                                            "comment": "Gain at least 100-120 km/h."
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
