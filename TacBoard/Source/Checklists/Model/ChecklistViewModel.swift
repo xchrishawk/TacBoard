@@ -150,7 +150,18 @@ class ChecklistViewModel: BinderViewModel {
         displayedBinders.producer.startWithValues { [unowned self] displayedBinders in
             guard let selectedItem = self.selectedItem.value else { return }
             if !displayedBinders.contains(where: { $0.contains(item: selectedItem) }) {
+                
+                // First, try to find a checklist with a key matching the old selected item
+                for binder in displayedBinders {
+                    if let item = binder.firstItem(where: { $0.key == selectedItem.key }) {
+                        self.selectedItem.value = item
+                        return
+                    }
+                }
+                
+                // If that fails, then reset the selected checklist to nil
                 self.selectedItem.value = nil
+                
             }
         }
         

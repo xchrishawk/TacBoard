@@ -209,7 +209,20 @@ class AirportViewModel {
         displayedCollections.producer.startWithValues { [unowned self] displayedCollections in
             guard let selectedAirport = self.selectedAirport.value else { return }
             if !displayedCollections.contains(where: { $0.contains(airport: selectedAirport) }) {
+                
+                // First, try to find an airport with a key matching the old selected item
+                for collection in displayedCollections {
+                    for airport in collection.airports {
+                        if airport.key == selectedAirport.key {
+                            self.selectedAirport.value = airport
+                            return
+                        }
+                    }
+                }
+                
+                // If that fails, then reset the selected airport to nil
                 self.selectedAirport.value = nil
+                
             }
         }
         
