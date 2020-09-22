@@ -60,7 +60,6 @@
 		0C67C13424D77B430053308F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C13324D77B430053308F /* SettingsViewController.swift */; };
 		0C67C13624D77C880053308F /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C13524D77C880053308F /* SegmentedControl.swift */; };
 		0C67C13A24D77F010053308F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C13924D77F010053308F /* SettingsManager.swift */; };
-		0C832A2A24D77FAE00493E5F /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C832A2924D77FAE00493E5F /* DisplayMode.swift */; };
 		0C832A3924D7980F00493E5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C832A3724D7980F00493E5F /* Localizable.strings */; };
 		0C832A3E24D7A18800493E5F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C832A3D24D7A18800493E5F /* UIColor.swift */; };
 		0C832A4224D7A33A00493E5F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C832A4124D7A33A00493E5F /* UIFont.swift */; };
@@ -201,7 +200,6 @@
 		0C67C13324D77B430053308F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C67C13524D77C880053308F /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		0C67C13924D77F010053308F /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		0C832A2924D77FAE00493E5F /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = "<group>"; };
 		0C832A3824D7980F00493E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C832A3D24D7A18800493E5F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		0C832A4124D7A33A00493E5F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -556,7 +554,6 @@
 		0C67C13824D77EF20053308F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C832A2924D77FAE00493E5F /* DisplayMode.swift */,
 				0C67C13924D77F010053308F /* SettingsManager.swift */,
 				0C9A18AA24DA09110048BDFC /* SplitDisplayMode.swift */,
 				0CBE447024DCF74D002144FD /* UnitFormat.swift */,
@@ -922,7 +919,6 @@
 				0CA7405124D6257A00E7DDA9 /* ChecklistDefaultItem.swift in Sources */,
 				83D9207025156F2A00B13C19 /* CodingUserInfoKey.swift in Sources */,
 				0C1BEC1D24F199E4001695E6 /* Double.swift in Sources */,
-				0C832A2A24D77FAE00493E5F /* DisplayMode.swift in Sources */,
 				0CA7405524D62D0200E7DDA9 /* String.swift in Sources */,
 				0C9D9A3624E9FCC300064F9C /* WKWebView.swift in Sources */,
 				0C1ED47C24D58C7600486255 /* ChecklistViewController.swift in Sources */,

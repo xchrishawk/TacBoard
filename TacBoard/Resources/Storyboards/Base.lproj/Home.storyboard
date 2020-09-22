@@ -742,64 +742,10 @@
                         <color key="tintColor" name="TintColor"/>
                         <color key="separatorColor" name="SeparatorColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Display" footerTitle="If Display Mode is set to Auto, app will follow system Light/Dark setting." id="cOf-Hi-vGI">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3Hf-3O-2nQ" userLabel="Display Mode Cell">
-                                        <rect key="frame" x="20" y="55.5" width="794" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Hf-3O-2nQ" id="eGG-Ep-wLF">
-                                            <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-JA-aM5">
-                                                    <rect key="frame" x="15" y="19.5" width="104" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="PrimaryTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-Db-KNv" customClass="SegmentedControl" customModule="TacBoard" customModuleProvider="target">
-                                                    <rect key="frame" x="539" y="10" width="240" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="PO4-Kr-vXa">
-                                                            <variation key="widthClass=compact" constant="160"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="height" constant="40" id="f4B-KS-Ue3"/>
-                                                    </constraints>
-                                                    <segments>
-                                                        <segment title="Auto"/>
-                                                        <segment title="Day"/>
-                                                        <segment title="Night"/>
-                                                    </segments>
-                                                    <color key="selectedSegmentTintColor" name="TintColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="normalTitleTextColor">
-                                                            <color key="value" name="TintColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleTextColor">
-                                                            <color key="value" name="TintInvertedColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="displayModeSegmentedControlValueChanged:" destination="Mr1-vS-yD1" eventType="valueChanged" id="TFj-OL-amg"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="I4X-Db-KNv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cex-JA-aM5" secondAttribute="trailing" constant="15" id="6OK-5u-0Eu"/>
-                                                <constraint firstAttribute="trailing" secondItem="I4X-Db-KNv" secondAttribute="trailing" constant="15" id="BNC-d3-lCC"/>
-                                                <constraint firstItem="I4X-Db-KNv" firstAttribute="centerY" secondItem="eGG-Ep-wLF" secondAttribute="centerY" id="F29-hs-LWQ"/>
-                                                <constraint firstItem="cex-JA-aM5" firstAttribute="leading" secondItem="eGG-Ep-wLF" secondAttribute="leading" constant="15" id="YFb-Vs-oWD"/>
-                                                <constraint firstItem="cex-JA-aM5" firstAttribute="centerY" secondItem="eGG-Ep-wLF" secondAttribute="centerY" id="xZb-oe-EbB"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Units" id="LUO-Sp-Ui6">
+                            <tableViewSection headerTitle="Units" footerTitle="The airport information page will use the selected units to display airport data." id="LUO-Sp-Ui6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nnz-Lt-LQa" userLabel="Unit Format Cell">
-                                        <rect key="frame" x="20" y="183.5" width="794" height="60"/>
+                                        <rect key="frame" x="20" y="55.5" width="794" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nnz-Lt-LQa" id="wMB-C0-mUz">
                                             <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
@@ -848,7 +794,7 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Bur-qd-5AL" userLabel="Lat/Lon Format Cell">
-                                        <rect key="frame" x="20" y="243.5" width="794" height="60"/>
+                                        <rect key="frame" x="20" y="115.5" width="794" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bur-qd-5AL" id="TiY-fh-U5w">
                                             <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
@@ -902,7 +848,7 @@
                             <tableViewSection headerTitle="System Reset" footerTitle="Reset all settings back to their default state." id="cYq-83-CCR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kqk-v3-8p3">
-                                        <rect key="frame" x="20" y="367" width="794" height="60"/>
+                                        <rect key="frame" x="20" y="251" width="794" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kqk-v3-8p3" id="T9o-xU-Iuw">
                                             <rect key="frame" x="0.0" y="0.0" width="794" height="60"/>
@@ -934,7 +880,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="XJp-Zg-htv"/>
                     <connections>
-                        <outlet property="displayModeSegmentedControl" destination="I4X-Db-KNv" id="O1i-nO-M5z"/>
                         <outlet property="latLonFormatSegmentedControl" destination="il5-mV-70b" id="ZsS-tA-64w"/>
                         <outlet property="unitFormatSegmentedControl" destination="UkD-DF-9oo" id="B80-zm-DBz"/>
                     </connections>

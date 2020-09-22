@@ -18,7 +18,6 @@ class SettingsViewController: TableViewController {
     
     // MARK: Outlets
     
-    @IBOutlet private var displayModeSegmentedControl: SegmentedControl?
     @IBOutlet private var unitFormatSegmentedControl: SegmentedControl?
     @IBOutlet private var latLonFormatSegmentedControl: SegmentedControl?
     
@@ -43,7 +42,6 @@ class SettingsViewController: TableViewController {
         
         super.viewDidLoad()
         
-        displayModeSegmentedControl?.configure(for: DisplayMode.self)
         unitFormatSegmentedControl?.configure(for: UnitFormat.self)
         latLonFormatSegmentedControl?.configure(for: LatLon.Format.self)
         
@@ -52,12 +50,6 @@ class SettingsViewController: TableViewController {
     }
     
     // MARK: Actions
-    
-    /// The user changed the display mode setting.
-    @IBAction
-    private func displayModeSegmentedControlValueChanged(_ sender: SegmentedControl) {
-        settingsManager.displayMode.value = sender.value(for: DisplayMode.self)
-    }
     
     /// The user changed the unit format setting.
     @IBAction
@@ -99,11 +91,6 @@ class SettingsViewController: TableViewController {
     
     /// Initializes ReactiveSwift bindings.
     private func initializeBindings() {
-     
-        // Update the display mode setting
-        settingsManager.displayMode.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] displayMode in
-            self.displayModeSegmentedControl?.setValue(displayMode, for: DisplayMode.self)
-        }
         
         // Update the unit format setting
         settingsManager.unitFormat.producer.take(duringLifetimeOf: self).startWithValues { [unowned self] unitFormat in

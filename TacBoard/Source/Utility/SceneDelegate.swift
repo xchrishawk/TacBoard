@@ -11,10 +11,6 @@ import UIKit
 
 /// Main scene delegate class.
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
-    // MARK: Fields
-    
-    private var windowDisposableLookup: [UIWindow: Disposable] = [:]
 
     // MARK: UIWindowSceneDelegate
     
@@ -23,16 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     /// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        guard let windowScene = scene as? UIWindowScene else { return }
-
-        // Set up each window to follow the global display mode setting
-        for window in windowScene.windows {
-            windowDisposableLookup[window]?.dispose() // sanity check
-            windowDisposableLookup[window] = SettingsManager.shared.displayMode.producer.startWithValues { [weak window] displayMode in
-                window?.overrideUserInterfaceStyle = displayMode.userInterfaceStyle
-            }
-        }
         
         // Open URLs if there are any specified
         if !connectionOptions.urlContexts.isEmpty {
@@ -43,14 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     /// Called as the scene is being released by the system.
     func sceneDidDisconnect(_ scene: UIScene) {
-        
-        guard let windowScene = scene as? UIWindowScene else { return }
-        
-        // Stop observing the display mode setting
-        for window in windowScene.windows {
-            windowDisposableLookup[window]?.dispose()
-        }
-        
+        // no-op
     }
 
     /// Called when the scene has moved from an inactive state to an active state.

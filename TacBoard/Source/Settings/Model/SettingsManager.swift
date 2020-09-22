@@ -24,9 +24,6 @@ fileprivate enum Setting: String {
     /// The currently enabled terrain modules.
     case enabledTerrainModules
     
-    /// The currently selected display mode.
-    case displayMode
-    
     /// The currently selected unit format.
     case unitFormat
     
@@ -87,7 +84,6 @@ class SettingsManager {
         // Settings
         self.enabledAircraftModules = defaults.mutableProperty(setting: .enabledAircraftModules, defaultValue: Set(AircraftModule.defaultEnabledModules))
         self.enabledTerrainModules = defaults.mutableProperty(setting: .enabledTerrainModules, defaultValue: Set(TerrainModule.defaultEnabledModules))
-        self.displayMode = defaults.mutableProperty(setting: .displayMode)
         self.unitFormat = defaults.mutableProperty(setting: .unitFormat)
         self.latLonFormat = defaults.mutableProperty(setting: .latLonFormat)
         self.airportSplitDisplayMode = defaults.mutableProperty(setting: .airportSplitDisplayMode)
@@ -111,9 +107,6 @@ class SettingsManager {
     
     /// The set of currently enabled terrain modules.
     let enabledTerrainModules: MutableProperty<Set<TerrainModule>>
-    
-    /// The currently selected display mode.
-    let displayMode: MutableProperty<DisplayMode>
     
     /// The currently selected unit format.
     let unitFormat: MutableProperty<UnitFormat>
@@ -157,7 +150,6 @@ class SettingsManager {
     func resetAllSettings() {
         enabledAircraftModules.value = Set(AircraftModule.defaultEnabledModules)
         enabledTerrainModules.value = Set(TerrainModule.defaultEnabledModules)
-        displayMode.value = .default
         unitFormat.value = .default
         latLonFormat.value = .default
         airportSplitDisplayMode.value = .default
