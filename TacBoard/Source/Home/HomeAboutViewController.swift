@@ -66,12 +66,17 @@ class HomeAboutViewController: TableViewController {
     
     #endif
     
+    // MARK: Outlets
+    
+    @IBOutlet private var checkingForUpdatedDataView: UIView?
+    
     // MARK: UIViewController Overrides
     
     /// Initializes the view controller after the view has loaded.
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeBindings()
+        checkingForUpdatedDataView?.layer.cornerRadius = 10.0
     }
     
     // MARK: UITableViewDataSource
@@ -225,14 +230,20 @@ class HomeAboutViewController: TableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommandItem", for: indexPath) as! HomeAboutCommandTableViewCell
             
             cell.button?.setTitle(LocalizableString(.aboutDataInfoCheckForUpdatedData), for: .normal)
-            cell.button?.touchUpInside = { [weak self] in
+            cell.button?.touchUpInside = { [weak self, weak cell] in
                 
                 // Tell all of the data consumers to reload their data
                 self?.contentManager.reloadContentNow()
                 self?.userContentManager.reloadContentNow()
-                
-                // TODO - UI feedback for user???
-                
+
+                // Briefly display the checking view
+                self?.isCheckingForUpdatedDataViewDisplayed = true
+                cell?.button?.isEnabled = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [weak self, weak cell] in
+                    self?.isCheckingForUpdatedDataViewDisplayed = false
+                    cell?.button?.isEnabled = true
+                }
+
             }
             
             return cell
@@ -371,6 +382,34 @@ class HomeAboutViewController: TableViewController {
     }
     
     #endif
+    
+    /// If set to `true`, the "Checking For Updated Data..." view will be displayed.
+    private var isCheckingForUpdatedDataViewDisplayed: Bool = false {
+        didSet {
+         
+            guard
+                let checkingForUpdatedDataView = checkingForUpdatedDataView,
+                isCheckingForUpdatedDataViewDisplayed != oldValue
+                else { return }
+            
+            if isCheckingForUpdatedDataViewDisplayed {
+                
+                // Display the view
+                view.addSubview(checkingForUpdatedDataView)
+                checkingForUpdatedDataView.translatesAutoresizingMaskIntoConstraints = false
+                view.safeAreaLayoutGuide.centerXAnchor.constraint(equalTo: checkingForUpdatedDataView.centerXAnchor).isActive = true
+                view.safeAreaLayoutGuide.centerYAnchor.constraint(equalTo: checkingForUpdatedDataView.centerYAnchor).isActive = true
+                view.safeAreaLayoutGuide.widthAnchor.constraint(greaterThanOrEqualTo: checkingForUpdatedDataView.widthAnchor, multiplier: 1.0, constant: 20.0).isActive = true
+                
+            } else {
+                
+                // Remove the view
+                checkingForUpdatedDataView.removeFromSuperview()
+                
+            }
+            
+        }
+    }
     
 }
 

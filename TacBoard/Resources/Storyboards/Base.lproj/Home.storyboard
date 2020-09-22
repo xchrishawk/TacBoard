@@ -546,10 +546,41 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="About" id="FOL-rO-bwd"/>
                     <connections>
+                        <outlet property="checkingForUpdatedDataView" destination="mnt-lA-fQQ" id="Cwe-6D-qEw"/>
                         <segue destination="6Be-lU-nHd" kind="show" identifier="ShowUserContentList" id="7Af-FX-eyO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIX-cV-cQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnt-lA-fQQ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6NR-LX-Tmd">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mrx-aS-Bm0">
+                                <rect key="frame" x="20" y="20" width="200" height="88"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2t1-qs-pkG">
+                                        <rect key="frame" x="81.5" y="0.0" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking For Updated Data..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Way-cV-uWW">
+                                        <rect key="frame" x="40" y="47" width="120" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="SecondaryTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mrx-aS-Bm0" secondAttribute="trailing" constant="20" id="4B1-h1-NK4"/>
+                            <constraint firstItem="mrx-aS-Bm0" firstAttribute="top" secondItem="6NR-LX-Tmd" secondAttribute="top" constant="20" id="HZL-oF-Bs3"/>
+                            <constraint firstItem="mrx-aS-Bm0" firstAttribute="leading" secondItem="6NR-LX-Tmd" secondAttribute="leading" constant="20" id="Or8-ig-PPC"/>
+                            <constraint firstAttribute="bottom" secondItem="mrx-aS-Bm0" secondAttribute="bottom" constant="20" id="pvP-TG-Thy"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="systemUltraThinMaterial"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="865" y="-1365"/>
         </scene>
