@@ -1,5 +1,5 @@
 {
-    "version": "0.2.0",
+    "version": "0.2.0A",
     "description": "TacBoard Checklists",
     "objects": [
         {
@@ -3205,7 +3205,7 @@
                                             "text": "Taxi Clearance",
                                             "subtext": "ATC Communication",
                                             "action": "Request",
-                                            "comment": "When using runway for takeoff"
+                                            "comment": "When using runway for takeoff."
                                         },
                                         {
                                             "text": "BANK HOLD",
@@ -3264,7 +3264,7 @@
                                     "items": [
                                         {
                                             "type": "Comment",
-                                            "text": "[small][li]Control speed with cyclic, collective and wheel brake using ground as reference for speed. Taxiing is allowed with speed up to 15 km/h and wind speed up to 20 m/s.[/li][li]To stop set cyclic to neutral and reduce collective while using wheel brake. In case of brake failure or emergency braking it's allowed to pull cyclic aft while increasing collective up to hovering. Avoid overturning with cyclic.[/li][li]Turning is performed by smooth simultaneous deflection of rudder and cyclic in turn direction while avoiding bank more then 5° and high speed turns.[/li][li][b]CAUTION![/b] Backwards steering and pivoting around single wheel are forbidden.[/li][li]In crosswind conditions helicopter has a tendency of turning against the wind. Don't counter natural wind induced banking up to 5° to avoid this.[/li][li]Taxiing on soft ground or show should be performed with extra caution with speed up to 5 km/h. To keep front wheels from digging in use cyclic and collective.[/li][/small]"
+                                            "text": "[small][li]Control speed with cyclic, collective and wheel brake using ground as reference for speed. Taxiing is allowed with speed up to 15 km/h and wind speed up to 20 m/s.[/li][li]To stop, set cyclic to neutral and reduce collective while using wheel brake. In case of brake failure or emergency braking it's allowed to pull cyclic aft while increasing collective up to hovering. Avoid overturning with cyclic.[/li][li]Turning is performed by smooth simultaneous deflection of rudder and cyclic in turn direction while avoiding bank more then 5° and high speed turns.[/li][li][b]CAUTION![/b] Backwards steering and pivoting around single wheel are forbidden.[/li][li]In crosswind conditions helicopter has a tendency of turning against the wind. Don't counter natural wind induced banking up to 5° to avoid this.[/li][li]Taxiing on soft ground or show should be performed with extra caution with speed up to 5 km/h. To keep front wheels from digging in use cyclic and collective.[/li][/small]"
                                         }
                                     ]
                                 }
